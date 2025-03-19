@@ -12,6 +12,7 @@ This respository presumes the use of Artificial Intelligence like Co-Pilot.
 ---
 
 # To Include
+- https://github.com/MercersKitchen/Music-Player-20250131-P2-github.io
 - https://github.com/MercersKitchen/Review-Music-Player-20250131-P4-github.io
 - Teacher Only Folder, references to Alberta Curriculum and teacher specific material
 - TBA

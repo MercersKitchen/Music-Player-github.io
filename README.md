@@ -22,6 +22,21 @@ This repository presumes the use of Artificial Intelligence like Co-Pilot.
 
 ---
 
+Preumptions
+- Human thought requires experience for evaluation of performance 
+- Human thought requires human comprehension
+- Students are able to use AI to further their own thought
+
+Partial Solution: specific algorithms allow for other algorithms
+
+For algorithmic teaching and learning, Processing.org IDE will be used.
+- GitHub and VSCode with Co-Pilot is able to be used as
+- Research Tool
+- Find and Replace
+- Code interpretation
+
+---
+
 # To Include
 - https://github.com/MercersKitchen/Music-Player-20250131-P2-github.io
 - https://github.com/MercersKitchen/Review-Music-Player-20250131-P4-github.io

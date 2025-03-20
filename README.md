@@ -43,4 +43,14 @@ For algorithmic teaching and learning, Processing.org IDE will be used.
 - Teacher Only Folder, references to Alberta Curriculum and teacher-specific material
 - TBA
 
+Next Note
+- Starter Code v Exmeplars: Learning to Code the hardway (short cuts, decreasing typing errors, and using debuggers)
+    - the beginning of comprehension
+    - what do we learn when we type partial functions, algorithms, etc
+    - how does this affect our comprension
+    - programs with comments to provide vocabulary and ways to talk about coding (also see curriculume)
+    - using ReadMe.md or ReadMe.txt
+    - Summary v narrative: art of story telling and creating multiple course-long narratives for engagement and comprehension (talk other humans or AI)
+- HelloWorld: time honoured tradition, something bigger than yourself
+
 ---

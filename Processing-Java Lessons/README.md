@@ -4,14 +4,14 @@ Lessons, Revisions, and AI (Artificial Intelligence and Academic Integrity)
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*
 
 Contents & Discussion about Voice & Porgramming Methodology
-- TBA, <a href="">tba</a>
+- Expectations, Sketching, & WireFrame, <a href="">tba</a>
 
 Addtional Notes
 - Processing-Java, <a href="">here</a>, makes simple code look like many other languages with immediate visual output
 
 ---
 
-# TBA
+# Expectations, Sketching, & WireFrame
 
 ---
 

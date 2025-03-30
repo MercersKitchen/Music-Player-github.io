@@ -3,9 +3,11 @@ Main Programs (Drivers), Classes, and Abstract Classes
 
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*
 
-The beginning page for all lessons in MercersKitchen for Teaching Computer Science.
+Contents
+- TBA, <a href="">tba</a>
 
-This repository presumes the use of Artificial Intelligence like Co-Pilot.
+Additional Notes
+- TBA
 
 ---
 

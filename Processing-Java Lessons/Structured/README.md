@@ -15,5 +15,8 @@ Contents
 ---
 
 # To Include
+- GUI: diagram, Google Prototyping, Paperfolding, creating of percent references, formulaic representation, how a computer sees creativitiy
+- Music Buttons: symbolic representation, list, paperfolding & intersections
+- Combination of keyPressed(){} and mouseX&Y
 
 ---

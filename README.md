@@ -3,9 +3,11 @@ Lessons, Revisions, and AI (Artificial Intelligence and Academic Integrity)
 
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*
 
-The beginning page for all lessons in MercersKitchen for Teaching Computer Science.
+The beginning page for all lessons using Processing-Java in MercersKitchen for Teaching (Computer Science).
 
-This repository presumes the use of Artificial Intelligence like Co-Pilot.
+This repository presumes the use of Artificial Intelligence like Co-Pilot. Programs can be opened with Processing-Java or VS-Code with Co-Pilot included through GitHub.
+
+To an expereinced programmer, teaching students to read and write code is like making a program utlimately inefficient first. Currently, students' idiosyncratic mistakes cannot be replicated by Artificial intelligence. A teacher knows these
 
 ---
 

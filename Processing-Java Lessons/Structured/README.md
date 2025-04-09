@@ -1,5 +1,5 @@
 # Structured Programming
-Learning the PRocessing Reference: Static and Dynamic
+Learning the Processing Reference: Static and Dynamic
 
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*
 

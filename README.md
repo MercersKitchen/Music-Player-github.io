@@ -64,6 +64,7 @@ Next Note
 - Exemplars: what my purpose is in a lesson
 
 1. Hello World ... a time honoured tradition in static mode
-. BoilerPlate ... a basic program template in dynamic mode
-. 
+. BoilerPlate ... a basic program template in dynamic mode, introducing comments, psuedocode, and AI completion
+. DIV ... introducing geometries, rect(), debugger, parameters, ratios (paperfolding fractions, percents, etc.)
+. DIV_Start ... typing for debugger & compiler runtime error control (sometimes on purpose for completion emphasis)
 ---

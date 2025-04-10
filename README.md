@@ -61,6 +61,6 @@ Next Note
 
 # Folder Order
 - Lesson Starters: basic code & vocabulary for natural language conversation
-- TBA
+- Exemplars: what my purpose is in a lesson
 
 ---

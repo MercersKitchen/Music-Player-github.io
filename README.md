@@ -63,4 +63,6 @@ Next Note
 - Lesson Starters: basic code & vocabulary for natural language conversation
 - Exemplars: what my purpose is in a lesson
 
+1. Hello World ... a time honoured tradition
+. 
 ---

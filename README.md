@@ -62,6 +62,7 @@ Next Note
 # Folder Order
 - Lesson Starters: basic code & vocabulary for natural language conversation
 - Exemplars: what my purpose is in a lesson
+- "Learning to Code the Hardway"
 
 1. Hello World ... a time honoured tradition in static mode
 . BoilerPlate ... a basic program template in dynamic mode, introducing comments, psuedocode, and AI completion

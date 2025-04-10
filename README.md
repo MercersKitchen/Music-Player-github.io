@@ -58,3 +58,9 @@ Next Note
 - HelloWorld: time honoured tradition, something bigger than yourself
 
 ---
+
+# Folder Order
+- Lesson Starters: basic code & vocabulary for natural language conversation
+- TBA
+
+---

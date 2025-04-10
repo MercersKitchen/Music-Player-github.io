@@ -4,8 +4,7 @@
  - Introductions to Character Escapes for inspectiving program developement
  */
 //
-// Who can describe what is happening?
-// Can you figure out what either line is doing?
+// What either ln do?
 //
 print("Hello World");
 println("Hello World");

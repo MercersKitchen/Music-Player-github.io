@@ -67,5 +67,11 @@ Next Note
 1. Hello World ... a time honoured tradition in static mode
 . BoilerPlate ... a basic program template in dynamic mode, introducing comments, psuedocode, and AI completion
 . DIV ... introducing geometries, rect(), debugger, parameters, ratios (paperfolding fractions, percents, etc.)
+    - Structured: visually verified alogrithm
+    - Structured: object introduction
 . DIV_Start ... typing for debugger & compiler runtime error control (sometimes on purpose for completion emphasis)
+. Two-Dimensional Images for Music Buttons ... introduce inscribing shapes within DIVs ( ```rect()``` ), cascading variables from display geomtery (landscape, portrait, & square)
+    - rectangle to square, using paper-folding
+    - ternary operators for variable assignment (binary algorithms)
+. 
 ---

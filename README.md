@@ -70,8 +70,14 @@ Next Note
     - Structured: visually verified alogrithm
     - Structured: object introduction
 . DIV_Start ... typing for debugger & compiler runtime error control (sometimes on purpose for completion emphasis)
-. Two-Dimensional Images for Music Buttons ... introduce inscribing shapes within DIVs ( ```rect()``` ), cascading variables from display geomtery (landscape, portrait, & square)
-    - rectangle to square, using paper-folding
+. Logical Button Reprentations: Two-Dimensional Images for Music Buttons ... introduce inscribing shapes within DIVs ( ```rect()``` ), cascading variables from display geomtery (landscape, portrait, & square)
+    - rectangle to square inscribing, using paper-folding
     - ternary operators for variable assignment (binary algorithms)
-. 
+    - IF-Else statements
+. Images: using DIVs to draw images the CANVAS
+    - Aspect Ratio Algorithm: common sense image resizing or resampling, visually-verified, considers combinations of geometry and locigal consequences
+    - Background images: aspect taken from display geometry
+    - Filling DIV like a background, same as above
+    - Using Aspect Ratio of an image to resize, resample
+
 ---

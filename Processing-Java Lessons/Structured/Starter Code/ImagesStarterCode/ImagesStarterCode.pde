@@ -1,4 +1,10 @@
-//Dynamic Programming v Static
+/* Dynamic Programming
+ - Image Resampling is a binary algorithm with mulitple choices
+ - may need to review algorithm multile times:
+   - whole discussion introducing math, introduction with final formulae and specific use
+   - main "computer points": varaibles, binary choices
+   - reverse beginning with final formulae replicating a math class and given information
+ */
 //
 //Library - Minim
 //

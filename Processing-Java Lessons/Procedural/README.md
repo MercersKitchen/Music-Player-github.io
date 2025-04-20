@@ -17,5 +17,10 @@ Additional Notes
 
 # To Include
 - ZOOM with Wild Emails
+- All DIVs and 2d-shapes: faster Population
+- Procedure for Key Board & MousePressed functions
+- Procedure for Text
+- Images: multiple images to array (data structures)
+- Draw: button combinations to erase other 2-d shapes or images
 
 ---

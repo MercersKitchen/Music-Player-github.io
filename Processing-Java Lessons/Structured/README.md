@@ -21,8 +21,13 @@ Contents
 
 ---
 
+Files to Acknoweldge for Vocabulary: Juristicational Curriculum
+- https://education.alberta.ca/media/159478/cse_sum.pdf
+- https://education.alberta.ca/media/159479/cse_pos.pdf
+
 Links
 - https://processing.org/
+- https://processing.org/reference
 - https://code.compartmental.net/minim/: AudioPlayer & AudioMetaData
 - https://github.com/ddf/Minim
 

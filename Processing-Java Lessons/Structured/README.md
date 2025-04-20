@@ -5,6 +5,8 @@ Building a Music Player using Processing.org and Minim
 
 Note: all programs can be written between static and dynamic. Static allows for specific, single lines of code to be recognized in more complicated programs as part of simle algorithms.
 
+CAUTION: bugs are sometimes built in since identifying errors is part of learning
+
 Contents
 - TBA, <a href="">tba</a>
 

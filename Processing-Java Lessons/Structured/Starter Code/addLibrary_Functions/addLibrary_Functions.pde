@@ -67,7 +67,9 @@ void setup() {
 //
 void draw() {} //End draw
 //
-void mousePressed() {
+void mousePressed() {} //End mousePressed
+//
+void keyPressed() {
   /* Key Board Short Cuts ... learning what the Music Buttons could be
    Note: CAP Lock with ||
    if ( key==? || key==? ) ; //'' only
@@ -103,8 +105,6 @@ void mousePressed() {
    - Auto Play
    - Random Song
    */
-} //End mousePressed
-//
-void keyPressed() {} //End keyPressed
+} //End keyPressed
 //
 // End Main Program

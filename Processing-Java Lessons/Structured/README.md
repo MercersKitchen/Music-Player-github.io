@@ -1,5 +1,5 @@
-# Structured Programming
-Learning the Processing Reference: Static and Dynamic
+# Natural Language of Structured Programming
+Building a Music Player using Processing.org and Minim
 
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*
 
@@ -18,5 +18,12 @@ Contents
 - GUI: diagram, Google Prototyping, Paperfolding, creating of percent references, formulaic representation, how a computer sees creativitiy
 - Music Buttons: symbolic representation, list, paperfolding & intersections
 - Combination of keyPressed(){} and mouseX&Y
+
+---
+
+Links
+- https://processing.org/
+- https://code.compartmental.net/minim/: AudioPlayer & AudioMetaData
+- https://github.com/ddf/Minim
 
 ---

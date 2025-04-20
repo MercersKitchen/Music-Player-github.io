@@ -1,4 +1,4 @@
-# Object Orientated Programming
+# Natural Language of Object Orientated Programming
 Main Programs (Drivers), Classes, and Abstract Classes
 
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*

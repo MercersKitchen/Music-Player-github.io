@@ -1,5 +1,5 @@
-# Procedural Programming
-Between Boilerplate, Functions, and Data Structures
+# Natural Language of Procedural Programming
+Refining Readability, modulation, and data structures of a Music Player
 
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*
 

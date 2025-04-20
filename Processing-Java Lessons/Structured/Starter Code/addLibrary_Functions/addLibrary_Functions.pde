@@ -72,7 +72,7 @@ void mousePressed() {
    Note: CAP Lock with ||
    if ( key==? || key==? ) ; //'' only
    - 
-   if ( key==CODED || keyCode==SpecialKey ) ; //
+   if ( key==CODED || keyCode==SpecialKey ) ; //Special Keys abriviated CAPS
    All Music Player Features are built out of these Minim AudioPlayer() functions
    .isPlaying()
    .isMuted()

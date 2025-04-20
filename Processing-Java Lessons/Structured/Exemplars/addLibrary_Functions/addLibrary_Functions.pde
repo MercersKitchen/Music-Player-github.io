@@ -36,6 +36,7 @@ void setup() {
   //
   //Music Loading - STRUCTURED Review
   minim = new Minim(this);
+  String lessonDependanciesFolder = "Lesson Dependancies Folder/";
   String musicPathway = "Music Pong/";
   String musicPong = "Music Pong/";
   String musicAll = "Music All/";
@@ -46,13 +47,13 @@ void setup() {
   //Including the reading of the number of files in the array
   String fileExtension_mp3 = ".mp3";
   //
-  String musicDirectory = "../../../../" + musicPathway + musicPong;
+  String musicDirectory = "../../../../" + lessonDependanciesFolder + musicPathway + musicPong;
   String file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
   println( file );
   //Create a FOR loop to loadFile() a changing songName
   playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
   //Music Testing
-  //playList[currentSong].play();
+  playList[currentSong].play();
   //
   //
   musicMenuX = appWidth*1/4;

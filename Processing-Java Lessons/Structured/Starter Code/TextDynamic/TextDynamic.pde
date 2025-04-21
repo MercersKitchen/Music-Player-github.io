@@ -110,12 +110,14 @@ void setup() {
    println("here"); //infinte loop, problem with WHILE, similar to draw()
    //Nothing Else works
    //
-   fontSize = fontSize*0.99;
+   fontSize *= 0.99; //Assignment Operator  //fontSize = fontSize*0.99;
    //Update WHILE Conditional with fontSize
    textFont(titleFont, fontSize);
    } //End Wrap-Around Notification
    */
-  text(playListMetaData[currentSong].title(), titleX, titleY, titleWidth, titleHeight);
+  //
+  //Option, drawing ```title``` v playListMetaData[currentSong].title()
+  text(title, titleX, titleY, titleWidth, titleHeight);
   color whiteInk = #FFFFFF;
   fill(whiteInk); //reset
   //

@@ -1,6 +1,7 @@
 /* Dynamic Programming
  - Image Resampling is a binary algorithm with mulitple choices
  - Coloring the DIV inroduces GUI design & spacing & Hexidecimal or RGB
+ - CAUTION: Square Geomtery ERROR
  */
 //
 //Library - Minim
@@ -10,7 +11,7 @@ int appWidth, appHeight;
 float imageDivX, imageDivY, imageDivWidth, imageDivHeight;
 float imageXChanged, imageYChanged, imageWidthChanged, imageHeightChanged;
 //
-PImage myFirstImage;
+PImage myFirstImage, mySecondImage;
 //
 color red=#FF0000, resetColour=#FFFFFF; //Use File / Tools / Color Selctor
 //
@@ -31,15 +32,22 @@ void setup() {
   String upArrow = "../../../../../../";
   String folders = "Lesson Dependancies Folder/Images/";
   String bike = "bike";
-  String fileExtension = ".jpg";
-  String myFirstImagePathway = upArrow + folders + bike + fileExtension;
+  String oldMan = "Old man portrait";
+  String fileExtensionJPG = ".jpg";
+  String fileExtensionPNG = ".png";
+  String myFirstImagePathway = upArrow + folders + bike + fileExtensionJPG;
+  String mySecondImagePathway = upArrow + folders + oldMan + fileExtensionPNG;
   println(myFirstImagePathway);
+  println(mySecondImagePathway);
   myFirstImage = loadImage( myFirstImagePathway );
+  mySecondImage = loadImage( mySecondImagePathway );
   int myFirstImageWidth = 860;
   int myFirstImageHeight = 529;
-  float imageAspectRatio_GreaterOne = ( myFirstImageWidth >= myFirstImageHeight ) ? float(myFirstImageWidth)/float(myFirstImageHeight) : float(myFirstImageHeight)/float(myFirstImageWidth) ; // Choice x / for bigger or smaller
+  int mySecondImageWidth = 2800;
+  int mySecondImageHeight = 3500;
+  float imageAspectRatio_GreaterOne = ( mySecondImageWidth >= mySecondImageHeight ) ? float(mySecondImageWidth)/float(mySecondImageHeight) : float(mySecondImageHeight)/float(mySecondImageWidth) ; // Choice x / for bigger or smaller
   println(imageAspectRatio_GreaterOne);
-  Boolean imageLandscape = ( myFirstImageWidth >= myFirstImageHeight ) ? true : false ;
+  Boolean imageLandscape = ( mySecondImageWidth >= mySecondImageHeight ) ? true : false ;
   /*Only the image geometry needs to be know for the algorithm below
    - When the Geometries change, big dimension to small dimension must happen or image will not fit
    - still need an ERROR-Check with oddly shaped landscape-landscape, protrait-portrait resampling
@@ -47,22 +55,23 @@ void setup() {
    */
   if ( imageLandscape==true ) {
     imageWidthChanged = imageDivWidth;
-    imageHeightChanged = ( myFirstImageWidth >= imageDivWidth ) ? imageWidthChanged/imageAspectRatio_GreaterOne : imageWidthChanged*imageAspectRatio_GreaterOne ;
+    imageHeightChanged = ( mySecondImageWidth > imageDivWidth ) ? imageWidthChanged/imageAspectRatio_GreaterOne : imageWidthChanged*imageAspectRatio_GreaterOne ; //CAUTION: square geometry ERROR
     if ( imageHeightChanged > imageDivHeight ) { //ERROR Catch
-      println("Image Aspect Ratio algorithm ERROR");
+      println("Image Aspect Ratio algorithm ERROR"); //After Proceudres, catch with Height-Calc-First Algorithm
       exit();
     }
     //TOP BOTTOM CENTERED
-    imageXChanged = imageDivX;
-    float leftOverHeight = ( imageDivHeight - imageHeightChanged ) *1/2;
-    imageYChanged = imageDivY + leftOverHeight ;
   } else {
     imageHeightChanged = imageDivHeight;
-    imageWidthChanged = ( myFirstImageHeight >= imageDivHeight ) ? imageHeightChanged/imageAspectRatio_GreaterOne : imageHeightChanged*imageAspectRatio_GreaterOne ;
+    imageWidthChanged = ( mySecondImageHeight >= imageDivHeight ) ? imageHeightChanged/imageAspectRatio_GreaterOne : imageHeightChanged*imageAspectRatio_GreaterOne ;
     if ( imageWidthChanged > imageDivWidth ) { //ERROR Catch
       println("Image Aspect Ratio algorithm ERROR");
       exit();
     }
+    //LEFT RIGHT CENTERED
+    imageYChanged = imageDivY;
+    float leftOverWidth = ( imageDivWidth - imageWidthChanged ) *1/2;
+    imageXChanged = imageDivX + leftOverWidth ;
   }
   //
   //DIV red resetColour
@@ -71,7 +80,7 @@ void setup() {
   fill(resetColour);
   //
   //Prototype Images
-  image( myFirstImage, imageXChanged, imageYChanged, imageWidthChanged, imageHeightChanged );
+  image( mySecondImage, imageXChanged, imageYChanged, imageWidthChanged, imageHeightChanged );
   //
 } //End setup
 //

@@ -26,9 +26,9 @@ PFont titleFont = createFont ("Harrington", 55); //Verify font exists
 //Tools / Create Font / Find Font / Do Not Press "OK", known bug
 //
 //Layout with a rect()
-float titleX = appWidth*1/5;
+float titleX = appWidth*1.5/5;
 float titleY = appHeight*1/10;
-float titleWidth = appWidth*3/5; //Origonal 60% = 3/5
+float titleWidth = appWidth*2/5; //Origonal 40% = 2/5
 float titleHeight = appHeight*1/10; //Origonal 10% = 1/10 //Alternative, enter actual pixel number
 rect(titleX, titleY, titleWidth, titleHeight);
 //

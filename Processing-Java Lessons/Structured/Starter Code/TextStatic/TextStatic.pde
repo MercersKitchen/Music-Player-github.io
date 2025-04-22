@@ -33,7 +33,7 @@ rect(titleX, titleY, titleWidth, titleHeight);
 //Font Size relative to rect(height)
 float fontSize = 52; //Change the number until it fits, largest font size, int only to ease guessing
 println("Font Size:", fontSize );
-
+//
 /* Aspect Ratio Manipulations (changes to variables)
  - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
  - Rewriting fontSize with formulae

@@ -8,8 +8,6 @@
 //
 String title = "Wahoo!";
 //
-
-//
 //Display
 //fullScreen();
 size(700, 500);

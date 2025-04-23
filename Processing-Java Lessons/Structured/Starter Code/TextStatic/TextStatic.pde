@@ -6,13 +6,14 @@
  - Reminder: use print() & println() to inspect variables
  */
 //
-String title = "Wahoo!";
+String title = "Wahoo! Spring is Awesome";
 //
 //Display
 //fullScreen();
 size(700, 500);
 int appWidth = width; //displayWidth
 int appHeight = height; //displayHeight
+int shorterSide = ( appWidth >= appHeight ) ? appHeight : appWidth ; //Landscape, Portrait, & Square
 //
 //println("Start of Console");
 //Fonts from OS
@@ -20,6 +21,7 @@ int appHeight = height; //displayHeight
   String[] fontList = PFont.list(); //To list all fonts available on system
  printArray(fontList); //For listing all possible fonts to choose, then createFont
  */
+float fontSize = shorterSide; //changed int to float for strongly formatted language
 PFont titleFont = createFont ("Harrington", 55); //Verify font exists
 //Tools / Create Font / Find Font / Do Not Press "OK", known bug
 //
@@ -31,17 +33,20 @@ float titleHeight = appHeight*1/10; //Origonal 10% = 1/10 //Alternative, enter a
 rect(titleX, titleY, titleWidth, titleHeight);
 //
 //Font Size relative to rect(height)
-float fontSize = 52; //Change the number until it fits, largest font size, int only to ease guessing
+fontSize = 52; //Change the number until it fits, largest font size, int only to ease guessing
 println("Font Size:", fontSize );
 //
 /* Aspect Ratio Manipulations (changes to variables)
  - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
  - Rewriting fontSize with formulae
+ - Done before text(String) so all fonts same size
  */
 float harringtonAspectRatio = fontSize / titleHeight;
 fontSize = titleHeight*harringtonAspectRatio;
 println("Aspect Ratio:", harringtonAspectRatio);
 println(); //Skip a line
+//
+// IF with Assignment Operator decreasing percent to illustrate WHILE
 //
 //Minimum Lines of code to format and draw text with colour
 color purpleInk = #2C08FF;

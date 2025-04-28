@@ -259,7 +259,7 @@ void setup() {
   fill(purpleInk); //Ink, hexidecimal copied from Color Selector
   textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-  textFont(titleFont, fontSize); //see variable note
+  textFont(appFont, fontSize); //see variable note
   //textFont() has option to combine font declaration with textSize()
   //
   //Drawing Text
@@ -277,14 +277,14 @@ void setup() {
    */
   //
   //Option, drawing ```title``` v playListMetaData[currentSong].title()
-  text(title, titleX, titleY, titleWidth, titleHeight);
+  text(playListMetaData[currentSong].title(), songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight);
   color whiteInk = #FFFFFF;
   fill(whiteInk); //reset
   //
   //Aspect Ratio of Specfic Font, calculations only to be entered in variables above
-  println( "Text Width:", textWidth( playListMetaData[currentSong].title() ), "v rectWidth:", titleWidth ); //Always smaller or cut off, if text is drawn, always drawn
-  println( "Text Height:", fontSize, "v. rectHeight:", titleHeight ); //largest fontSize that will be draw, relative to rectHeight
-  println( "Harrington Aspect Ratio ( fontSize/rect(height) ):", fontSize/titleHeight ); //Remember casting
+  println( "Text Width:", textWidth( playListMetaData[currentSong].title() ), "v rectWidth:", songTitleDivWidth ); //Always smaller or cut off, if text is drawn, always drawn
+  println( "Text Height:", fontSize, "v. rectHeight:", songTitleDivHeight ); //largest fontSize that will be draw, relative to rectHeight
+  println( "Harrington Aspect Ratio ( fontSize/rect(height) ):", fontSize/songTitleDivHeight ); //Remember casting
   //
   //Print What is available on a particular song
   //See Image / Properties / Details

@@ -8,7 +8,7 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim; //initates entire class
-int numberOfSongs = 1; //Best Practice
+int numberOfSongs = 8; //Best Practice
 //int numberOfSoundEffects = ???
 AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
 //AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
@@ -62,14 +62,64 @@ void setup() {
   String pongWorld = "Pong World";
   //Add all files, CS20 Review is special OS Java Library
   //Including the reading of the number of files in the array
+  //Alphebetical order, same as OS ordering files
+  String beatYourCompetition = "Beat_Your_Competition";
+  String cycles = "Cycles";
+  String eureka = "Eureka";
+  String ghostWalk = "Ghost_Walk";
+  String groove = "groove";
+  String newsroom = "Newsroom";
+  String startYourEngines = "Start_Your_Engines";
+  String theSimplest = "The_Simplest";
+  //Able to Music Load Faster with an Array
+  //
   String fileExtension_mp3 = ".mp3";
   //
-  String musicDirectory = "../../../../" + lessonDependanciesFolder + musicPong;
-  String file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
-  //println( file );
-  //Create a FOR loop to loadFile() a changing songName
+  String musicDirectory = "../../" + lessonDependanciesFolder + musicAll; //musicPong
+  //Create a FOR loop to loadFile() a changing songName, Create a Procedure with two Arrays first
+  String file = musicDirectory + beatYourCompetition + fileExtension_mp3; //relative pathway or directory
+  //String file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
+  currentSong=0;
   playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  playListMetaData[currentSong] = playList[currentSong].getMetaData();
+  //
+  currentSong++;
+  file = musicDirectory + cycles + fileExtension_mp3; //relative pathway or directory
+  playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  playListMetaData[currentSong] = playList[currentSong].getMetaData();
+  //
+  currentSong++;
+  file = musicDirectory + eureka + fileExtension_mp3; //relative pathway or directory
+  playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  playListMetaData[currentSong] = playList[currentSong].getMetaData();
+  //
+  currentSong++;
+  file = musicDirectory + ghostWalk + fileExtension_mp3; //relative pathway or directory
+  playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  playListMetaData[currentSong] = playList[currentSong].getMetaData();
+  //
+  currentSong++;
+  file = musicDirectory + groove + fileExtension_mp3; //relative pathway or directory
+  playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  playListMetaData[currentSong] = playList[currentSong].getMetaData();
+  //
+  currentSong++;
+  file = musicDirectory + newsroom + fileExtension_mp3; //relative pathway or directory
+  playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  playListMetaData[currentSong] = playList[currentSong].getMetaData();
+  //
+  currentSong++;
+  file = musicDirectory + startYourEngines + fileExtension_mp3; //relative pathway or directory
+  playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  playListMetaData[currentSong] = playList[currentSong].getMetaData();
+  //
+  currentSong++;
+  file = musicDirectory + theSimplest + fileExtension_mp3; //relative pathway or directory
+  playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  playListMetaData[currentSong] = playList[currentSong].getMetaData();
+  //
   //Music Testing
+  currentSong=0;
   //playList[currentSong].play();
   //
   //println("Start of Console");
@@ -79,7 +129,7 @@ void setup() {
    printArray(fontList); //For listing all possible fonts to choose, then createFont
    */
   appFont = createFont ("Harrington", appShortSide); //Verify font exists
-  //Tools / Create Font / Find Font / Do Not Press "OK", known bug
+  //Tools / Create Font / Find Font / Do Not Press "OK", known bug, cannot mix loadFont() and createFont()
   //
   //Population
   quitX = appWidth - appShortSide*1/20;
@@ -97,7 +147,7 @@ void setup() {
   //
   //rect(DIV) is a square to start, by design
   int numberOfButtons = 13; //Half a button on either side as space, Center Button is Play
-  println("Button Width:", appWidth/numberOfButtons);
+  //println("Button Width:", appWidth/numberOfButtons);
   int widthOfButton = appWidth/numberOfButtons;
   int beginningButtonSpace = widthOfButton;
   int buttonY = appHeight*3/5;
@@ -197,7 +247,7 @@ void setup() {
   songPositionDivX = musicSongSpaceX;
   songPositionDivY = musicSongSpaceY;
   songPositionDivWidth = musicSongSpaceWidth*1/5;
-  songPositionDivHeight = musicSongSpaceHeight*2/5;  
+  songPositionDivHeight = musicSongSpaceHeight*2/5;
   timeRemainingDivX = musicSongSpaceX + musicSongSpaceWidth*3/5;
   timeRemainingDivY = musicSongSpaceY + musicSongSpaceHeight*3/5;
   timeRemainingDivWidth = musicSongSpaceWidth*1/5;
@@ -243,7 +293,7 @@ void setup() {
   //
   //Font Size relative to rect(height)
   float fontSize = 52; //Change the number until it fits, largest font size, int only to ease guessing
-  println("Font Size:", fontSize );
+  //println("Font Size:", fontSize );
   //
   /* Aspect Ratio Manipulations (changes to variables)
    - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
@@ -251,8 +301,8 @@ void setup() {
    */
   float harringtonAspectRatio = fontSize / songTitleDivHeight;
   fontSize = songTitleDivHeight*harringtonAspectRatio;
-  println("Aspect Ratio:", harringtonAspectRatio);
-  println(); //Skip a line
+  //println("Aspect Ratio:", harringtonAspectRatio);
+  //println(); //Skip a line
   //
   //Minimum Lines of code to format and draw text with colour
   color purpleInk = #2C08FF;
@@ -265,16 +315,15 @@ void setup() {
   //Drawing Text
   //Option draw ```title```
   //Decrease Font when wrapped around
-  /* while ( titleWidth < textWidth( playListMetaData[currentSong].title() ) ) { //decrease font
-   //exit();
-   println("here"); //infinte loop, problem with WHILE, similar to draw()
-   //Nothing Else works
-   //
-   fontSize *= 0.99; //Assignment Operator  //fontSize = fontSize*0.99;
-   //Update WHILE Conditional with fontSize
-   textFont(titleFont, fontSize);
-   } //End Wrap-Around Notification
-   */
+  while ( songTitleDivWidth < textWidth( playListMetaData[currentSong].title() ) ) { //decrease font
+    //exit();
+    //println("here"); //infinte loop, problem with WHILE, similar to draw()
+    //Nothing Else works
+    //
+    fontSize *= 0.99; //Assignment Operator  //fontSize = fontSize*0.99;
+    //Update WHILE Conditional with fontSize
+    textFont(appFont, fontSize);
+  } //End Wrap-Around Notification
   //
   //Option, drawing ```title``` v playListMetaData[currentSong].title()
   text(playListMetaData[currentSong].title(), songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight);
@@ -282,9 +331,9 @@ void setup() {
   fill(whiteInk); //reset
   //
   //Aspect Ratio of Specfic Font, calculations only to be entered in variables above
-  println( "Text Width:", textWidth( playListMetaData[currentSong].title() ), "v rectWidth:", songTitleDivWidth ); //Always smaller or cut off, if text is drawn, always drawn
-  println( "Text Height:", fontSize, "v. rectHeight:", songTitleDivHeight ); //largest fontSize that will be draw, relative to rectHeight
-  println( "Harrington Aspect Ratio ( fontSize/rect(height) ):", fontSize/songTitleDivHeight ); //Remember casting
+  //println( "Text Width:", textWidth( playListMetaData[currentSong].title() ), "v rectWidth:", songTitleDivWidth ); //Always smaller or cut off, if text is drawn, always drawn
+  //println( "Text Height:", fontSize, "v. rectHeight:", songTitleDivHeight ); //largest fontSize that will be draw, relative to rectHeight
+  //println( "Harrington Aspect Ratio ( fontSize/rect(height) ):", fontSize/songTitleDivHeight ); //Remember casting
   //
   //Print What is available on a particular song
   //See Image / Properties / Details
@@ -308,15 +357,17 @@ void setup() {
   //
 } //End setup
 //
-void draw() {} //End draw
+void draw() {
+} //End draw
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+} //End mousePressed
 //
 void keyPressed() {
   /* Key Board Short Cuts ... learning what the Music Buttons could be
    Note: CAP Lock with ||
    if ( key==? || key==? ) ; //'' only
-   - 
+   -
    if ( key==CODED || keyCode==SpecialKey ) ; //Special Keys abriviated CAPS
    All Music Player Features are built out of these Minim AudioPlayer() functions
    .isPlaying()
@@ -329,7 +380,7 @@ void keyPressed() {
    .skip()
    .unmute()
    .mute()
-   - 
+   -
    Lesson Music Button Features based on single, double, and spamming taps
    - Play
    - Pause
@@ -342,13 +393,13 @@ void keyPressed() {
    - Next Song
    - Previous Song
    - Shuffle
-   - 
+   -
    - Advanced Buttons & Combinations
    - Play-Pause-Stop
    - Auto Play
    - Random Song
    */
-   //if ( key=='P' || key=='p' ) playList[currentSong].play(); //Simple Play, no double tap possible
+  //if ( key=='P' || key=='p' ) playList[currentSong].play(); //Simple Play, no double tap possible
   //
   if ( key=='P' || key=='p' ) playList[currentSong].loop(0); //Simple Play, double tap possible
   /* Note: double tap is automatic rewind, no pause

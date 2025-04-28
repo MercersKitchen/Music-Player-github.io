@@ -22,5 +22,7 @@ Additional Notes
 - Procedure for Text
 - Images: multiple images to array (data structures)
 - Draw: button combinations to erase other 2-d shapes or images
+- Automatic Pathways using sketchPath() or similar
+- 
 
 ---

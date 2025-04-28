@@ -1,6 +1,7 @@
 //Dynamic Programming v Static
 //
 //Library - Minim
+//Add Library in IDE and Code
 //
 //Global Variables
 //

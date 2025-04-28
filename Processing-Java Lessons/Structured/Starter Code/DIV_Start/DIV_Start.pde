@@ -18,11 +18,12 @@ void setup() {
   imageHeight = displayHeight*0.15;
   //
   //rect(X, Y Width, Height);
+  rect(imageX, imageY, imageWidth, imageHeight);
   //
 } //End setup
 //
 void draw() {
-  rect(imageX, imageY, imageWidth, imageHeight);
+  //Empty draw()
 } //End draw
 //
 void mousePressed() {} //End mousePressed

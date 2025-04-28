@@ -90,3 +90,15 @@ Data Structures
 TBA: GUI Overlap and difficulty reading it
 
 ---
+
+Grading & APP Ideas
+- LIbrary
+- Play Song
+- All DIVs
+- 2D Shapes
+- Music Functions
+- Buttons
+- Images
+- Text
+
+---

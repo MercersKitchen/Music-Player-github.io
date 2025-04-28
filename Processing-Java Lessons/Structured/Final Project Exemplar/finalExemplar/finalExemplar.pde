@@ -46,15 +46,15 @@ float fontSize;
 //
 void setup() {
   //Display
-  fullScreen();
-  int appWidth = displayWidth;
-  int appHeight = displayHeight;
+  //fullScreen();
+  size(700, 500);
+  int appWidth = width; //displayWidth
+  int appHeight = height; //displayHeight
   int appShortSide = ( appWidth < appHeight ) ? appWidth : appHeight ;
   //
   //Music Loading - STRUCTURED Review
   minim = new Minim(this);
   String lessonDependanciesFolder = "Lesson Dependancies Folder/";
-  String musicPathway = "Music Pong/";
   String musicPong = "Music Pong/";
   String musicAll = "Music All/";
   //Note: Download music and sound effects, then design your player with images, text, and 2D shapes
@@ -64,9 +64,9 @@ void setup() {
   //Including the reading of the number of files in the array
   String fileExtension_mp3 = ".mp3";
   //
-  String musicDirectory = "../../../../" + lessonDependanciesFolder + musicPathway;
+  String musicDirectory = "../../../../" + lessonDependanciesFolder + musicPong;
   String file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
-  println( file );
+  //println( file );
   //Create a FOR loop to loadFile() a changing songName
   playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
   //Music Testing
@@ -78,7 +78,7 @@ void setup() {
   String[] fontList = PFont.list(); //To list all fonts available on system
    printArray(fontList); //For listing all possible fonts to choose, then createFont
    */
-  appFont = createFont ("Harrington", 55); //Verify font exists
+  appFont = createFont ("Harrington", appShortSide); //Verify font exists
   //Tools / Create Font / Find Font / Do Not Press "OK", known bug
   //
   //Population

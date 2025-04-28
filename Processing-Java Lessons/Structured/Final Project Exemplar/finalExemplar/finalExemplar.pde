@@ -12,6 +12,7 @@ int numberOfSongs = 1; //Best Practice
 //int numberOfSoundEffects = ???
 AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
 //AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
+AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
 //
 float quitX, quitY, quitWidth, quitHeight;
@@ -33,13 +34,22 @@ float songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight;
 float timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight;
 float totalTimeDivX, totalTimeDivY, totalTimeDivWidth, totalTimeDivHeight;
 //Button Variables after
+float stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight;
+float playX1, playY1, playX2, playY2, playX3, playY3;
+float fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3, fastForwardY3;
+float fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6;
+float pauseX1, pauseY1, pauseWidth1, pauseHeight1;
+float pauseX2, pauseY2, pauseWidth2, pauseHeight2;
 //
+PFont appFont;
+float fontSize;
 //
 void setup() {
   //Display
   fullScreen();
   int appWidth = displayWidth;
   int appHeight = displayHeight;
+  int appShortSide = ( appWidth < appHeight ) ? appWidth : appHeight ;
   //
   //Music Loading - STRUCTURED Review
   minim = new Minim(this);
@@ -62,11 +72,20 @@ void setup() {
   //Music Testing
   //playList[currentSong].play();
   //
+  //println("Start of Console");
+  //Fonts from OS
+  /*
+  String[] fontList = PFont.list(); //To list all fonts available on system
+   printArray(fontList); //For listing all possible fonts to choose, then createFont
+   */
+  appFont = createFont ("Harrington", 55); //Verify font exists
+  //Tools / Create Font / Find Font / Do Not Press "OK", known bug
+  //
   //Population
-  quitX = appWidth - shortSide*1/20;
+  quitX = appWidth - appShortSide*1/20;
   quitY = 0;
-  quitWidth = shortSide*1/20;
-  quitHeight = shortSide*1/20;
+  quitWidth = appShortSide*1/20;
+  quitHeight = appShortSide*1/20;
   imageDivX = appWidth*1/4;
   imageDivY = appHeight*1/5;
   imageDivWidth = appWidth*1/2;
@@ -76,6 +95,7 @@ void setup() {
   songTitleDivWidth = appWidth*1/2;
   songTitleDivHeight = appHeight*1/10;
   //
+  //rect(DIV) is a square to start, by design
   int numberOfButtons = 13; //Half a button on either side as space, Center Button is Play
   println("Button Width:", appWidth/numberOfButtons);
   int widthOfButton = appWidth/numberOfButtons;
@@ -85,6 +105,13 @@ void setup() {
   stopDivY = buttonY;
   stopDivWidth = widthOfButton;
   stopDivHeight = widthOfButton;
+  //
+  //STOP BUTTON
+  stopButtonX = stopDivX + stopDivWidth*1/4;
+  stopButtonY = stopDivY + stopDivHeight*1/4;
+  stopButtonWidth = widthOfButton*1/2;
+  stopButtonHeight = widthOfButton*1/2;
+  //
   muteDivX = beginningButtonSpace + widthOfButton*1;
   muteDivY = buttonY;
   muteDivWidth = widthOfButton;
@@ -101,10 +128,30 @@ void setup() {
   pauseDivY = buttonY;
   pauseDivWidth = widthOfButton;
   pauseDivHeight = widthOfButton;
+  //
+  //Pause Button
+  pauseX1 = pauseDivX + pauseDivWidth*1/4;
+  pauseY1 = pauseDivY + pauseDivHeight*1/4;
+  pauseWidth1 = pauseDivWidth*1/8;
+  pauseHeight1 = pauseDivHeight*1/2;
+  pauseX2 = pauseDivX + pauseDivWidth*5/8;
+  pauseY2 = pauseDivY + pauseDivHeight*1/4;
+  pauseWidth2 = pauseDivWidth*1/8;
+  pauseHeight2 = pauseDivHeight*1/2;
+  //
   playDivX = beginningButtonSpace + widthOfButton*5; //TEACHER Only" manipulate this number to draw simulate all buttons
   playDivY = buttonY;
   playDivWidth = widthOfButton;
   playDivHeight = widthOfButton;
+  //
+  //Play Button
+  playX1 = playDivX + playDivWidth*1/4;
+  playY1 = playDivY + playDivHeight*1/4;
+  playX2 = playDivX + playDivWidth*3/4;
+  playY2 = playDivY + playDivHeight*1/2;
+  playX3 = playDivX + playDivWidth*1/4;
+  playY3 = playDivY + playDivHeight*3/4;
+  //
   loopOnceDivX = beginningButtonSpace + widthOfButton*6;
   loopOnceDivY = buttonY;
   loopOnceDivWidth = widthOfButton;
@@ -117,6 +164,21 @@ void setup() {
   fastForwardDivY = buttonY;
   fastForwardDivWidth = widthOfButton;
   fastForwardDivHeight = widthOfButton;
+  //
+  //Fast Forward Button
+  fastForwardX1 = fastForwardDivX + fastForwardDivWidth*1/4;
+  fastForwardY1 = fastForwardDivY + fastForwardDivHeight*1/4;
+  fastForwardX2 = fastForwardDivX + fastForwardDivWidth*1/2;
+  fastForwardY2 = fastForwardDivY + fastForwardDivHeight*1/2;
+  fastForwardX3 = fastForwardDivX + fastForwardDivWidth*1/4;
+  fastForwardY3 = fastForwardDivY + fastForwardDivHeight*3/4;
+  fastForwardX4 = fastForwardDivX + fastForwardDivWidth*1/2;
+  fastForwardY4 = fastForwardDivY + fastForwardDivHeight*1/4;
+  fastForwardX5 = fastForwardDivX + fastForwardDivWidth*3/4;
+  fastForwardY5 = fastForwardDivY + fastForwardDivHeight*1/2;
+  fastForwardX6 = fastForwardDivX + fastForwardDivWidth*1/2;
+  fastForwardY6 = fastForwardDivY + fastForwardDivHeight*3/4;
+  //
   nextDivX = beginningButtonSpace + widthOfButton*9;
   nextDivY = buttonY;
   nextDivWidth = widthOfButton;
@@ -151,7 +213,7 @@ void setup() {
   timeBarDivHeight = musicSongSpaceHeight*1/5;
   //
   //DIVs
-  //rect(X, Y Width, Height)
+  //rect(X, Y, Width, Height)
   rect(quitX, quitY, quitWidth, quitHeight);
   rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
   rect(stopDivX, stopDivY, stopDivWidth, stopDivHeight);  //*0
@@ -170,6 +232,79 @@ void setup() {
   rect(timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight);
   rect(timeRemainingDivX, timeRemainingDivY, timeRemainingDivWidth, timeRemainingDivHeight);
   rect(totalTimeDivX, totalTimeDivY, totalTimeDivWidth, totalTimeDivHeight);
+  //
+  //rect(timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight);
+  rect(stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight);
+  triangle(playX1, playY1, playX2, playY2, playX3, playY3);
+  triangle(fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3, fastForwardY3);
+  triangle(fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6);
+  rect(pauseX1, pauseY1, pauseWidth1, pauseHeight1);
+  rect(pauseX2, pauseY2, pauseWidth2, pauseHeight2);
+  //
+  //Font Size relative to rect(height)
+  float fontSize = 52; //Change the number until it fits, largest font size, int only to ease guessing
+  println("Font Size:", fontSize );
+  //
+  /* Aspect Ratio Manipulations (changes to variables)
+   - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
+   - Rewriting fontSize with formulae
+   */
+  float harringtonAspectRatio = fontSize / songTitleDivHeight;
+  fontSize = songTitleDivHeight*harringtonAspectRatio;
+  println("Aspect Ratio:", harringtonAspectRatio);
+  println(); //Skip a line
+  //
+  //Minimum Lines of code to format and draw text with colour
+  color purpleInk = #2C08FF;
+  fill(purpleInk); //Ink, hexidecimal copied from Color Selector
+  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
+  textFont(titleFont, fontSize); //see variable note
+  //textFont() has option to combine font declaration with textSize()
+  //
+  //Drawing Text
+  //Option draw ```title```
+  //Decrease Font when wrapped around
+  /* while ( titleWidth < textWidth( playListMetaData[currentSong].title() ) ) { //decrease font
+   //exit();
+   println("here"); //infinte loop, problem with WHILE, similar to draw()
+   //Nothing Else works
+   //
+   fontSize *= 0.99; //Assignment Operator  //fontSize = fontSize*0.99;
+   //Update WHILE Conditional with fontSize
+   textFont(titleFont, fontSize);
+   } //End Wrap-Around Notification
+   */
+  //
+  //Option, drawing ```title``` v playListMetaData[currentSong].title()
+  text(title, titleX, titleY, titleWidth, titleHeight);
+  color whiteInk = #FFFFFF;
+  fill(whiteInk); //reset
+  //
+  //Aspect Ratio of Specfic Font, calculations only to be entered in variables above
+  println( "Text Width:", textWidth( playListMetaData[currentSong].title() ), "v rectWidth:", titleWidth ); //Always smaller or cut off, if text is drawn, always drawn
+  println( "Text Height:", fontSize, "v. rectHeight:", titleHeight ); //largest fontSize that will be draw, relative to rectHeight
+  println( "Harrington Aspect Ratio ( fontSize/rect(height) ):", fontSize/titleHeight ); //Remember casting
+  //
+  //Print What is available on a particular song
+  //See Image / Properties / Details
+  println();
+  println( "File Name: " + playListMetaData[currentSong].fileName() );
+  println( "Length (in milliseconds): " + playListMetaData[currentSong].length() );
+  println( "Title: " + playListMetaData[currentSong].title() );
+  println( "Author: " + playListMetaData[currentSong].author() );
+  println( "Album: " + playListMetaData[currentSong].album() );
+  println( "Date: " + playListMetaData[currentSong].date() );
+  println( "Comment: " + playListMetaData[currentSong].comment() );
+  println( "Lyrics: " + playListMetaData[currentSong].lyrics() );
+  println( "Track: " + playListMetaData[currentSong].track() );
+  println( "Genre: " + playListMetaData[currentSong].genre() );
+  println( "Copyright: " + playListMetaData[currentSong].copyright() );
+  println( "Disc: " + playListMetaData[currentSong].disc() );
+  println( "Composer: " + playListMetaData[currentSong].composer() );
+  println( "Orchestra: " + playListMetaData[currentSong].orchestra() );
+  println( "Publisher: " + playListMetaData[currentSong].publisher() );
+  println( "Encoded: " + playListMetaData[currentSong].encoded() );
   //
 } //End setup
 //

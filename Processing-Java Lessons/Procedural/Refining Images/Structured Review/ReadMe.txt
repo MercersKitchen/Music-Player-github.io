@@ -1,1 +1,0 @@
-Finishes Algorithm to self-completing

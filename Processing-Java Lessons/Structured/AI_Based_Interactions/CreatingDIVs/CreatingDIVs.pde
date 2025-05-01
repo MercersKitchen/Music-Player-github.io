@@ -1,15 +1,18 @@
-/* Library Notes
-  - File / Sketch / Import Library / Manage Libraries
-  - We use Minim for Sound and Sound Effects
-  - Able to Google-search libraries to make your project easier
-  - Documentation: https://code.compartmental.net/minim/
-  - Specific Class: https://code.compartmental.net/minim/audioplayer_class_audioplayer.html
-  - Specific Class: https://code.compartmental.net/minim/audiometadata_class_audiometadata.html
-  
-  ** You are now able to research any Processing-Java Library ... or Any Java Library from the internet **
-  - Processing-Java Libraries must be installed into the IDE
-  - Java Libraries simply require the 'import' declaration
-*/
+/* Drawing DIVs, Instructions
+ - Note: Quit Button is Active
+ - Click and Hold a Rectangle
+ - Move it to where you want it on the screen
+ - Release the rectangle
+ - Repeat to create all DIVs
+ - Key Board to Activate MousePressed Delete
+ //
+ - Review data array date structure
+ - Intermetidate Level: rewrite to access specific arrays
+ - Introductory Level: rewrite to primitive float variables
+ //
+ - Note: this program illustrates how an AI might deliever an output
+ - Written at an Intermeidate Level
+ */
 //Library - Minim
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -26,54 +29,112 @@ AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
 //AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
 //
-float musicMenuX, musicMenuY, musicMenuWidth, musicMenuHeight;
+color colour, black=#000000, red=#FF0000, white=#FFFFFF;
+float beginningRectButtonX, beginningRectButtonY, beginningRectButtonWidth, beginningRectButtonHeight;
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+int rectNumber=0;
+float newX, newY, newWidth, newHeight;
+Boolean drawNewRect=false;
+float[] divX = new float[rectNumber+1];
+float[] divY = new float[rectNumber+1];
+float[] divWidth = new float[rectNumber+1];
+float[] divHeight = new float[rectNumber+1];
 //
 void setup() {
   //Display
   fullScreen();
   int appWidth = displayWidth;
   int appHeight = displayHeight;
+  int shorterSide = ( appWidth >= appHeight ) ? appHeight : appWidth ;
   //
   //Music Loading - STRUCTURED Review
   minim = new Minim(this);
-  String musicPathway = "Music Pong/";
+  String lessonDependanciesFolder = "Lesson Dependancies Folder/";
   String musicPong = "Music Pong/";
-  String musicAll = "Music All/";
-  //Note: Download music and sound effects, then design your player with images, text, and 2D shapes
-  //See Google Search: Atari pong logo free image download
   String pongWorld = "Pong World";
-  //Add all files, CS20 Review is special OS Java Library
-  //Including the reading of the number of files in the array
   String fileExtension_mp3 = ".mp3";
   //
-  String musicDirectory = "../../../../" + musicPathway + musicPong;
+  String musicDirectory = "../../../../" + lessonDependanciesFolder + musicPong;
   String file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
-  println( file );
-  //Create a FOR loop to loadFile() a changing songName
   playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
   //Music Testing
-  //playList[currentSong].play();
+  playList[currentSong].play();
   //
-  //
-  musicMenuX = appWidth*1/4;
-  musicMenuY = appHeight*1/4;
-  musicMenuWidth = appWidth*1/2;
-  musicMenuHeight = appHeight*1/2;
+  //Population
+  newY = newX = beginningRectButtonY = beginningRectButtonX = shorterSide*0;
+  newWidth = newHeight = beginningRectButtonHeight = beginningRectButtonWidth = shorterSide*1/10;
+  quitButtonY = shorterSide*0;
+  quitButtonHeight = quitButtonWidth = shorterSide*1/20;
+  quitButtonX = appWidth - (shorterSide*1/20);
   //
   //rect(X, Y Width, Height);
-  rect(musicMenuX, musicMenuY, musicMenuWidth, musicMenuHeight);
+  rect(beginningRectButtonX, beginningRectButtonY, beginningRectButtonWidth, beginningRectButtonHeight);
+  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   //
 } //End setup
 //
-void draw() {} //End draw
+void draw() {
+  background(black);
+  rect(beginningRectButtonX, beginningRectButtonY, beginningRectButtonWidth, beginningRectButtonHeight);
+  //
+  //drawingRect();
+  if ( drawNewRect==true ) {
+    newX = mouseX;
+    newY = mouseY;
+    rect( newX, newY, newWidth, newHeight );
+  }
+  printArray(divX);
+  while ( rectNumber>0) { // Placing New Rectangles
+    //
+    for ( int i=0; i<rectNumber; i++ ) {
+      rect( divX[i], divY[i], divWidth[i], divHeight[i] );
+      //
+    }
+  }//End New Rectangles Placed
+  //
+  //Misc
+  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
+    colour = red;
+  } else {
+    colour = white;
+  }
+  fill(colour);
+  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  fill(white);
+  //
+} //End draw
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+  //mouseX> && mouseX< && mouseY> && mouseY<
+  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
+    exit();
+  } //End Quit Button
+  if ( mouseX>beginningRectButtonX && mouseX<beginningRectButtonX+beginningRectButtonWidth && mouseY>beginningRectButtonY && mouseY<beginningRectButtonY+beginningRectButtonHeight ) {
+    //rectNumber++;
+    drawNewRect=true;
+    //rect(newX, newY, newWidth, newHeight);
+  } //End Rect() Grab
+} //End mousePressed
 //
+void mouseReleased() {
+  if ( drawNewRect==true ) {
+    divX[rectNumber] = newX;
+    divY[rectNumber] = newY;
+    divWidth[rectNumber] = newWidth;
+    divHeight[rectNumber] = newHeight;
+    drawNewRect = false;
+    rectNumber++;
+  } //End Placing Rectangle
+  //
+  //Change divWidth[rectNumber], divHeight[rectNumber]
+  //
+} //End Mouse Release
+//d
 void keyPressed() {
   /* Key Board Short Cuts ... learning what the Music Buttons could be
    Note: CAP Lock with ||
    if ( key==? || key==? ) ; //'' only
-   - 
+   -
    if ( key==CODED || keyCode==SpecialKey ) ; //Special Keys abriviated CAPS
    All Music Player Features are built out of these Minim AudioPlayer() functions
    .isPlaying()
@@ -86,7 +147,7 @@ void keyPressed() {
    .skip()
    .unmute()
    .mute()
-   - 
+   -
    Lesson Music Button Features based on single, double, and spamming taps
    - Play
    - Pause
@@ -99,7 +160,7 @@ void keyPressed() {
    - Next Song
    - Previous Song
    - Shuffle
-   - 
+   -
    - Advanced Buttons & Combinations
    - Play-Pause-Stop
    - Auto Play

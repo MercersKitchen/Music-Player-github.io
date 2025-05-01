@@ -78,12 +78,12 @@ void draw() {
   rect(beginningRectButtonX, beginningRectButtonY, beginningRectButtonWidth, beginningRectButtonHeight);
   //
   //drawingRect();
+  println(drawNewRect);
   if ( drawNewRect==true ) {
     newX = mouseX;
     newY = mouseY;
     rect( newX, newY, newWidth, newHeight );
   }
-  printArray(divX);
   while ( rectNumber>0) { // Placing New Rectangles
     //
     for ( int i=0; i<rectNumber; i++ ) {
@@ -122,8 +122,10 @@ void mouseReleased() {
     divY[rectNumber] = newY;
     divWidth[rectNumber] = newWidth;
     divHeight[rectNumber] = newHeight;
+    newX = newY = 0;
     drawNewRect = false;
     rectNumber++;
+    loop();
   } //End Placing Rectangle
   //
   //Change divWidth[rectNumber], divHeight[rectNumber]

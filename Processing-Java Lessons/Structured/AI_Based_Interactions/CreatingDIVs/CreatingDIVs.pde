@@ -67,9 +67,8 @@ void setup() {
   playList[currentSong].play();
   //
   //Population
-  newY = newX = beginningRectButtonY = beginningRectButtonX = shorterSide*0;
+  newY = newX = quitButtonY = beginningRectButtonY = beginningRectButtonX = shorterSide*0;
   newWidth = newHeight = beginningRectButtonHeight = beginningRectButtonWidth = shorterSide*1/10;
-  quitButtonY = shorterSide*0;
   quitButtonHeight = quitButtonWidth = shorterSide*1/20;
   quitButtonX = appWidth - (shorterSide*1/20);
   //
@@ -103,7 +102,6 @@ void draw() {
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   fill(white);
   //
-  printArray(divX);
 } //End draw
 //
 void mousePressed() {
@@ -119,9 +117,7 @@ void mousePressed() {
     quitDoubleClick=true;
   } //End Quit Button
   if ( mouseX>beginningRectButtonX && mouseX<beginningRectButtonX+beginningRectButtonWidth && mouseY>beginningRectButtonY && mouseY<beginningRectButtonY+beginningRectButtonHeight ) {
-    //rectNumber++;
     drawNewRect=true;
-    //rect(newX, newY, newWidth, newHeight);
   } //End Rect() Grab
   //
   //Resize Width & Height
@@ -153,7 +149,6 @@ void mouseReleased() {
     divY = append(divY, 0);
     divWidth = append(divWidth, 0);
     divHeight = append(divHeight, 0);
-    //
   } //End Placing Rectangle
   //
   if ( resizeWidth==true ) {
@@ -168,63 +163,13 @@ void mouseReleased() {
 } //End Mouse Release
 //
 void keyPressed() {
-  //divX = shorten(divX);
-  //divY = shorten(divY);
-  //divWidth = shorten(divWidth);
-  //divHeight = shorten(divHeight);
-  //rectNumber--;
-  /*
-  if ( deleteRectActivated==true ) {
-   //shorten()
-   
-   //println(deleteThisRect);
-   //
-   divX = arraySubsetDeletion(divX, deleteThisRect);
-   divY = arraySubsetDeletion(divY, deleteThisRect);
-   divWidth = arraySubsetDeletion(divWidth, deleteThisRect);
-   divHeight = arraySubsetDeletion(divHeight, deleteThisRect);
-   rectNumber--;
-   deleteRectActivated=false;
-   }
-   */
+  //Currently deletes most recent rectangle, nothing more
+  divX = shorten(divX);
+  divY = shorten(divY);
+  divWidth = shorten(divWidth);
+  divHeight = shorten(divHeight);
+  rectNumber--;
+  //
 } //End keyPressed
-/*
-float[] arraySubsetDeletion(float[] array, int deleteThisRect) {
- //int length = array.length-1;
- float[] arrayTemp1 = new float[array.length];
- int start = 0;
- if ( deleteThisRect == 0 ) {
- array = subset(array, 0);
- return array;
- }
- if ( deleteThisRect == 1 ) {
- array = subset(array, 0);
- return array;
- }
- array = subset(array, 1);
- return array;
- //
-/*
- println(length);
- 
- int endFirstHalfElements = deleteThisRect-1;
- int startSecondHalfElements = deleteThisRect+1;
- 
- if ( array.length>1 ) {
- arrayTemp1 = subset(array, start, endFirstHalfElements);
- } else {
- if ( deleteThisRect==0 ) array = subset(array, 1);
- if ( deleteThisRect==1 ) array = shorten(array);
- }
- if (array.length == 3 ) {
- if ( deleteThisRect==0 ) array = subset(array, 1);
- 
- } else {
- }
- printArray(arrayTemp1);
- float[] arrayTemp2 = subset(array, startSecondHalfElements, array.length-1 );
- return concat(arrayTemp1, arrayTemp2);
- } //End Array Subset Deletion
- */
 //
 // End Main Program

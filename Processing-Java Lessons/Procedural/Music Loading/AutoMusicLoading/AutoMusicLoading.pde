@@ -1,20 +1,3 @@
-/* Drawing DIVs, Instructions
- - Note: Quit Button is Active
- - Print Screen to save values and image, then double click the Quit Button
- - Click and Hold to draw a DIV
- - Move it to where you want it on the screen
- - Release the DIV
- - Click the DIV to resize, hold and move the mouse, release to change the size
- - Repeat to create all DIVs
- - Key Board to Activate MousePressed Delete
- //
- - Review data array date structure
- - Intermetidate Level: rewrite to access specific arrays
- - Introductory Level: rewrite to primitive float variables
- //
- - Note: this program illustrates how an AI might deliever an output
- - Written at an Intermeidate Level
- */
 //Library - Minim
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -46,22 +29,23 @@ void setup() {
   String lessonDependanciesFolder = "/../../../../Lesson Dependancies Folder/Music All/";
   //
   String musicDirectory = absolutePath + lessonDependanciesFolder;
-  File directory = new File(musicDirectory); //Uses Java Library
+  File directory = new File(musicDirectory); //Uses Java Library to create class (variables & code)
+  //A class is like an .mp3 that has music and text information
   File[] fileNames = directory.listFiles(); //Uses built in class to list all files
   String[] files = new String[fileNames.length]; //convert File to String for minim.loadFile()
   int i=0;
   if ( fileNames != null ) {
-    for ( File file : fileNames ) {
+    for ( File file : fileNames ) { //FOR EACH Loop, creates locate class
       files[i] = lessonDependanciesFolder + file.getName(); //print fileNames.getName() Object to String
-      i++;
+      //Note: getName() is built in code
+      i++; //iteration necessary here, not in regular FOR
     }
   }
-  printArray(files);
   currentSong=0;
-  playList = new AudioPlayer[fileNames.length];
+  playList = new AudioPlayer[fileNames.length]; //sets the array length
   while ( currentSong < fileNames.length ) {
     playList[ currentSong ] = minim.loadFile( files[ currentSong ] );
-    currentSong++;
+    currentSong++; //functions similar to FOR
   }
   currentSong=0;
   playList[ currentSong ].play();
@@ -69,7 +53,7 @@ void setup() {
 } //End setup
 //
 void draw() {
-  // Empty Draw
+  //Empty Draw
 } //End draw
 //
 void mousePressed() {

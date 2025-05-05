@@ -1,7 +1,7 @@
 Minim minim; //initates entire class
 int numberOfSongs = 1; //Best Practice
 //int numberOfSoundEffects = ???
-AudioPlayer[] playList;
+AudioPlayer[] playList; //length of array determined by reading the Music Folder
 //AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
 //

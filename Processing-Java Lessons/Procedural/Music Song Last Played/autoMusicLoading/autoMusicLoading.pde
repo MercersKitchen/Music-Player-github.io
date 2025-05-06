@@ -9,28 +9,39 @@ import ddf.minim.ugens.*;
 import java.io.File;
 //
 //Global Variables
+int appWidth, shorterSide;
+//
+String saveTxtPath_currentSong; //For Saving Last Known Song Played
+//
 Minim minim; //initates entire class
 int numberOfSongs = 1; //Best Practice
 //int numberOfSoundEffects = ???
 AudioPlayer[] playList; //length of array determined by reading the Music Folder
 //AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
-int currentSong = numberOfSongs - numberOfSongs; //ZERO
+int currentSong; //Reads .txt file to populate last known song
 //
 void setup() {
   //
   //fullScreen();
   size(700, 500);
-  int appWidth = width; //displayWidth
+  appWidth = width; //displayWidth
   int appHeight = height; //displayHeight
-  int shorterSide = int(comparisonReturnSmaller( float(appWidth), float(appHeight) ) );
+  shorterSide = int(comparisonReturnSmaller( float(appWidth), float(appHeight) ) );
+  //
+  //Saving Last Known Song Played
+  // Initialize the save file path
+  saveTxtPath_currentSong = sketchPath("currentSong.txt");
+  println(saveTxtPath_currentSong);
+  //
+  populationSetup();
   //
   minim = new Minim(this);
   String absolutePath = sketchPath();
-  println(absolutePath);
+  //println(absolutePath);
   String lessonDependanciesFolder = "/../../../../Lesson Dependancies Folder/Music All/";
   //
   String musicDirectory = absolutePath + lessonDependanciesFolder;
-  println(musicDirectory);
+  //println(musicDirectory);
   File directory = new File(musicDirectory); //Uses Java Library to create class (variables & code)
   //A class is like an .mp3 that has music and text information
   File[] fileNames = directory.listFiles(); //Uses built in class to list all files
@@ -43,7 +54,7 @@ void setup() {
       i++; //iteration necessary here, not in regular FOR
     }
   }
-  printArray(files);
+  //printArray(files);
   currentSong=0;
   playList = new AudioPlayer[fileNames.length]; //sets the array length
   while ( currentSong < fileNames.length ) {
@@ -51,16 +62,19 @@ void setup() {
     currentSong++; //functions similar to FOR
   }
   numberOfSongs = fileNames.length;
-  currentSong=0;
+  println("Loading currentSong Variable");
+  currentSong = loadCurrentSong();
+  println("Current Song is", currentSong+1, "of", numberOfSongs);
   playList[ currentSong ].play();
   //
 } //End setup
 //
 void draw() {
-  //Empty Draw
+  drawButtons();
 } //End draw
 //
 void mousePressed() {
+  mousePressedQuitButton();
 } //End mousePressed
 //
 void keyPressed() {
@@ -74,5 +88,17 @@ void keyPressed() {
   }
   playList[ currentSong ].play();
 } //End keyPressed
+//
+// Load the currentSong-value from a .txt file
+// String array illustrates more than one varaible can be saved as
+// Start-up preference
+int loadCurrentSong() {
+  String[] data = loadStrings(saveTxtPath_currentSong);
+  if (data != null && data.length > 0) {
+    println("Loaded current song: " + data[0]);
+    return int(data[0]);
+  }
+  return 0; // Default to the first song if no file exists
+}
 //
 // End Main Program

@@ -37,4 +37,8 @@ Additional Notes
   - Code can be called anytime independant of the varaibles used
 - TBA
 
+### Last Song Played
+- Saving Program State
+- Populating Preferences based on last read program game state
+
 ---

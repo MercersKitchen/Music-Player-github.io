@@ -34,9 +34,13 @@ void mousePressedQuitButton() {
 } //End Mouse Pressed Quit Button
 //
 void saveCurrentSong() {
-  String[] data = { str(currentSong) };
-  saveStrings(saveTxtPath_currentSong, data);
+  String[] number = { str(currentSong) }; //element ZERO
+  saveStrings(saveTxtPath_currentSong, number);
   println("Saved current song: " + currentSong);
+  String[] dataBoolean = { str(randomStart) };
+  saveStrings(saveTxtPath_randomStart, dataBoolean);
+  println("Saved Random Start: " + randomStart);
+  
 }// End Save currentSong
 //
 //End Buttons Subprogram

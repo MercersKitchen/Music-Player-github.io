@@ -1,6 +1,4 @@
 Boolean quitDoubleClick=false;
-float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
-color colour, black=#000000, red=#FF0000, white=#FFFFFF;
 //
 void drawButtons() {
   background(black);
@@ -21,22 +19,21 @@ void quitButton() {
   //
 } //End Quit Button
 //
-void mousePressedQuitButton() {
+void mouseInteractions() {
+  quitButton();
+} // End Mouse Interactions
+//
+void quitButton() {
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
     if ( quitDoubleClick==false ) {
       println("Saving Strings .txt");
+      //Prompt of small menu to Double Click Quit Button
       saveCurrentSong();
     }
     noLoop(); //First QUIT Click enables printScreen in OS
     if ( quitDoubleClick==true ) exit(); //Second QUIT Closes CANVAS
     quitDoubleClick=true;
   } //End Quit Button
-} //End Mouse Pressed Quit Button
+}//End Quit Button
 //
-void saveCurrentSong() {
-  String[] data = { str(currentSong) };
-  saveStrings(saveTxtPath_currentSong, data);
-  println("Saved current song: " + currentSong);
-}// End Save currentSong
-//
-//End Buttons Subprogram
+// End Subprogram Mouse Interactions

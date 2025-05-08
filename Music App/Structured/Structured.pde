@@ -33,13 +33,18 @@ float timeRemainingDivX, timeRemainingDivY, timeRemainingDivWidth, timeRemaining
 float songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight;
 float timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight;
 float totalTimeDivX, totalTimeDivY, totalTimeDivWidth, totalTimeDivHeight;
-//Button Variables after
+//
+//Button Shape Variables
 float stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight;
 float playX1, playY1, playX2, playY2, playX3, playY3;
 float fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3, fastForwardY3;
 float fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6;
 float pauseX1, pauseY1, pauseWidth1, pauseHeight1;
 float pauseX2, pauseY2, pauseWidth2, pauseHeight2;
+//
+PImage myFirstImage, mySecondImage;
+float imageWidthChanged_First, imageHeightChanged_First;
+float imageWidthChanged_Second, imageHeightChanged_Second;
 //
 PFont appFont;
 float fontSize;
@@ -52,17 +57,12 @@ void setup() {
   int appHeight = height; //displayHeight
   int appShortSide = ( appWidth < appHeight ) ? appWidth : appHeight ;
   //
-  //Music Loading - STRUCTURED Review
+  //Music Loading - STRUCTURED
   minim = new Minim(this);
   String lessonDependanciesFolder = "Lesson Dependancies Folder/";
   String musicPong = "Music Pong/";
   String musicAll = "Music All/";
-  //Note: Download music and sound effects, then design your player with images, text, and 2D shapes
-  //See Google Search: Atari pong logo free image download
   String pongWorld = "Pong World";
-  //Add all files, CS20 Review is special OS Java Library
-  //Including the reading of the number of files in the array
-  //Alphebetical order, same as OS ordering files
   String beatYourCompetition = "Beat_Your_Competition";
   String cycles = "Cycles";
   String eureka = "Eureka";
@@ -147,7 +147,6 @@ void setup() {
   //
   //rect(DIV) is a square to start, by design
   int numberOfButtons = 13; //Half a button on either side as space, Center Button is Play
-  //println("Button Width:", appWidth/numberOfButtons);
   int widthOfButton = appWidth/numberOfButtons;
   int beginningButtonSpace = widthOfButton;
   int buttonY = appHeight*3/5;
@@ -291,9 +290,75 @@ void setup() {
   rect(pauseX1, pauseY1, pauseWidth1, pauseHeight1);
   rect(pauseX2, pauseY2, pauseWidth2, pauseHeight2);
   //
+  //Images Drawing
+  //
+  //Image Aspect Ratio Algorithm: demonstrating Landscape to Portrait
+  String upArrow = "../../";
+  String folders = "Lesson Dependancies Folder/Images/";
+  String bike = "bike"; //Fpr QUIT Button
+  String oldManPortrait = "Old man portrait"; //MAIN Image DIV
+  String fileExtensionJPG = ".jpg";
+  String fileExtensionPNG = ".png";
+  String myFirstImagePathway = upArrow + folders + oldManPortrait + fileExtensionPNG;
+  String mySecondImagePathway = upArrow + folders + bike + fileExtensionJPG;
+  myFirstImage = loadImage( myFirstImagePathway );
+  mySecondImage = loadImage( mySecondImagePathway );
+  int myFirstImageWidth = 2800;
+  int myFirstImageHeight = 3500;
+  int mySecondImageWidth = 860;
+  int mySecondImageHeight = 529;
+  float imageAspectRatioFirst_GreaterOne = ( myFirstImageWidth >= myFirstImageHeight ) ? float(myFirstImageWidth)/float(myFirstImageHeight) : float(myFirstImageHeight)/float(myFirstImageWidth) ; // Choice x / for bigger or smaller
+  float imageAspectRatioSecond_GreaterOne = ( mySecondImageWidth >= mySecondImageHeight ) ? float(mySecondImageWidth)/float(mySecondImageHeight) : float(mySecondImageHeight)/float(mySecondImageWidth) ; // Choice x / for bigger or smaller
+  Boolean imageLandscapeFirst = ( myFirstImageWidth >= myFirstImageHeight ) ? true : false ;
+  Boolean imageLandscapeSecond = ( mySecondImageWidth >= mySecondImageHeight ) ? true : false ;
+  /*Only the image geometry needs to be know for the algorithm below
+   - When the Geometries change, big dimension to small dimension must happen or image will not fit
+   - still need an ERROR-Check with oddly shaped landscape-landscape, protrait-portrait resampling
+   - size-decreasing algorithms (resampling) discussed in Text
+   */
+  //Old Man Image in Image DIV
+  if ( imageLandscapeFirst==true ) {
+    imageWidthChanged_First = imageDivWidth;
+    imageHeightChanged_First = ( myFirstImageWidth >= imageDivWidth ) ? imageWidthChanged_First/imageAspectRatioFirst_GreaterOne : imageWidthChanged_First*imageAspectRatioFirst_GreaterOne ;
+    if ( imageHeightChanged_First > imageDivHeight ) { //ERROR Catch
+      println("First Image Aspect Ratio algorithm Landscape ERROR");
+      exit();
+      //noLoop(); //Debugging only
+    }
+  } else {
+    imageHeightChanged_First = imageDivHeight;
+    imageWidthChanged_First = ( myFirstImageHeight >= imageDivHeight ) ? imageHeightChanged_First/imageAspectRatioFirst_GreaterOne : imageHeightChanged_First*imageAspectRatioFirst_GreaterOne ;
+    if ( imageWidthChanged_First > imageDivWidth ) { //ERROR Catch
+      println("First Image Aspect Ratio algorithm Portrait ERROR");
+      exit();
+      //noLoop(); //Debugging only
+    }
+  }
+  //Old Man Portrait in Image DIV
+  image( myFirstImage, imageDivX, imageDivY, imageWidthChanged_First, imageHeightChanged_First );
+  //Bike Image in QUIT Button DIV
+  if ( imageLandscapeSecond==true ) {
+    imageWidthChanged_Second = quitWidth;
+    imageHeightChanged_Second = ( mySecondImageWidth >= quitWidth ) ? imageWidthChanged_Second/imageAspectRatioSecond_GreaterOne : imageWidthChanged_Second*imageAspectRatioSecond_GreaterOne ;
+    if ( imageHeightChanged_Second > quitHeight ) { //ERROR Catch
+      println("Second Image Aspect Ratio algorithm Landscape ERROR");
+      exit();
+      //noLoop(); //Debugging only
+    }
+  } else {
+    imageHeightChanged_Second = quitHeight;
+    imageWidthChanged_Second = ( mySecondImageHeight >= quitHeight ) ? imageHeightChanged_Second/imageAspectRatioSecond_GreaterOne : imageHeightChanged_Second*imageAspectRatioSecond_GreaterOne ;
+    if ( imageWidthChanged_Second > quitWidth ) { //ERROR Catch
+      println("Second Image Aspect Ratio algorithm Portrait ERROR");
+      exit();
+      //noLoop(); //Debugging only
+    }
+  }
+  // Bike Image in QUIT Div
+  image( mySecondImage, quitX, quitY, imageWidthChanged_Second, imageHeightChanged_Second );
+  //
   //Font Size relative to rect(height)
   float fontSize = 52; //Change the number until it fits, largest font size, int only to ease guessing
-  //println("Font Size:", fontSize );
   //
   /* Aspect Ratio Manipulations (changes to variables)
    - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
@@ -301,8 +366,6 @@ void setup() {
    */
   float harringtonAspectRatio = fontSize / songTitleDivHeight;
   fontSize = songTitleDivHeight*harringtonAspectRatio;
-  //println("Aspect Ratio:", harringtonAspectRatio);
-  //println(); //Skip a line
   //
   //Minimum Lines of code to format and draw text with colour
   color purpleInk = #2C08FF;
@@ -316,10 +379,6 @@ void setup() {
   //Option draw ```title```
   //Decrease Font when wrapped around
   while ( songTitleDivWidth < textWidth( playListMetaData[currentSong].title() ) ) { //decrease font
-    //exit();
-    //println("here"); //infinte loop, problem with WHILE, similar to draw()
-    //Nothing Else works
-    //
     fontSize *= 0.99; //Assignment Operator  //fontSize = fontSize*0.99;
     //Update WHILE Conditional with fontSize
     textFont(appFont, fontSize);
@@ -337,30 +396,42 @@ void setup() {
   //
   //Print What is available on a particular song
   //See Image / Properties / Details
-  println();
-  println( "File Name: " + playListMetaData[currentSong].fileName() );
-  println( "Length (in milliseconds): " + playListMetaData[currentSong].length() );
-  println( "Title: " + playListMetaData[currentSong].title() );
-  println( "Author: " + playListMetaData[currentSong].author() );
-  println( "Album: " + playListMetaData[currentSong].album() );
-  println( "Date: " + playListMetaData[currentSong].date() );
-  println( "Comment: " + playListMetaData[currentSong].comment() );
-  println( "Lyrics: " + playListMetaData[currentSong].lyrics() );
-  println( "Track: " + playListMetaData[currentSong].track() );
-  println( "Genre: " + playListMetaData[currentSong].genre() );
-  println( "Copyright: " + playListMetaData[currentSong].copyright() );
-  println( "Disc: " + playListMetaData[currentSong].disc() );
-  println( "Composer: " + playListMetaData[currentSong].composer() );
-  println( "Orchestra: " + playListMetaData[currentSong].orchestra() );
-  println( "Publisher: " + playListMetaData[currentSong].publisher() );
-  println( "Encoded: " + playListMetaData[currentSong].encoded() );
+  /* println();
+   println( "File Name: " + playListMetaData[currentSong].fileName() );
+   println( "Length (in milliseconds): " + playListMetaData[currentSong].length() );
+   println( "Title: " + playListMetaData[currentSong].title() );
+   println( "Author: " + playListMetaData[currentSong].author() );
+   println( "Album: " + playListMetaData[currentSong].album() );
+   println( "Date: " + playListMetaData[currentSong].date() );
+   println( "Comment: " + playListMetaData[currentSong].comment() );
+   println( "Lyrics: " + playListMetaData[currentSong].lyrics() );
+   println( "Track: " + playListMetaData[currentSong].track() );
+   println( "Genre: " + playListMetaData[currentSong].genre() );
+   println( "Copyright: " + playListMetaData[currentSong].copyright() );
+   println( "Disc: " + playListMetaData[currentSong].disc() );
+   println( "Composer: " + playListMetaData[currentSong].composer() );
+   println( "Orchestra: " + playListMetaData[currentSong].orchestra() );
+   println( "Publisher: " + playListMetaData[currentSong].publisher() );
+   println( "Encoded: " + playListMetaData[currentSong].encoded() );
+   */
   //
 } //End setup
 //
 void draw() {
+  //Song title and individual song time data will change, see .mp3 exemplar programs
+  //QUIT Button - Hoverover and activate
+  //QUIT Button - Save the Last Song
+  //HoverOver for all Buttons - Procedures
 } //End draw
 //
 void mousePressed() {
+  //QUIT Button to form
+  //Data Structure for: mouseX> && mouseX< && mouseY> && mouseY<
+  if ( mouseX>quitX && mouseX<quitX+quitWidth && mouseY>quitY && mouseY<quitY+quitHeight ) {
+    //Procedures: active Saving Program state or last song, prompt a double click for exit()
+    //Use a procedure to access mouse & key board
+    exit();
+  }
 } //End mousePressed
 //
 void keyPressed() {

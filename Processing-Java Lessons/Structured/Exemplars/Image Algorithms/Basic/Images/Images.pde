@@ -46,6 +46,7 @@ void setup() {
     if ( imageHeightChanged > imageDivHeight ) { //ERROR Catch
       println("Image Aspect Ratio algorithm ERROR");
       exit();
+      //noLoop(); //Debugging only
     }
   } else {
     imageHeightChanged = imageDivHeight;
@@ -53,6 +54,7 @@ void setup() {
     if ( imageWidthChanged > imageDivWidth ) { //ERROR Catch
       println("Image Aspect Ratio algorithm ERROR");
       exit();
+      //noLoop(); //Debugging only
     }
   }
   //

@@ -12,6 +12,7 @@ import java.io.File;
 int appWidth, shorterSide;
 //
 String saveTxtPath_currentSong; //For Saving Last Known Song Played
+String saveTxtPath_randomStart; //For Saving Last Known Song Played
 //
 Minim minim; //initates entire class
 int numberOfSongs = 1; //Best Practice
@@ -19,6 +20,8 @@ int numberOfSongs = 1; //Best Practice
 AudioPlayer[] playList; //length of array determined by reading the Music Folder
 //AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
 int currentSong; //Reads .txt file to populate last known song
+//
+Boolean randomStart=false;
 //
 void setup() {
   //
@@ -31,6 +34,7 @@ void setup() {
   //Saving Last Known Song Played
   // Initialize the save file path
   saveTxtPath_currentSong = sketchPath("currentSong.txt");
+  saveTxtPath_randomStart = sketchPath("randomStart.txt");
   println(saveTxtPath_currentSong);
   //
   populationSetup();
@@ -63,7 +67,12 @@ void setup() {
   }
   numberOfSongs = fileNames.length;
   println("Loading currentSong Variable");
-  currentSong = loadCurrentSong();
+  randomStart = loadRandomStart();
+  if ( randomStart==true ) {
+    currentSong = int( random( numberOfSongs ) );
+  } else {
+    currentSong = loadCurrentSong();
+  }
   println("Current Song is", currentSong+1, "of", numberOfSongs);
   playList[ currentSong ].play();
   //
@@ -71,6 +80,7 @@ void setup() {
 //
 void draw() {
   drawButtons();
+  if ( playList[currentSong].isPlaying()==false ) println(currentSong);
 } //End draw
 //
 void mousePressed() {
@@ -87,6 +97,14 @@ void keyPressed() {
     currentSong++;
   }
   playList[ currentSong ].play();
+  //
+  if (key=='W' || key=='w') {
+    if ( randomStart==true ) {
+      randomStart=false;
+    } else {
+      randomStart=true;
+    }
+  }
 } //End keyPressed
 //
 // Load the currentSong-value from a .txt file
@@ -100,5 +118,24 @@ int loadCurrentSong() {
   }
   return 0; // Default to the first song if no file exists
 }
+Boolean loadRandomStart() {
+  String[] dataString = loadStrings(saveTxtPath_randomStart);
+  Boolean dataBoolean;
+  if (dataString != null && dataString.length > 0) {
+    println("Loaded random start: " + dataString[0]);
+    try {
+      dataBoolean = Boolean.parseBoolean(dataString[0]);
+    }
+    catch (Exception e) {
+      println("Error parsing boolean value: " + e);
+      dataBoolean = false; // default value
+    }
+  } else {
+      println("File is empty.");
+      dataBoolean = false; // default value
+      return dataBoolean;
+    }
+    return dataBoolean;
+}//End Random Start Boolean
 //
 // End Main Program

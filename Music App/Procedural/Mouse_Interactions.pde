@@ -2,29 +2,31 @@ Boolean quitDoubleClick=false;
 //
 void drawButtons() {
   background(black);
-  quitButton();
+  quitButtonDrawing();
   //
 } //End Draw Buttons
 //
-void quitButton() {
+void quitButtonDrawing() {
   //Misc
-  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
+  int i=0;
+  if ( mouseX>divs[i] && mouseX<divs[i]+divs[i+2] && mouseY>divs[i+1] && mouseY<divs[i+1]+divs[i+3] ) { //i: 0-3
     colour = red;
   } else {
     colour = white;
   }
   fill(colour);
-  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  rect( divs[i], divs[i+1], divs[i+2], divs[i+3] ); //i: 0-3
   fill(white);
   //
 } //End Quit Button
 //
 void mouseInteractions() {
-  quitButton();
+  quitButtonMouse();
 } // End Mouse Interactions
 //
-void quitButton() {
-  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
+void quitButtonMouse() {
+  int i=0;
+  if ( mouseX>divs[i] && mouseX<divs[i]+divs[i+2] && mouseY>divs[i+1] && mouseY<divs[i+1]+divs[i+3] ) { //i: 0-3
     if ( quitDoubleClick==false ) {
       println("Saving Strings .txt");
       //Prompt of small menu to Double Click Quit Button

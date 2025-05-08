@@ -2,6 +2,7 @@
 //
 void keyBoardShortCuts() {
   simpleNextButtonTesting();
+  randomStartButton();
 } //End Key Board Short Cuts
 //
 void simpleNextButtonTesting() {
@@ -15,13 +16,15 @@ void simpleNextButtonTesting() {
   playList[ currentSong ].play();
 } // End Simle Next Button Music Testing
 //
-
-
-
-void saveCurrentSong() {
-  String[] data = { str(currentSong) };
-  saveStrings(saveTxtPath_currentSong, data);
-  println("Saved current song: " + currentSong);
-}// End Save currentSong
+void randomStartButton() {
+  if (key=='W' || key=='w') {
+    if ( randomStart==true ) {
+      randomStart=false;
+    } else {
+      randomStart=true;
+    }
+  }
+  //
+} //End Random Start Button
 //
 // End Key Board Short Cuts Subprogram

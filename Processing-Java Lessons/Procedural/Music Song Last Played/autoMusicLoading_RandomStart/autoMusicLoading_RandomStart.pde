@@ -1,3 +1,9 @@
+/* Read-Write to a File: see MAIN & Buttons only
+ - 2x .txt
+ - loading()
+ - saving()
+ - pause to verify in consol what is being read-write, verification only
+ */
 //Library - Minim
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -12,7 +18,7 @@ import java.io.File;
 int appWidth, shorterSide;
 //
 String saveTxtPath_currentSong; //For Saving Last Known Song Played
-String saveTxtPath_randomStart; //For Saving Last Known Song Played
+String saveTxtPath_randomStart; //For Saving Preference: Random Start
 //
 Minim minim; //initates entire class
 int numberOfSongs = 1; //Best Practice
@@ -36,6 +42,7 @@ void setup() {
   saveTxtPath_currentSong = sketchPath("currentSong.txt");
   saveTxtPath_randomStart = sketchPath("randomStart.txt");
   println(saveTxtPath_currentSong);
+  println(saveTxtPath_randomStart);
   //
   populationSetup();
   //
@@ -131,11 +138,11 @@ Boolean loadRandomStart() {
       dataBoolean = false; // default value
     }
   } else {
-      println("File is empty.");
-      dataBoolean = false; // default value
-      return dataBoolean;
-    }
+    println("File is empty.");
+    dataBoolean = false; // default value
     return dataBoolean;
+  }
+  return dataBoolean;
 }//End Random Start Boolean
 //
 // End Main Program

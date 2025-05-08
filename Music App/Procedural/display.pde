@@ -1,9 +1,9 @@
-int appWidth, appHeight, shorterSide;
+int appWidth, appHeight, appShorterSide;
 //
 void display() {
   appWidth = width; //displayWidth
   appHeight = height; //displayHeight
-  shorterSide = int(comparisonReturnSmaller( float(appWidth), float(appHeight) ) );
+  appShorterSide = int(comparisonReturnSmaller( float(appWidth), float(appHeight) ) );
 } //End Display
 //
 //End Subprogam Display

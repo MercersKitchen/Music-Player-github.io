@@ -17,6 +17,7 @@ int currentSong = numberOfSongs - numberOfSongs; //ZERO
 //
 float quitX, quitY, quitWidth, quitHeight;
 float imageDivX, imageDivY, imageDivWidth, imageDivHeight;
+float messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height;
 float stopDivX, stopDivY, stopDivWidth, stopDivHeight;
 float muteDivX, muteDivY, muteDivWidth, muteDivHeight;
 float previousDivX, previousDivY, previousDivWidth, previousDivHeight;
@@ -132,24 +133,30 @@ void setup() {
   //Tools / Create Font / Find Font / Do Not Press "OK", known bug, cannot mix loadFont() and createFont()
   //
   //Population
-  quitX = appWidth - appShortSide*1/20;
-  quitY = 0;
-  quitWidth = appShortSide*1/20;
-  quitHeight = appShortSide*1/20;
-  imageDivX = appWidth*1/4;
-  imageDivY = appHeight*1/5;
-  imageDivWidth = appWidth*1/2;
-  imageDivHeight = appHeight*1.5/5; //1+1.5=2.5, half of the total height
-  songTitleDivX = appWidth*1/4;
-  songTitleDivY = appHeight*1/20;
-  songTitleDivWidth = appWidth*1/2;
-  songTitleDivHeight = appHeight*1/10;
-  //
   //rect(DIV) is a square to start, by design
   int numberOfButtons = 13; //Half a button on either side as space, Center Button is Play
   int widthOfButton = appWidth/numberOfButtons;
   int beginningButtonSpace = widthOfButton;
   int buttonY = appHeight*3/5;
+  //
+  quitX = appWidth - appShortSide*1/20;
+  quitY = 0;
+  quitWidth = appShortSide*1/20;
+  quitHeight = appShortSide*1/20;
+  songTitleDivX = beginningButtonSpace;
+  songTitleDivY = appHeight*1.5/20;
+  songTitleDivWidth = appWidth*1/2 - beginningButtonSpace*1.5;
+  songTitleDivHeight = appHeight*1/10;
+  imageDivX = beginningButtonSpace;
+  imageDivY = appHeight*4.5/20;
+  imageDivWidth = appWidth*1/2 - beginningButtonSpace*1.5;
+  imageDivHeight = appHeight*1.5/5; //1+1.5=2.5, half of the total height
+  messageDIV_X = appWidth*1/2 + beginningButtonSpace*1/2;
+  messageDIV_Y = appHeight*1.5/20;
+  messageDIV_Width = appWidth*1/2 - beginningButtonSpace*1.5;
+  messageDIV_Height = appHeight*9/20;
+  
+  //
   stopDivX = beginningButtonSpace + widthOfButton*0;
   stopDivY = buttonY;
   stopDivWidth = widthOfButton;
@@ -265,6 +272,7 @@ void setup() {
   //rect(X, Y, Width, Height)
   rect(quitX, quitY, quitWidth, quitHeight);
   rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
+  rect(messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height);
   rect(stopDivX, stopDivY, stopDivWidth, stopDivHeight);  //*0
   rect(muteDivX, muteDivY, muteDivWidth, muteDivHeight); //*1
   rect(previousDivX, previousDivY, previousDivWidth, previousDivHeight); //*2

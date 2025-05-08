@@ -40,7 +40,6 @@ void saveCurrentSong() {
   String[] dataBoolean = { str(randomStart) };
   saveStrings(saveTxtPath_randomStart, dataBoolean);
   println("Saved Random Start: " + randomStart);
-  
 }// End Save currentSong
 //
 //End Buttons Subprogram

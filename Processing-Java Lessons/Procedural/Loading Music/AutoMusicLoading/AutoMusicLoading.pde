@@ -52,7 +52,7 @@ void setup() {
     currentSong++; //functions similar to FOR
   }
   numberOfSongs = fileNames.length;
-  currentSong=0;
+  currentSong=numberOfSongs-numberOfSongs;
   playList[ currentSong ].play();
   //
 } //End setup

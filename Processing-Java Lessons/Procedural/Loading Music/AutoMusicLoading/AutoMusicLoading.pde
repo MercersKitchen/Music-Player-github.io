@@ -27,9 +27,9 @@ void setup() {
   minim = new Minim(this);
   String absolutePath = sketchPath();
   println(absolutePath);
-  String lessonDependanciesFolder = "/../../../../Lesson Dependancies Folder/Music All/";
+  String musicFolder = "/../../../../Lesson Dependancies Folder/Music All/";
   //
-  String musicDirectory = absolutePath + lessonDependanciesFolder;
+  String musicDirectory = absolutePath + musicFolder;
   println(musicDirectory);
   File directory = new File(musicDirectory); //Uses Java Library to create class (variables & code)
   //A class is like an .mp3 that has music and text information
@@ -38,7 +38,7 @@ void setup() {
   int i=0;
   if ( fileNames != null ) {
     for ( File file : fileNames ) { //FOR EACH Loop, creates local class
-      files[i] = lessonDependanciesFolder + file.getName(); //print fileNames.getName() Object to String
+      files[i] = musicFolder + file.getName(); //print fileNames.getName() Object to String
       //Note: getName() is built in code
       i++; //iteration necessary here, not in regular FOR
     }

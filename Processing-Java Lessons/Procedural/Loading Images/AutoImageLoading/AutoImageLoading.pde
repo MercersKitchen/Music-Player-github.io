@@ -15,8 +15,15 @@ import java.io.File;
 Minim minim; //initates entire class
 int numberOfSongs = 1; //Best Practice
 //int numberOfSoundEffects = ???
-
+AudioPlayer[] playList; //length of array determined by reading the Music Folder
+//AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
+//
+int pathwayLength;
+String[] musicPathway, imagesPathway, files; //local variables for pathways to loading files msuic and image files
+PImage images;
+//
+//PImage[] images;
 //
 void setup() {
   //
@@ -27,21 +34,39 @@ void setup() {
   int shorterSide = int(comparisonReturnSmaller( float(appWidth), float(appHeight) ) );
   //
   minim = new Minim(this);
-  String absolutePath = sketchPath();
-  println("Absolute Path", absolutePath);
-  String lessonDependanciesFolder = "/../../../../Lesson Dependancies Folder/";
-  String musicAll = "Music All/"; //Poor Practice: rewritten in File Loading
-  String images = "Images/"; //Poor Practice: rewritten in File Loading
+  String lessonDependanciesFolder = "/../../../../Lesson Dependancies Folder/"; //Relative Pathway
+  String imagesPath = sketchPath()+lessonDependanciesFolder+"Images"; //Hardcoded
+  String musicPath = sketchPath()+lessonDependanciesFolder+"Music All"; //Hardcoded
+  folderLength(imagesPath);
+  imagesPathway = new String[pathwayLength];
+  files = new String[pathwayLength]; //Purpose: convert File to String for minim.loadFile()
+  fileNames(pathwayLength, imagesPath);
+  
+  //pathwayLength = fileNamesLength(String absolutePathway);
+  //File[] fileNames = new File[1];
+  //music = expand(, pathwayLength);
+  /*
+  musicAll_folder = "Music All/"; //Poor Practice: rewritten in File Loading
+  images_folder = "Images/"; //Poor Practice: rewritten in File Loading
   //
   String generalDirectory = absolutePath + lessonDependanciesFolder;
   //String imageDirectory = absolutePath + lessonDependanciesFolder + images;
   println("Music Directory", generalDirectory);
   //println("Image Directory", imageDirectory);
-  fileLoading (generalDirectory, lessonDependanciesFolder, musicAll);
+  //
+  fileLoading (generalDirectory, lessonDependanciesFolder, musicAll_folder);
+  //
+  println(musicAll_folder);
+  //if ( musicAll_folder ) musicLoading(fileNames, files);
+  //if ( fileTypeFolder=="Images/" ) musicLoading(fileNames, files);
+  //
   currentSong=numberOfSongs-numberOfSongs;
   playList[ currentSong ].play();
-  fileLoading (generalDirectory, lessonDependanciesFolder, images);
   //
+  //fileLoading (generalDirectory, lessonDependanciesFolder, images);
+  //
+  
+  */
 } //End setup
 //
 void draw() {

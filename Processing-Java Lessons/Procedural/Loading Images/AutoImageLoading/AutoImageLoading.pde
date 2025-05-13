@@ -19,7 +19,7 @@ AudioPlayer[] playList; //length of array determined by reading the Music Folder
 //AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
 //
-PImage imagesPlayList;
+PImage[] imagesPlayList;
 //
 void setup() {
   //
@@ -35,11 +35,18 @@ void setup() {
   String musicPath = sketchPath()+lessonDependanciesFolder+"Music All/"; //Hardcoded
   
   
-  imageLoading(String pathway)
+  //Read entire String files into imageLoad() & minim.loadFile()
+  // if straight = does not work, use copy array code,
+  // https://processing.org/reference/arrayCopy_.html
   
-  musicLoading(String pathway);
+  musicLoading(musicPath);
+  
+  imageLoading(imagesPath); //Order from alphebetical to same as music file
+  //Reading and sorting file names in CS30
   
   
+  image( imagesPlayList[0], 0, 0 );
+  playList[0].play();
 
   
   //pathwayLength = fileNamesLength(String absolutePathway);

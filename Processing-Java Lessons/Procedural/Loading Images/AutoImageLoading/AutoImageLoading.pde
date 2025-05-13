@@ -19,11 +19,7 @@ AudioPlayer[] playList; //length of array determined by reading the Music Folder
 //AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
 //
-int pathwayLength;
-String[] musicPathway, imagesPathway, files; //local variables for pathways to loading files msuic and image files
-PImage images;
-//
-//PImage[] images;
+PImage imagesPlayList;
 //
 void setup() {
   //
@@ -35,12 +31,16 @@ void setup() {
   //
   minim = new Minim(this);
   String lessonDependanciesFolder = "/../../../../Lesson Dependancies Folder/"; //Relative Pathway
-  String imagesPath = sketchPath()+lessonDependanciesFolder+"Images"; //Hardcoded
-  String musicPath = sketchPath()+lessonDependanciesFolder+"Music All"; //Hardcoded
-  folderLength(imagesPath);
-  imagesPathway = new String[pathwayLength];
-  files = new String[pathwayLength]; //Purpose: convert File to String for minim.loadFile()
-  fileNames(pathwayLength, imagesPath);
+  String imagesPath = sketchPath()+lessonDependanciesFolder+"Images/"; //Hardcoded
+  String musicPath = sketchPath()+lessonDependanciesFolder+"Music All/"; //Hardcoded
+  
+  
+  imageLoading(String pathway)
+  
+  musicLoading(String pathway);
+  
+  
+
   
   //pathwayLength = fileNamesLength(String absolutePathway);
   //File[] fileNames = new File[1];

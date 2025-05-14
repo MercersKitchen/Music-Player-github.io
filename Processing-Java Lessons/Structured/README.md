@@ -106,3 +106,8 @@ Grading & APP Ideas
 Hoverover
 
 ---
+
+# To Include
+- DIVs give opportunity to visually see completed variable manipulation | use print() & println()
+
+---

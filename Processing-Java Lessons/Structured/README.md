@@ -109,5 +109,9 @@ Hoverover
 
 # To Include
 - DIVs give opportunity to visually see completed variable manipulation | use print() & println()
+- 2D Images gives opportunity to create library code for different Music Function Buttons
+   - Lesson is about putting multiple shapes into one extra large DIV
+   - Able to copy and paste after
+   - Proceudres will make this exercise easier
 
 ---

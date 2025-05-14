@@ -42,3 +42,9 @@ Additional Notes
 - Populating Preferences based on last read program game state
 
 ---
+
+# To Include
+- Typing Program: see https://www.youtube.com/shorts/UWN50ZbW9Fo
+- Reading Files 
+
+--

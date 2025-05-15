@@ -23,20 +23,8 @@ void quitButton() {
 //
 void mousePressedQuitButton() {
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
-    if ( quitDoubleClick==false ) {
-      println("Saving Strings .txt");
-      saveCurrentSong();
-    }
-    noLoop(); //First QUIT Click enables printScreen in OS
-    if ( quitDoubleClick==true ) exit(); //Second QUIT Closes CANVAS
-    quitDoubleClick=true;
+    exit();
   } //End Quit Button
 } //End Mouse Pressed Quit Button
-//
-void saveCurrentSong() {
-  String[] data = { str(currentSong) };
-  saveStrings(saveTxtPath_currentSong, data);
-  println("Saved current song: " + currentSong);
-}// End Save currentSong
 //
 //End Buttons Subprogram

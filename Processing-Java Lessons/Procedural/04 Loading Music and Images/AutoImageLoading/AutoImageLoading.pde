@@ -33,6 +33,8 @@ void setup() {
   image( imagesPlayList[0], 0, 0 );
   playList[0].play();
   //
+  //printArray(imagesPlayList); //Gives Hardrive Addresses (refered to as registry)
+  //printArray(playList); //Gives Hardrive Addresses (refered to as registry)
 } //End setup
 //
 void draw() {

@@ -22,13 +22,12 @@ void setup() {
   //
   //fullScreen();
   size(700, 500);
-  int appWidth = width; //displayWidth
-  int appHeight = height; //displayHeight
-  int shorterSide = int(comparisonReturnSmaller( float(appWidth), float(appHeight) ) );
-  //
+  display();
+  saveTxtSetup();
   minim = new Minim(this);
-  //
   fileLoading();
+  //
+  divs();
   //
   image( imagesPlayList[0], 0, 0 );
   playList[0].play();
@@ -38,10 +37,13 @@ void setup() {
 } //End setup
 //
 void draw() {
-  //Empty Draw
+  drawButtons();
+  divRect(); //See DIVs
+  if ( playList[currentSong].isPlaying()==false ) println(currentSong);
 } //End draw
 //
 void mousePressed() {
+  mousePressedQuitButton();
 } //End mousePressed
 //
 void keyPressed() {
@@ -55,7 +57,7 @@ void keyPressed() {
   }
   playList[ currentSong ].play();
   //
-  println(currentSong, numberOfSongs);
+  //println(currentSong, numberOfSongs);
 } //End keyPressed
 //
 // End Main Program

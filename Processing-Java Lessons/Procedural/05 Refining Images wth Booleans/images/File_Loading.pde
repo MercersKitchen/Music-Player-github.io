@@ -14,6 +14,14 @@ void fileLoading() {
   //currentSong variable controls Music and Image to CANVAS
   fileReading(musicPath, imagesPath, true); //Sets Music Variables, used for images
   fileReading(musicPath, imagesPath, false); //When false, loadMusic will load images
+  //
+  randomStart = loadRandomStart();
+  if ( randomStart==true ) {
+    currentSong = int( random( numberOfSongs ) );
+  } else {
+    currentSong = loadCurrentSong();
+  }
+  //println("File Loading", currentSong);
 } //End File Loading
 //
 //NOTE Boolean loadMusic can be array when >2 to skip code

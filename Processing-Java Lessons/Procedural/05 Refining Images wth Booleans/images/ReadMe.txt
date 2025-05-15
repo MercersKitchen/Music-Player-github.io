@@ -1,6 +1,7 @@
-Create Double
+QUIT Button works with saving text file
+Random Start Feature works
 
-Create Procedure for double
+---
 
 Might be printing the same files[] and it might not be erased
 

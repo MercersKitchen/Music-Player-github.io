@@ -155,7 +155,6 @@ void setup() {
   messageDIV_Y = appHeight*1.5/20;
   messageDIV_Width = appWidth*1/2 - beginningButtonSpace*1.5;
   messageDIV_Height = appHeight*9/20;
-  
   //
   stopDivX = beginningButtonSpace + widthOfButton*0;
   stopDivY = buttonY;

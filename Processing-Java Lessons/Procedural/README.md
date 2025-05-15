@@ -55,3 +55,10 @@ Additional Notes
 - can also use timing
 
 ---
+
+# To include
+- what is the end user experinece from the code
+- section
+- what runs where and when
+- how many lines of code are executed
+

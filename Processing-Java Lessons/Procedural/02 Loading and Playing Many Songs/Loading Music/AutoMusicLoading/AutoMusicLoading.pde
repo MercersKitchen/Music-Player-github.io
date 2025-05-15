@@ -51,7 +51,6 @@ void setup() {
     playList[ currentSong ] = minim.loadFile( files[ currentSong ] );
     currentSong++; //functions similar to FOR
   }
-  numberOfSongs = fileNames.length;
   currentSong=numberOfSongs-numberOfSongs;
   playList[ currentSong ].play();
   //

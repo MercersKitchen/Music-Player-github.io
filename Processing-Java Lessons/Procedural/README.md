@@ -47,4 +47,11 @@ Additional Notes
 - Typing Program: see https://www.youtube.com/shorts/UWN50ZbW9Fo
 - Reading Files 
 
---
+---
+
+# To include excercise
+- counting lines of code through procedures
+- should be a running count
+- can also use timing
+
+---

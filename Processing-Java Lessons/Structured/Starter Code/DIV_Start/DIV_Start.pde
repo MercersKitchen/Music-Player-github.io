@@ -9,6 +9,7 @@ float imageX, imageY, imageWidth, imageHeight;
 void setup() {
   //Display
   fullScreen();
+  //size(700, 500); //key varaibles: width & height
   appWidth = displayWidth;
   appHeight = displayHeight;
   //

@@ -44,12 +44,13 @@ Develop the for msuic functions and representation: what does the computer know 
 
 Attending to the code, what the voice is at each level
 - Structured: one images, music based text, general music app text, specific music buttons and symbols
-  - Introductory: DIVs
+  - Introductory: DIVs & paperfolding
     - how DIVs can resemble a developer bias and projection
     - how DIVs can resemble the CANVAS and cascading variables as referent measures
     - how cascading DIVs or variables creates a library or function with passed parameters
   - Introductory: flowchart of music features and how they do not interfer with each other
-  - Introducotry: use of key board listeners for concrete illustration of case-break decision making (ignoring other code in sequential execution)
+  - Introducotry: paperfolding to use smaller side of DIV and create a square to put symbols in it
+    - use of key board listeners for concrete illustration of case-break decision making (ignoring other code in sequential execution)
     - Intermediate: how key board algorithms can be referenced and accessed for mousePressed
   - Introductory: aspect ratio of images
   - Introductory: aspect ratio of drawn text (as a prototyping of text fonts & emotional white space)

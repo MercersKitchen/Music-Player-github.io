@@ -4,12 +4,16 @@ Note: how the code of some program features influcnes the code of other program 
 - Difference between using computer tools that are faster than interactions with AI
 
 Progression of Natural Language Conversation
+- Learning how to code
+- Learning how the code will work 
+- Learning about math & algorithms
 
 . Building a boilerplate
   - Static v. Dynamic Processing-JAVA programs
   - Static Programs, very simple prototying examples
   - Dynamic Programs change the CANVAS like an animation
   - Comiler necessary lines of code, including MAIN Program Folder Name, setup() & draw()
+  - What are the beginning ways to control a program's CANVAS
 
 . How to play a Song, loading a library
   - additional words in a computer langauge, primary functions, that simplfy a programmers work

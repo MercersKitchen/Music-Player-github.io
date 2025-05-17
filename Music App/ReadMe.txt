@@ -1,3 +1,8 @@
+Why is Computer Science difficult to learn?
+What could make computer scinece fun?
+
+---
+
 Develop all math-based algorithms & grade-level fluency
 
 Note: any computer app end-user experinece is made up of images, shapes, and text
@@ -6,6 +11,17 @@ Purpose: build an app to run on any computer or any device
 - My lessons limit this to any computer (Mac, Windows) and Android
 
 WARNING: using devices mean enabling developer-mode to side-load programs
+
+What if you could walk up to an AI and create a music player
+- an experience giving you conceptual understanding to explore and build any app
+
+What if this experience showed you different parts of a computer
+- different cyber security issues
+- different ways of coding in a generic language
+- algorithms
+- maths
+
+Teaching & learning works with everyone else who say "no" as an emotional strategy
 
 ---
 

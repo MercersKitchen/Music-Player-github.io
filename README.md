@@ -88,5 +88,6 @@ AI is an amazing research tool
 Building a conceptual understanding from examples
 
 Builidng a fluency with AI
+- creating prompts
 
 ---

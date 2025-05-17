@@ -40,9 +40,20 @@ Develop the for msuic functions and representation: what does the computer know 
 
 Attending to the code, what the voice is at each level
 - Structured: one images, music based text, general music app text, specific music buttons and symbols
+  - Introductory: how DIVs can resemble a developer bias and projection
+  - Introductory: flowchart of music featueres and how they do not interfer with each other
+  - Introductory: aspect ratio of images
+  - Introductory: aspect ratio of drawn text (as a prototyping of text fonts & emotional white space)
   - Advanced: grouping lines of code by function, referenced when needed
 - Procedural: Mulitple songs, mulitple images, minimal design for specfic end user expereince,
               menu based music player written as an encapsulated subprogram from a prototyped full version
+  - Intermeidate: grouped lines of code, program reads like an essay
+  - Intermediate: reading and writing primitive data into arrays to form FOR & WHILE algorithmic drawing 
+  - Intermediate: end-user expereince as grouped music buttons, exploring IF Statmenets and Decisions (not cases & breaks yet)
+    - Play-Pause-Stop
+    - Loop Once-Infinite
+    - Previous (first 10 seconds) - Rewind (preference seconds or percent-of-song) & Double Tap to Preiovus Song
+    - Next (first 10 seconds) - Fast Forward (preference seconds or percent-of-song)  & Double Tap to Next Song
   - Advanced: on-off type button activation
 - Object Orientated: rewriting an encapulated subprogram as a static class incoporated in to a larger project
 

@@ -28,7 +28,7 @@ Progression of Natural Language Conversation
   - How are variables created, different examples of naming, initializing, and initializing (assigning value)
 
 
-2. Drawing 
+. Drawing the different music buttons based on feature, function, and representation.
 
 
 

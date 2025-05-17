@@ -100,5 +100,9 @@ Referneces
 Processing.org spans interpreted and compiler langaugaes in a generic way. 
 This general approach makes accessible other langauges with the fun of visually verifing algorithmic completion.
 Visual verification creates wonder with cause-effect, making abstract a concrete conceptualization framework.
+- Python
+- Java
+- Rpi
+- Etc.
 
 ---

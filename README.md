@@ -81,3 +81,7 @@ Next Note
     - Using Aspect Ratio of an image to resize, resample
 
 ---
+
+AI is an amazing research tool
+- how do you interact with it and learn from it
+

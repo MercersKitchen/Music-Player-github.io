@@ -1,3 +1,28 @@
+Note: how the code of some program features influcnes the code of other program features
+- Natural Language conversations must identify the meta understanding of the entire project (learned by student)
+- Difference between prototyping and rewriting code for efficiency
+- Difference between using computer tools that are faster than interactions with AI
+
+Progression of Natural Language Conversation
+
+. How to play a Song, loading a library
+  - additional words in a computer langauge, primary functions, that simplfy a programmers work
+  - introductory functions to enable further research in the library
+
+. Drawing a Rectangle, Divisions in a Page
+  - using primary functions, spelling, and bugs
+  - parameters in strongly formatted language
+  - Global Variable: what a compiler and computer needs first in computer architeure (values and registry)
+
+  - What are the different parameters of a fucntion: what does the comptuer need to function (abstraction of case study)
+  - How are variables created, different examples of naming, initializing, and initializing (assigning value)
+  
+
+2. Drawing 
+
+
+
+
 What is the Advanced Placement Requirements
 
 Note: start with 100%, when does mark start to decrease

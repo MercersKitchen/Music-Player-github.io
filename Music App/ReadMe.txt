@@ -1,3 +1,7 @@
+Change to ReadMe.md when links are known
+
+---
+
 Why is Computer Science difficult to learn?
 What could make computer scinece fun?
 
@@ -42,6 +46,7 @@ Attending to the code, what the voice is at each level
 - Structured: one images, music based text, general music app text, specific music buttons and symbols
   - Introductory: how DIVs can resemble a developer bias and projection
   - Introductory: flowchart of music featueres and how they do not interfer with each other
+  - Introducotry: use of key board listeners for concrete illustration of case-break decision making (ignoring other code in sequential execution)
   - Introductory: aspect ratio of images
   - Introductory: aspect ratio of drawn text (as a prototyping of text fonts & emotional white space)
   - Advanced: grouping lines of code by function, referenced when needed

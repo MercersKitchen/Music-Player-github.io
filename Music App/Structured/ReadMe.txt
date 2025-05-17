@@ -1,3 +1,7 @@
+Change to ReadMe.md when links are known
+
+---
+
 Note: how the code of some program features influcnes the code of other program features
 - Natural Language conversations must identify the meta understanding of the entire project (learned by student)
 - Difference between prototyping and rewriting code for efficiency

@@ -91,3 +91,10 @@ Builidng a fluency with AI
 - creating prompts
 
 ---
+
+Referneces
+- AP CSP
+- Processing.org
+- Minim Library connected to Processing.org
+
+---

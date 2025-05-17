@@ -5,6 +5,12 @@ Note: how the code of some program features influcnes the code of other program 
 
 Progression of Natural Language Conversation
 
+. Building a boilerplate
+  - Static v. Dynamic Processing-JAVA programs
+  - Static Programs, very simple prototying examples
+  - Dynamic Programs change the CANVAS like an animation
+  - Comiler necessary lines of code, including MAIN Program Folder Name, setup() & draw()
+
 . How to play a Song, loading a library
   - additional words in a computer langauge, primary functions, that simplfy a programmers work
   - introductory functions to enable further research in the library
@@ -16,7 +22,7 @@ Progression of Natural Language Conversation
 
   - What are the different parameters of a fucntion: what does the comptuer need to function (abstraction of case study)
   - How are variables created, different examples of naming, initializing, and initializing (assigning value)
-  
+
 
 2. Drawing 
 

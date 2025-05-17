@@ -85,3 +85,8 @@ Next Note
 AI is an amazing research tool
 - how do you interact with it and learn from it
 
+Building a conceptual understanding from examples
+
+Builidng a fluency with AI
+
+---

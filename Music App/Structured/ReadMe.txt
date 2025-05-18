@@ -30,21 +30,26 @@ Progression of Natural Language Conversation
 Note: it is better to work in a more abstract boilerplate than a blank slate
 - Emphasis: ability to locate and use landmarks in code according to function of the boilerplate
 
-. How to play a Song, loading a library
+. How to play a song, loading a library
   - additional words in a computer language, primary functions, that simplify a programmer's work
   - introductory functions to enable further research in the library
 
-. Drawing a Rectangle, Divisions in a Page
+Note: this adds more code to ignore for now
+- purpose: split students' attention and task
+- able to search for music and ensure it plays as a break from coding (reading & writing algorithms)
+
+. Drawing a rectangle, divisions in a page
   - using primary functions, spelling, and bugs
+  - explore use of "debugging IDE section" for pre-compiler errors and console output for post-compiler errors
   - parameters in strongly formatted language
-  - Global Variable: what a compiler and computer needs first in computer architecture (values and registry)
+  - Global variable: what a compiler and computer need first in computer architecture (values and registry)
 
   - What are the different parameters of a function: what does the computer need to function (abstraction of case study)
   - How are variables created, different examples of naming, initializing, and assigning value
 
 . Drawing the different music buttons based on feature, function, and representation.
 
-What are the Advanced Placement Requirements
+What are the Advanced Placement requirements
 
 Note: start with 100%, when does mark start to decrease
 

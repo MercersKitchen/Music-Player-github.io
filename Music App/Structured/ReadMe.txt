@@ -1,8 +1,11 @@
 Change to ReadMe.md when links are known
 
 What are example algorithms or sequences of steps, at various levels of abstraction?
+- What is the purpose of coding?
+  - Pleasure of solving short prompts for developing a pure understanding of algorithms
+  - Pleasure of developing something for someone else, like a gift, as an applied understanding of algorithms
+  - Even AI is intended as a gift, with all it's uncertainity ... the road is paved with good intentions
 - TBA
-
 
 
 

@@ -1,5 +1,18 @@
 Change to ReadMe.md when links are known
 
+What are example algorithms or sequences of steps, at various levels of abstraction?
+- TBA
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 Purpose of this player: celebration, promotion

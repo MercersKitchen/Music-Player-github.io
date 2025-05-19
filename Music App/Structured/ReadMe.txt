@@ -2,6 +2,32 @@ Change to ReadMe.md when links are known
 
 ---
 
+Purpose of this player: celebration, promotion
+- give to someone to share favorite songs and special messages to that person about the songs, images, or shared memories
+- full exploration of setup, keyPressed, application to mousePressed
+- introducing draw
+
+Introduction of developer-based code and maintained-personalized code for purchase
+- Preferences and data provided and then code is easily changed for presenation (provide ZIP of Exported code)
+- Comptuer App only
+- Android at own risk unless extra credit through Play Store
+
+---
+
+Purpose of Structured Programming
+- Objects first, concrete to code-determined
+  - computer abstraction of an object (2D 8-bit or 3D illusion of actual world)
+- Developer bias
+  - Case Study Developer Design Bias ( abstracting end-user expereince of music player to rect() & what it resemblems)
+  - Algorithmic fluency bias, usually adapted to math fluency (different from arithmetic)
+  - Sequential execution of code and tools to make sequential flow change 
+  - Basic Rules about how Processing-Java adjusts rules
+- Colour-choices and code requires foreground, background, emphasis & hoverover (art students), day-mode, dark-mode, night mode
+- Music Player Features and Symbol Design, with associated code 
+- Learning how key board short cuts can 
+- TBA
+
+---
 Note: how the code of some program features influences the code of other program features
 - Natural Language conversations must identify the meta understanding of the entire project (learned by student)
 - Difference between prototyping and rewriting code for efficiency
@@ -33,6 +59,8 @@ Note: it is better to work in a more abstract boilerplate than a blank slate
 . How to play a song, loading a library
   - additional words in a computer language, primary functions, that simplify a programmer's work
   - introductory functions to enable further research in the library
+  - introduces class notation and dereferencer
+  - ability to choose music and put it in a playlist (numbering songs, human numbering and computer numbering)
 
 Note: this adds more code to ignore for now
 - purpose: split students' attention and task
@@ -47,18 +75,26 @@ Note: this adds more code to ignore for now
   - What are the different parameters of a function: what does the computer need to function (abstraction of case study)
   - How are variables created, different examples of naming, initializing, and assigning value
 
+  - Data Structures: repetititon is sometimes the mother of Learning
+  - Primiary Variables can be combined but it depends on how these are used and the code to use them
+  - Once prototyped with primary variables, switching this to arrays
+
 . Drawing the different music buttons based on feature, function, and representation.
+  - Using Paperfolding to connect referent measures to shapes 
+  - Prototyping in a general DIV 
+  - Copying all variables to setup for DIV Application (intorduces passing parameters)
+  - Application data structure to setup, draw, & listeners
+
+. Aspect Ratio in Images 
+
+. Aspect Ratio in Text 
 
 What are the Advanced Placement requirements
+- Vocabulary used
+- Final video of end-user expereince
+- Final video walking through all code, demonstration of vocabulary
 
 Note: start with 100%, when does mark start to decrease
-
-DIVs are built based on referent measures
-
-Purpose of this player: celebration, promotion
-- give to someone to share favorite songs and special messages to that person about the songs, images, or shared memories
-- full exploration of setup, keyPressed, application to mousePressed
-- introducing draw
 
 Purpose: Review the final project after all prototyping is done
 - All print() and println() removed

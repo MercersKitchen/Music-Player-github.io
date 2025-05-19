@@ -104,6 +104,10 @@ Note: this adds more code to ignore for now
 . Aspect Ratio in Images 
 
 . Aspect Ratio in Text 
+  - Many text algorithms and functions for text, sometimes repeating other functions
+  - This algorithms provides the most flexiblity 
+  - Enables imagination with how code for text could be developed
+  
 
 What are the Advanced Placement requirements
 - Vocabulary used

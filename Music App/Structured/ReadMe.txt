@@ -1,11 +1,15 @@
 Change to ReadMe.md when links are known
 
+What makes CS30 the same as Math 30 or Science, Biology, Chemistry, & Physic 30?
+- Using number in abstract ways to solve problems
+- Using instruction to process number for solving problems
+
 What are example algorithms or sequences of steps, at various levels of abstraction?
 - What is the purpose of coding?
   - Pleasure of solving short prompts for developing a pure understanding of algorithms
   - Pleasure of developing something for someone else, like a gift, as an applied understanding of algorithms
   - Even AI is intended as a gift, with all it's uncertainity ... the road is paved with good intentions
-- TBA
+- How a comptuer thinks - reading a program and connections to what it needs
 
 
 
@@ -44,6 +48,7 @@ Purpose of Structured Programming
 - TBA
 
 ---
+
 Note: how the code of some program features influences the code of other program features
 - Natural Language conversations must identify the meta understanding of the entire project (learned by student)
 - Difference between prototyping and rewriting code for efficiency
@@ -60,6 +65,7 @@ Progression of Natural Language Conversation
     - Sequential Programming, execution of functions and variable inspection in console
     - CANVAS does not change
     - Can be done in a Dynamic Program if ignoring some lines of code
+    - Many examples avaailable to illustrate simple algorithm of use 
   - Dynamic Processing-JAVA programs: CANVAS changes like an animation
   - Dynamic adds simple compiler needs, emphasizes how a computer is designed to handle a program
   - Compiler necessary lines of code, including MAIN Program Folder Name, setup() & draw()
@@ -102,12 +108,16 @@ Note: this adds more code to ignore for now
   - Application data structure to setup, draw, & listeners
 
 . Aspect Ratio in Images 
+  - Check for edge cases
+  - Check so image is not cut off
+  - 
 
 . Aspect Ratio in Text 
   - Many text algorithms and functions for text, sometimes repeating other functions
   - This algorithms provides the most flexiblity 
   - Enables imagination with how code for text could be developed
-  
+  - Check where text is not cut off
+
 
 What are the Advanced Placement requirements
 - Vocabulary used

@@ -16,6 +16,6 @@ Additional Notes
 ---
 
 # To Include
-- Pong Ball movement is x*-1
+- Pong Ball movement is x*-1: changing from addition to subtraction
 
 ---

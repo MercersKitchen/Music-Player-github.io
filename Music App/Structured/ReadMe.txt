@@ -4,6 +4,11 @@ What makes CS30 the same as Math 30 or Science, Biology, Chemistry, & Physic 30?
 - Using number in abstract ways to solve problems
 - Using instruction to process number for solving problems
 
+Note: story of using rational expressions in financial math
+- possible by why
+- use simplest math or algorithym to revisit what it is and what it does in application
+- devleop example to expand conceptual understanding
+
 What are example algorithms or sequences of steps, at various levels of abstraction?
 - What is the purpose of coding?
   - Pleasure of solving short prompts for developing a pure understanding of algorithms

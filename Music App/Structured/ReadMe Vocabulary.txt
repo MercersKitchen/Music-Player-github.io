@@ -4,18 +4,17 @@ Input
 Functionality
 Output
 
-List 
-- must be more than one element 
+Syntax Error: debugger errors before runtime errors 
 
+Runtime errors: interfere with continuous execution of program 
 
-Selection & Iteration 
-- do not need to be in same algorithm 
-- do not need to be in a procedure 
-- must affect output of program 
-
-WR#1:  
-- IDs user 
-- Design must idenitfy needs of user 
+Algorithm: detailed enough for someone else to write code (not AI)
+- Similar to Hackathons
+- Alogorithm written in input, processing, & output 
+- Sequencing: order of steps (or functions)
+- Selcetion: if-singleLine, if-else, if-elseIf-else 
+- Selection, advanced not taught: case-break 
+- Iternation: repeating steps until an outcome is met 
 
 ---
 

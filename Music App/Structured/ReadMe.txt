@@ -17,7 +17,7 @@ What are example algorithms or sequences of steps, at various levels of abstract
 - How a comptuer thinks - reading a program and connections to what it needs
 - What are examples of sequential code that demonstrate how to sequence code differently than drag and drop IDEs 
 
-
+DIVs do not overlap
 
 
 

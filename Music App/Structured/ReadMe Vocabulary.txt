@@ -8,6 +8,8 @@ Syntax Error: debugger errors before runtime errors
 
 Runtime errors: interfere with continuous execution of program 
 
+Logic Errors: might trigger syntax or runtime, but might only be visually verified 
+
 Algorithm: detailed enough for someone else to write code (not AI)
 - Similar to Hackathons
 - Alogorithm written in input, processing, & output 

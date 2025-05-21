@@ -35,4 +35,16 @@ Event: action that supplies input data
 
 Program segment: within a procedure, i.e. between {} 
 
+Program Functionality: features and user-interactions 
+
+Purpose: problem being solved or creative interest being pursued 
+
+Selection (intermeidate): try-exception
+- use of console to determine unknown exceptions 
+- use of elseIf to determine handling of known exceptions (see next & previous buttons)
+
+---
+
+BIG Ideas Addressed (See Page 16-21)
+
 

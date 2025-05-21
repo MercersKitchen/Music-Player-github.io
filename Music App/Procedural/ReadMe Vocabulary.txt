@@ -4,6 +4,9 @@ Describe a procedure, passing parameters is not necessary
 
 ---
 
+DIVs can overlap, controlled by Booleans 
+
+
 --- 
 
 To Include
@@ -62,4 +65,16 @@ List being used
 Parameters: explicit (in procedure header) & implicit (in anticipation of a procedure)
 
 Program segment: within a procedure, i.e. between {} 
+
+Selection (intermeidate): try-exception
+- use of console to determine unknown exceptions 
+- use of elseIf to determine handling of known exceptions (see next & previous buttons)
+
+Procedures defined as student-developed / algorithmic:
+- NOT Calls to existing libraries or program code are  
+- NOT: Built-in event handlers (i.e. "when" in blockbased)
+
+---
+
+BIG Ideas Addressed (See Page 16-21) 
 

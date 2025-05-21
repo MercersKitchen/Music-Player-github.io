@@ -17,5 +17,6 @@ Additional Notes
 
 # To Include
 - Pong Ball movement is x*-1: changing from addition to subtraction
+- Dividing the Playing Sufrace into searchable spaces based on the ball's coordinates or single coordinate
 
 ---

@@ -15,6 +15,7 @@ What are example algorithms or sequences of steps, at various levels of abstract
   - Pleasure of developing something for someone else, like a gift, as an applied understanding of algorithms
   - Even AI is intended as a gift, with all it's uncertainity ... the road is paved with good intentions
 - How a comptuer thinks - reading a program and connections to what it needs
+- What are examples of sequential code that demonstrate how to sequence code differently than drag and drop IDEs 
 
 
 

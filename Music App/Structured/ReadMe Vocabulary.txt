@@ -18,5 +18,21 @@ Algorithm: detailed enough for someone else to write code (not AI)
 
 ---
 
+Algorithm: sequnce, selection, iteration 
+
+Arguments, logical operators 
+- See ternary operator
+- See IF Statements 
+
+Listeners have IF Statements 
+
+Input: data into a program 
+- GUI Display 
+- Listeners 
+- Pong Ball Data 
+
+Event: action that supplies input data 
+
+Program segment: within a procedure, i.e. between {} 
 
 

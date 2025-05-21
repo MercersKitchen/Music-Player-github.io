@@ -50,5 +50,16 @@ WR#2c
 
 ---
 
+To Include: List 
+- collection type: database, hash tables, dictionairies, sets, etc. in a single structure 
+- data by initialization or computation on other variables or list elements 
+- arrays or arrayList 
 
+List being used 
+- new list created from existing data 
+- review MP3 meta data 
+
+Parameters: explicit (in procedure header) & implicit (in anticipation of a procedure)
+
+Program segment: within a procedure, i.e. between {} 
 

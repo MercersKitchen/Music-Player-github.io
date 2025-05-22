@@ -1,4 +1,6 @@
-// Purpose: combine prototyped 2D Music Button Symbols
+/* Purpose: combine prototyped 2D Music Button Symbols
+ - Loop Once Requires a "1" inside
+ */
 //
 //Library - Minim
 //
@@ -28,17 +30,23 @@ float fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3,
 float fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6;
 float pauseX1, pauseY1, pauseWidth1, pauseHeight1;
 float pauseX2, pauseY2, pauseWidth2, pauseHeight2;
-float muteTopPoint1X, muteToppoint1Y, muteToppoint2X, muteToppoint2Y;
+float muteTopPoint1X, muteTopPoint1Y, muteTopPoint2X, muteTopPoint2Y;
 float muteDownPoint1X, muteDownPoint1Y, muteDownPoint2X, muteDownPoint2Y;
 float muteBottomPoint1X, muteBottomPoint1Y, muteBottomPoint2X, muteBottomPoint2Y;
 float muteUpPoint1X, muteUpPoint1Y, muteUpPoint2X, muteUpPoint2Y;
 float muteCross1X1, muteCross1Y1, muteCross1X2, muteCross1Y2;
 float muteCross2X1, muteCross2Y1, muteCross2X2, muteCross2Y2;
+float prevX, prevY, prevWidth, prevHeight;
+float prevX1, prevY1, prevX2, prevY2, prevX3, prevY3;
+float fastRewindX1, fastRewindY1, fastRewindX2, fastRewindY2, fastRewindX3, fastRewindY3;
+float fastRewindX4, fastRewindY4, fastRewindX5, fastRewindY5, fastRewindX6, fastRewindY6;
+float loopOnceX, loopOnceY, loopOnceWidth, loopOnceHeight;
+float loopOnceX1, loopOnceY1, loopOnceX2, loopOnceY2, loopOnceX3, loopOnceY3;
 //
 void setup() {
   // Display
   fullScreen();
-  //size(700, 500); 
+  //size(700, 500);
   int appWidth = displayWidth; //width
   int appHeight = displayHeight; //height
   int appShortSide = ( appWidth < appHeight ) ? appWidth : appHeight ;
@@ -59,7 +67,7 @@ void setup() {
   //
   //rect(DIV) is a square to start, by design
   int numberOfButtons = 13; //Half a button on either side as space, Center Button is Play
-  println("Button Width:", appWidth/numberOfButtons);
+  //println("Button Width:", appWidth/numberOfButtons);
   int widthOfButton = appWidth/numberOfButtons;
   int beginningButtonSpace = widthOfButton;
   int buttonY = appHeight*3/5;
@@ -82,9 +90,9 @@ void setup() {
   //Mute Button
   //Note: population of MUTE could be based on first point
   muteTopPoint1X = muteDivX + muteDivWidth*1/4 ;
-  muteToppoint1Y = muteDivY + muteDivHeight*1/4 ;
-  muteToppoint2X = muteTopPoint1X + muteDivWidth*1/2 ; //based on beginning of line
-  muteToppoint2Y = muteToppoint1Y ;
+  muteTopPoint1Y = muteDivY + muteDivHeight*1/4 ;
+  muteTopPoint2X = muteTopPoint1X + muteDivWidth*1/2 ; //based on beginning of line
+  muteTopPoint2Y = muteTopPoint1Y ;
   muteDownPoint1X = muteDivX + muteDivWidth*3/4 ;
   muteDownPoint1Y = muteDivY + muteDivHeight*1/4 ;
   muteDownPoint2X = muteDownPoint1X; //based on beginning of line
@@ -97,32 +105,51 @@ void setup() {
   muteUpPoint1Y = muteDivY + muteDivHeight*3/4;
   muteUpPoint2X = muteUpPoint1X ; //based on beginning of line
   muteUpPoint2Y = muteDivY + muteDivHeight*1/4;
+  muteCross1X1 = muteTopPoint1X;
+  muteCross1Y1 = muteTopPoint1Y;
+  muteCross1X2 = muteBottomPoint1X;
+  muteCross1Y2 = muteBottomPoint1Y;
+  muteCross2X1 = muteUpPoint1X;
+  muteCross2Y1 = muteUpPoint1Y;
+  muteCross2X2 = muteDownPoint1X;
+  muteCross2Y2 = muteDownPoint1Y;
   //
-  muteCross1X1 = ;
-  muteCross1Y1 = ;
-  muteCross1X2 = ;
-  muteCross1X2) = ;
-  muteCross2X1 = ;
-  muteCross2Y1 = ;
-  muteCross2X2 = ;
-  muteCross2X2) = ;
-  
-  
-  
-  
-  
-  
-  
-  
-  
   previousDivX = beginningButtonSpace + widthOfButton*2;
   previousDivY = buttonY;
   previousDivWidth = widthOfButton;
   previousDivHeight = widthOfButton;
+  //
+  //Previous Button
+  prevX = previousDivX + previousDivWidth*1/2 - previousDivWidth*1/8 ;
+  prevY = previousDivY + previousDivHeight*1/4 ;
+  prevWidth = previousDivWidth*1/8 ;
+  prevHeight = previousDivHeight*1/2 ;
+  prevX1 = previousDivX + previousDivWidth*3/4;
+  prevY1 = previousDivY + previousDivHeight*1/4;
+  prevX2 = previousDivX + previousDivWidth*1/2;
+  prevY2 = previousDivY + previousDivHeight*1/2 ;
+  prevX3 = prevX1 ;
+  prevY3 = previousDivY + previousDivHeight*3/4;
+  //
   fastRewindDivX = beginningButtonSpace + widthOfButton*3;
   fastRewindDivY = buttonY;
   fastRewindDivWidth = widthOfButton;
   fastRewindDivHeight = widthOfButton;
+  //
+  //fast rewind button
+  fastRewindX1 = fastRewindDivX + fastRewindDivWidth*3/4 ;
+  fastRewindY1 = fastRewindDivY + fastRewindDivHeight*1/4 ;
+  fastRewindX2 = fastRewindDivX + fastRewindDivWidth*1/2 ;
+  fastRewindY2 = fastRewindDivY + fastRewindDivHeight*1/2 ;
+  fastRewindX3 = fastRewindX1 ;
+  fastRewindY3 = fastRewindDivY + fastRewindDivHeight*3/4;
+  fastRewindX4 = fastRewindDivX + fastRewindDivWidth*1/2 ;
+  fastRewindY4 = fastRewindDivY + fastRewindDivHeight*1/4;
+  fastRewindX5 = fastRewindDivX + fastRewindDivWidth*1/4 ;
+  fastRewindY5 = fastRewindDivY + fastRewindDivHeight*1/2 ;
+  fastRewindX6 = fastRewindX4 ;
+  fastRewindY6 = fastRewindDivY + fastRewindDivHeight*3/4 ;
+  //
   pauseDivX = beginningButtonSpace + widthOfButton*4;
   pauseDivY = buttonY;
   pauseDivWidth = widthOfButton;
@@ -155,10 +182,29 @@ void setup() {
   loopOnceDivY = buttonY;
   loopOnceDivWidth = widthOfButton;
   loopOnceDivHeight = widthOfButton;
+  //
+  //loop once button
+  //Note, this is a stop botton with a "one inside" & a triangle
+  //CAUTION: this needs text
+  loopOnceX = loopOnceDivX + loopOnceDivWidth*1/4 ;
+  loopOnceY = loopOnceDivY + loopOnceDivHeight*1/4 ;
+  loopOnceWidth = loopOnceDivWidth*1/2;
+  loopOnceHeight = loopOnceDivHeight*1/2;
+  loopOnceX1 = loopOnceDivX + loopOnceDivWidth*3/4 - loopOnceDivWidth*1/16 ;
+  loopOnceY1 = loopOnceDivY + loopOnceDivHeight*1/4 - loopOnceDivHeight*1/16 ;
+  loopOnceX2 = loopOnceDivX + loopOnceDivWidth*3/4 + loopOnceDivWidth*1/16 ;
+  loopOnceY2 = loopOnceDivY + loopOnceDivHeight*1/4 ;
+  loopOnceX3 = loopOnceX1 ;
+  loopOnceY3 = loopOnceDivY + loopOnceDivHeight*1/4 + loopOnceDivHeight*1/16 ;
+  //
   loopInfiniteDivX = beginningButtonSpace + widthOfButton*7;
   loopInfiniteDivY = buttonY;
   loopInfiniteDivWidth = widthOfButton;
   loopInfiniteDivHeight = widthOfButton;
+  //
+  //loop infinite button
+  //Note: Loop infinite button is same as loop once, without text "1"
+  //
   fastForwardDivX = beginningButtonSpace + widthOfButton*8;
   fastForwardDivY = buttonY;
   fastForwardDivWidth = widthOfButton;
@@ -196,7 +242,7 @@ void setup() {
   songPositionDivX = musicSongSpaceX;
   songPositionDivY = musicSongSpaceY;
   songPositionDivWidth = musicSongSpaceWidth*1/5;
-  songPositionDivHeight = musicSongSpaceHeight*2/5;  
+  songPositionDivHeight = musicSongSpaceHeight*2/5;
   timeRemainingDivX = musicSongSpaceX + musicSongSpaceWidth*3/5;
   timeRemainingDivY = musicSongSpaceY + musicSongSpaceHeight*3/5;
   timeRemainingDivWidth = musicSongSpaceWidth*1/5;
@@ -235,19 +281,26 @@ void setup() {
   //rect(timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight);
   rect(stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight);
   //MUTE: muteDivX, muteDivY, muteDivWidth, muteDivHeight
-  line(muteTopPoint1X, muteToppoint1Y, muteToppoint2X, muteToppoint2Y);
+  line(muteTopPoint1X, muteTopPoint1Y, muteTopPoint2X, muteTopPoint2Y);
   line(muteDownPoint1X, muteDownPoint1Y, muteDownPoint2X, muteDownPoint2Y);
   line(muteBottomPoint1X, muteBottomPoint1Y, muteBottomPoint2X, muteBottomPoint2Y);
   line(muteUpPoint1X, muteUpPoint1Y, muteUpPoint2X, muteUpPoint2Y);
   line(muteCross1X1, muteCross1Y1, muteCross1X2, muteCross1Y2);
   line(muteCross2X1, muteCross2Y1, muteCross2X2, muteCross2Y2);
+  //Previous Button
+  rect(prevX, prevY, prevWidth, prevHeight);
+  triangle(prevX1, prevY1, prevX2, prevY2, prevX3, prevY3);
+  //Fast Rewind
+  triangle(fastRewindX1, fastRewindY1, fastRewindX2, fastRewindY2, fastRewindX3, fastRewindY3);
+  triangle(fastRewindX4, fastRewindY4, fastRewindX5, fastRewindY5, fastRewindX6, fastRewindY6);
   triangle(playX1, playY1, playX2, playY2, playX3, playY3);
-  triangle(fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3, fastForwardY3);
-  triangle(fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6);
   rect(pauseX1, pauseY1, pauseWidth1, pauseHeight1);
   rect(pauseX2, pauseY2, pauseWidth2, pauseHeight2);
-  //
-  //To Be Used
+  triangle(fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3, fastForwardY3);
+  triangle(fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6);
+  rect(loopOnceX, loopOnceY, loopOnceWidth, loopOnceHeight);
+  triangle(loopOnceX1, loopOnceY1, loopOnceX2, loopOnceY2, loopOnceX3, loopOnceY3);
+  //Note: Loop infinite button is same as loop once, without text "1"
   //triangle(loopInifiteX1, loopInifiteTriY1, loopInifiteTriX2, loopInifiteTriY2, loopInifiteTriX3, loopInifiteTriY3);
   //
 } //End setup

@@ -28,6 +28,12 @@ float fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3,
 float fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6;
 float pauseX1, pauseY1, pauseWidth1, pauseHeight1;
 float pauseX2, pauseY2, pauseWidth2, pauseHeight2;
+float muteTopPoint1X, muteToppoint1Y, muteToppoint2X, muteToppoint2Y;
+float muteDownPoint1X, muteDownPoint1Y, muteDownPoint2X, muteDownPoint2Y;
+float muteBottomPoint1X, muteBottomPoint1Y, muteBottomPoint2X, muteBottomPoint2Y;
+float muteUpPoint1X, muteUpPoint1Y, muteUpPoint2X, muteUpPoint2Y;
+float muteCross1X1, muteCross1Y1, muteCross1X2, muteCross1Y2;
+float muteCross2X1, muteCross2Y1, muteCross2X2, muteCross2Y2;
 //
 void setup() {
   // Display
@@ -72,6 +78,43 @@ void setup() {
   muteDivY = buttonY;
   muteDivWidth = widthOfButton;
   muteDivHeight = widthOfButton;
+  //
+  //Mute Button
+  //Note: population of MUTE could be based on first point
+  muteTopPoint1X = muteDivX + muteDivWidth*1/4 ;
+  muteToppoint1Y = muteDivY + muteDivHeight*1/4 ;
+  muteToppoint2X = muteTopPoint1X + muteDivWidth*1/2 ; //based on beginning of line
+  muteToppoint2Y = muteToppoint1Y ;
+  muteDownPoint1X = muteDivX + muteDivWidth*3/4 ;
+  muteDownPoint1Y = muteDivY + muteDivHeight*1/4 ;
+  muteDownPoint2X = muteDownPoint1X; //based on beginning of line
+  muteDownPoint2Y = muteDivY + muteDivHeight*3/4 ;
+  muteBottomPoint1X = muteDivX + muteDivWidth*3/4 ;
+  muteBottomPoint1Y = muteDivY + muteDivHeight*3/4;
+  muteBottomPoint2X = muteDivX + muteDivWidth*1/4 ; //based on beginning of line
+  muteBottomPoint2Y = muteDivY + muteDivHeight*3/4 ;
+  muteUpPoint1X = muteDivX + muteDivWidth*1/4;
+  muteUpPoint1Y = muteDivY + muteDivHeight*3/4;
+  muteUpPoint2X = muteUpPoint1X ; //based on beginning of line
+  muteUpPoint2Y = muteDivY + muteDivHeight*1/4;
+  //
+  muteCross1X1 = ;
+  muteCross1Y1 = ;
+  muteCross1X2 = ;
+  muteCross1X2) = ;
+  muteCross2X1 = ;
+  muteCross2Y1 = ;
+  muteCross2X2 = ;
+  muteCross2X2) = ;
+  
+  
+  
+  
+  
+  
+  
+  
+  
   previousDivX = beginningButtonSpace + widthOfButton*2;
   previousDivY = buttonY;
   previousDivWidth = widthOfButton;
@@ -191,11 +234,22 @@ void setup() {
   //
   //rect(timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight);
   rect(stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight);
+  //MUTE: muteDivX, muteDivY, muteDivWidth, muteDivHeight
+  line(muteTopPoint1X, muteToppoint1Y, muteToppoint2X, muteToppoint2Y);
+  line(muteDownPoint1X, muteDownPoint1Y, muteDownPoint2X, muteDownPoint2Y);
+  line(muteBottomPoint1X, muteBottomPoint1Y, muteBottomPoint2X, muteBottomPoint2Y);
+  line(muteUpPoint1X, muteUpPoint1Y, muteUpPoint2X, muteUpPoint2Y);
+  line(muteCross1X1, muteCross1Y1, muteCross1X2, muteCross1Y2);
+  line(muteCross2X1, muteCross2Y1, muteCross2X2, muteCross2Y2);
   triangle(playX1, playY1, playX2, playY2, playX3, playY3);
   triangle(fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3, fastForwardY3);
   triangle(fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6);
   rect(pauseX1, pauseY1, pauseWidth1, pauseHeight1);
   rect(pauseX2, pauseY2, pauseWidth2, pauseHeight2);
+  //
+  //To Be Used
+  //triangle(loopInifiteX1, loopInifiteTriY1, loopInifiteTriX2, loopInifiteTriY2, loopInifiteTriX3, loopInifiteTriY3);
+  //
 } //End setup
 //
 void draw() {

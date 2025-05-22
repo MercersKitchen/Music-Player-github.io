@@ -52,10 +52,10 @@ void setup() {
      }
      */
   }
-  //printArray(files);
+  printArray(files);
   //
-  playList = new AudioPlayer[fileNames.length]; //sets the array length
-  while ( currentSong < fileNames.length ) {
+  playList = new AudioPlayer[numberOfSongs]; //sets the array length
+  while ( currentSong < numberOfSongs ) {
     playList[ currentSong ] = minim.loadFile( files[ currentSong ] );
     currentSong++; //functions similar to FOR
   }

@@ -32,8 +32,9 @@ float pauseX2, pauseY2, pauseWidth2, pauseHeight2;
 void setup() {
   // Display
   fullScreen();
-  int appWidth = displayWidth;
-  int appHeight = displayHeight;
+  //size(700, 500); 
+  int appWidth = displayWidth; //width
+  int appHeight = displayHeight; //height
   int appShortSide = ( appWidth < appHeight ) ? appWidth : appHeight ;
   //
   //Population

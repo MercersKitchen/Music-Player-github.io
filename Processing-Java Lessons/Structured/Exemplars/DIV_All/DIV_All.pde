@@ -7,6 +7,7 @@
 //Library - Minim
 //
 //Global Variables
+float randomStartX, randomStartY, randomStartWidth, randomStartHeight;
 float quitX, quitY, quitWidth, quitHeight;
 float imageDivX, imageDivY, imageDivWidth, imageDivHeight;
 float stopDivX, stopDivY, stopDivWidth, stopDivHeight;
@@ -39,6 +40,10 @@ void setup() {
   quitY = 0;
   quitWidth = shortSide*1/20;
   quitHeight = shortSide*1/20;
+  randomStartX = 0;
+  randomStartY = 0;
+  randomStartWidth = shortSide*1/20;
+  randomStartHeight = shortSide*1/20;
   imageDivX = appWidth*1/4;
   imageDivY = appHeight*1/5;
   imageDivWidth = appWidth*1/2;
@@ -124,6 +129,7 @@ void setup() {
   //
   //DIVs
   //rect(X, Y, Width, Height)
+  rect(randomStartX, randomStartY, randomStartWidth, randomStartHeight);
   rect(quitX, quitY, quitWidth, quitHeight);
   rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
   rect(stopDivX, stopDivY, stopDivWidth, stopDivHeight);  //*0

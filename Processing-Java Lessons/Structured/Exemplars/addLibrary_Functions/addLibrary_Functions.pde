@@ -69,7 +69,8 @@ void setup() {
 void draw() {
 } //End draw
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+} //End mousePressed
 //
 void keyPressed() {
   /* Key Board Short Cuts ... learning what the Music Buttons could be
@@ -179,6 +180,8 @@ void keyPressed() {
     }
   }
   //if ( key=='P' || key=='p' ) ; // Previous //Students to finish
+  //
+  if ( key=='Y' || key=='y' ) currentSong = int(random(numberOfSongs)); //random(0, numberOfSongs)
   //
   //if ( key=='S' || key=='s' ) ; // Shuffle - PLAY (Random)
   //Note: will randomize the currentSong number

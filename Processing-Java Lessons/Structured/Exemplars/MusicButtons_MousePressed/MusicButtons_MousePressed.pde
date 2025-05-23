@@ -403,6 +403,9 @@ void draw() {
 } //End draw
 //
 void mousePressed() {
+  //mouseX> && mouseX< && mouseY> && mouseY<
+  if () {} //End
+  //
 } //End mousePressed
 //
 void keyPressed() {

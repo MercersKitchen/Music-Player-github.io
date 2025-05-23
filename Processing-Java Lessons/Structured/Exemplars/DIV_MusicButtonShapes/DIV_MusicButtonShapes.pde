@@ -42,6 +42,14 @@ float fastRewindX1, fastRewindY1, fastRewindX2, fastRewindY2, fastRewindX3, fast
 float fastRewindX4, fastRewindY4, fastRewindX5, fastRewindY5, fastRewindX6, fastRewindY6;
 float loopOnceX, loopOnceY, loopOnceWidth, loopOnceHeight;
 float loopOnceX1, loopOnceY1, loopOnceX2, loopOnceY2, loopOnceX3, loopOnceY3;
+float loopInfiniteX, loopInfiniteY, loopInfiniteWidth, loopInfiniteHeight;
+float loopInfiniteX1, loopInfiniteY1, loopInfiniteX2, loopInfiniteY2, loopInfiniteX3, loopInfiniteY3;
+float nextX1, nextY1, nextX2, nextY2, nextX3, nextY3;
+float nextX, nextY, nextWidth, nextHeight;
+float shuffleCross1X1, shuffleCross1Y1, shuffleCross1X2, shuffleCross1Y2;
+float shuffleCross2X1, shuffleCross2Y1, shuffleCross2X2, shuffleCross2Y2;
+float shuffleTriX1, shuffleTriY1, shuffleTriX2, shuffleTriY2, shuffleTriX3, shuffleTriY3;
+float shuffleTriX4, shuffleTriY4, shuffleTriX5, shuffleTriY5, shuffleTriX6, shuffleTriY6;
 //
 void setup() {
   // Display
@@ -204,6 +212,17 @@ void setup() {
   //
   //loop infinite button
   //Note: Loop infinite button is same as loop once, without text "1"
+  loopInfiniteX = loopInfiniteDivX + loopInfiniteDivWidth*1/4 ;
+  loopInfiniteY = loopInfiniteDivY + loopInfiniteDivHeight*1/4 ;
+  loopInfiniteWidth = loopInfiniteDivWidth*1/2;
+  loopInfiniteHeight = loopInfiniteDivHeight*1/2;
+  loopInfiniteX1 = loopInfiniteDivX + loopInfiniteDivWidth*3/4 - loopInfiniteDivWidth*1/16 ;
+  loopInfiniteY1 = loopInfiniteDivY + loopInfiniteDivHeight*1/4 - loopInfiniteDivHeight*1/16 ;
+  loopInfiniteX2 = loopInfiniteDivX + loopInfiniteDivWidth*3/4 + loopInfiniteDivWidth*1/16 ;
+  loopInfiniteY2 = loopInfiniteDivY + loopInfiniteDivHeight*1/4 ;
+  loopInfiniteX3 = loopInfiniteX1 ;
+  loopInfiniteY3 = loopInfiniteDivY + loopInfiniteDivHeight*1/4 + loopInfiniteDivHeight*1/16 ;
+  //
   //
   fastForwardDivX = beginningButtonSpace + widthOfButton*8;
   fastForwardDivY = buttonY;
@@ -228,10 +247,46 @@ void setup() {
   nextDivY = buttonY;
   nextDivWidth = widthOfButton;
   nextDivHeight = widthOfButton;
+  //
+  //Next Button
+  nextX1 = nextDivX + nextDivWidth*1/4;
+  nextY1 = nextDivY + nextDivHeight*1/4;
+  nextX2 = nextDivX + nextDivWidth*1/2;
+  nextY2 = nextDivY + nextDivHeight*1/2;
+  nextX3 = nextDivX + nextDivWidth*1/4;
+  nextY3 = nextDivY + nextDivHeight*3/4;
+  nextX = nextX2;
+  nextY = nextY1;
+  nextWidth = nextDivWidth*1/8;
+  nextHeight = nextDivHeight*1/2;
+  //
   shuffleDivX = beginningButtonSpace + widthOfButton*10;
   shuffleDivY = buttonY;
   shuffleDivWidth = widthOfButton;
   shuffleDivHeight = widthOfButton;
+  //
+  //Shuffle Button
+  shuffleCross1X1 = shuffleDivX + shuffleDivWidth*1/4;
+  shuffleCross1Y1 = shuffleDivY + shuffleDivHeight*1/4;
+  shuffleCross1X2 = shuffleDivX + shuffleDivWidth*3/4;
+  shuffleCross1Y2 = shuffleDivY + shuffleDivHeight*3/4;
+  shuffleCross2X1 = shuffleDivX + shuffleDivWidth*1/4;
+  shuffleCross2Y1 = shuffleDivY + shuffleDivHeight*3/4;
+  shuffleCross2X2 = shuffleDivX + shuffleDivWidth*3/4;
+  shuffleCross2Y2 = shuffleDivY + shuffleDivHeight*1/4;
+  shuffleTriX1 = shuffleCross2X2;
+  shuffleTriY1 = shuffleCross2Y2 - shuffleDivHeight*1/16;
+  shuffleTriX2 = shuffleCross2X2;
+  shuffleTriY2 = shuffleCross2Y2 + shuffleDivHeight*1/16;
+  shuffleTriX3 = shuffleCross2X2 + shuffleDivWidth*1/16;
+  shuffleTriY3 = shuffleCross2Y2;
+  shuffleTriX4 = shuffleCross1X2;
+  shuffleTriY4 = shuffleCross1Y2 - shuffleDivHeight*1/16;
+  shuffleTriX5 = shuffleCross1X2;
+  shuffleTriY5 = shuffleCross1Y2 + shuffleDivHeight*1/16;
+  shuffleTriX6 = shuffleCross1X2 + + shuffleDivWidth*1/16;
+  shuffleTriY6 = shuffleCross1Y2;
+
   //
   float musicSongPaddingY = widthOfButton*1/4;
   float musicSongSpaceX = stopDivX;
@@ -279,18 +334,16 @@ void setup() {
   rect(totalTimeDivX, totalTimeDivY, totalTimeDivWidth, totalTimeDivHeight);
   //
   //rect(timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight);
+  //
   rect(stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight);
-  //MUTE: muteDivX, muteDivY, muteDivWidth, muteDivHeight
   line(muteTopPoint1X, muteTopPoint1Y, muteTopPoint2X, muteTopPoint2Y);
   line(muteDownPoint1X, muteDownPoint1Y, muteDownPoint2X, muteDownPoint2Y);
   line(muteBottomPoint1X, muteBottomPoint1Y, muteBottomPoint2X, muteBottomPoint2Y);
   line(muteUpPoint1X, muteUpPoint1Y, muteUpPoint2X, muteUpPoint2Y);
   line(muteCross1X1, muteCross1Y1, muteCross1X2, muteCross1Y2);
   line(muteCross2X1, muteCross2Y1, muteCross2X2, muteCross2Y2);
-  //Previous Button
   rect(prevX, prevY, prevWidth, prevHeight);
   triangle(prevX1, prevY1, prevX2, prevY2, prevX3, prevY3);
-  //Fast Rewind
   triangle(fastRewindX1, fastRewindY1, fastRewindX2, fastRewindY2, fastRewindX3, fastRewindY3);
   triangle(fastRewindX4, fastRewindY4, fastRewindX5, fastRewindY5, fastRewindX6, fastRewindY6);
   triangle(playX1, playY1, playX2, playY2, playX3, playY3);
@@ -301,7 +354,14 @@ void setup() {
   rect(loopOnceX, loopOnceY, loopOnceWidth, loopOnceHeight);
   triangle(loopOnceX1, loopOnceY1, loopOnceX2, loopOnceY2, loopOnceX3, loopOnceY3);
   //Note: Loop infinite button is same as loop once, without text "1"
-  //triangle(loopInifiteX1, loopInifiteTriY1, loopInifiteTriX2, loopInifiteTriY2, loopInifiteTriX3, loopInifiteTriY3);
+  rect(loopInfiniteX, loopInfiniteY, loopInfiniteWidth, loopInfiniteHeight);
+  triangle(loopInfiniteX1, loopInfiniteY1, loopInfiniteX2, loopInfiniteY2, loopInfiniteX3, loopInfiniteY3);
+  triangle(nextX1, nextY1, nextX2, nextY2, nextX3, nextY3);
+  rect(nextX, nextY, nextWidth, nextHeight);
+  line(shuffleCross1X1, shuffleCross1Y1, shuffleCross1X2, shuffleCross1Y2);
+  line(shuffleCross2X1, shuffleCross2Y1, shuffleCross2X2, shuffleCross2Y2);
+  triangle(shuffleTriX1, shuffleTriY1, shuffleTriX2, shuffleTriY2, shuffleTriX3, shuffleTriY3);
+  triangle(shuffleTriX4, shuffleTriY4, shuffleTriX5, shuffleTriY5, shuffleTriX6, shuffleTriY6);
   //
 } //End setup
 //

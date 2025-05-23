@@ -1,5 +1,7 @@
 /* Purpose: combine prototyped 2D Music Button Symbols
  - Loop Once Requires a "1" inside
+ - CAUTION: Shuffle requires an autoplay or random next song (feature lacks clarity when only one song plays at a time)
+ - Note: Random Start seems to be a better description here
  */
 //
 //Library - Minim
@@ -19,6 +21,7 @@ AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
 //
 float randomStartX, randomStartY, randomStartWidth, randomStartHeight;
+Boolean randomSong=false;
 float quitX, quitY, quitWidth, quitHeight;
 float imageDivX, imageDivY, imageDivWidth, imageDivHeight;
 float stopDivX, stopDivY, stopDivWidth, stopDivHeight;
@@ -411,6 +414,86 @@ void draw() {
 void mousePressed() {
   //mouseX> && mouseX< && mouseY> && mouseY<
   //if () {} //End
+  //
+  //CAUTION: ERROR, code is copied from Key Pressed to Mouse Pressed
+  //  THUS any changes must be made twicer
+  //  ERROR: double taps are making images appear weird
+  //  PROBLEM: how can images be changed to refect what is happening with single song play
+  //
+  if ( mouseX>randomStartX && mouseX<randomStartX+randomStartWidth && mouseY>randomStartY && mouseY<randomStartY+randomStartHeight ) {
+    currentSong = int(random(numberOfSongs));
+  } //End Random Start
+  if ( mouseX>quitX && mouseX<quitX+quitWidth && mouseY>quitY && mouseY<quitY+quitHeight ) {
+    exit();
+  } //End Quit
+  if ( mouseX>stopDivX && mouseX<stopDivX+stopDivWidth && mouseY>stopDivY && mouseY<stopDivY+stopDivHeight ) {
+    if ( playList[currentSong].isPlaying() ) {
+      playList[currentSong].pause(); //single tap
+    } else {
+      playList[currentSong].rewind(); //double tap
+    }
+  } //End Stop
+  if ( mouseX>muteDivX && mouseX<muteDivX+muteDivWidth && mouseY>muteDivY && mouseY<muteDivY+muteDivHeight ) {if ( playList[currentSong].isMuted() ) {
+      //ERROR: song might not be playing
+      //CATCH: ask .isPlaying() or !.isPlaying()
+      playList[currentSong].unmute();
+    } else {
+      //Possible ERROR: Might rewind the song
+      playList[currentSong].mute();
+    }
+  } //End Mute
+  if ( mouseX>previousDivX && mouseX<previousDivX+previousDivWidth && mouseY>previousDivY && mouseY<previousDivY+previousDivHeight ) {
+    //Students to complete
+  } //End Previous
+  if ( mouseX>fastRewindDivX && mouseX<fastRewindDivX+fastRewindDivWidth && mouseY>fastRewindDivY && mouseY<fastRewindDivY+fastRewindDivHeight ) {
+    playList[currentSong].skip( -10000 );
+  } //End Fast Rewind
+  if ( mouseX>pauseDivX && mouseX<pauseDivX+pauseDivWidth && mouseY>pauseDivY && mouseY<pauseDivY+pauseDivHeight ) {
+    if ( playList[currentSong].isPlaying() ) {
+      playList[currentSong].pause();
+    } else {
+      playList[currentSong].play();
+    }
+  } //End Pause
+  if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
+    playList[currentSong].loop(0); //double tap possible
+  } //End Play
+  if ( mouseX>loopOnceDivX && mouseX<loopOnceDivX+loopOnceDivWidth && mouseY>loopOnceDivY && mouseY<loopOnceDivY+loopOnceDivHeight ) {
+    playList[currentSong].loop(1);
+  } //End Loop Once
+  if ( mouseX>loopInfiniteDivX && mouseX<loopInfiniteDivX+loopInfiniteDivWidth && mouseY>loopInfiniteDivY && mouseY<loopInfiniteDivY+loopInfiniteDivHeight ) {
+    playList[currentSong].loop();
+  } //End Loop Infinitely
+  if ( mouseX>fastForwardDivX && mouseX<fastForwardDivX+fastForwardDivWidth && mouseY>fastForwardDivY && mouseY<fastForwardDivY+fastForwardDivHeight ) {
+    playList[currentSong].skip( 10000 );
+  } //End Fast Forward
+  if ( mouseX>nextDivX && mouseX<nextDivX+nextDivWidth && mouseY>nextDivY && mouseY<nextDivY+nextDivHeight ) {
+    if ( playList[currentSong].isPlaying() ) {
+      playList[currentSong].pause();
+      playList[currentSong].rewind();
+      //
+      if ( currentSong==numberOfSongs-1 ) {
+        currentSong = 0;
+      } else {
+        currentSong++;
+      }
+      playList[currentSong].play();
+    } else {
+      //
+      playList[currentSong].rewind();
+      //
+      if ( currentSong==numberOfSongs-1 ) {
+        currentSong = 0;
+      } else {
+        currentSong++;
+      }
+      // NEXT will not automatically play the song
+      //song[currentSong].play();
+    }
+  } //End Next Song
+  if ( mouseX>shuffleDivX && mouseX<shuffleDivX+shuffleDivWidth && mouseY>shuffleDivY && mouseY<shuffleDivY+shuffleDivHeight ) {
+    //Students to complete
+  } //End Shuffle Next Song
   //
 } //End mousePressed
 //

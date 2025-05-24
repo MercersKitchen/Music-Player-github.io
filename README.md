@@ -3,6 +3,18 @@ Lessons, Revisions, and AI (Artificial Intelligence and Academic Integrity)
 
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*
 
+---
+
+My Perspective: everyone can read, write, and do arithmetic in different ways
+
+My Profession: how does this happen in a way I can respond to people 
+- not responding like a teacher to students' family and personal situations
+- beyond learning issues
+
+Story of Math 20 Applied and Regression Analysis eventually writing DIP Math 30-1 online questions (interactions with an exam)
+
+---
+
 The beginning page for all lessons using Processing-Java in MercersKitchen for Teaching (Computer Science).
 
 This repository presumes the use of Artificial Intelligence like Co-Pilot. Programs can be opened with Processing-Java or VS-Code with Co-Pilot included through GitHub.

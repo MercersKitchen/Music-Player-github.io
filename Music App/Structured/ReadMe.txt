@@ -6,15 +6,15 @@ What makes CS30 the same as Math 30 or Science, Biology, Chemistry, & Physic 30?
 
 Note: story of using rational expressions in financial math
 - possible by why
-- use simplest math or algorithym to revisit what it is and what it does in application
-- devleop example to expand conceptual understanding
+- use simplest math or algorithm to revisit what it is and what it does in application
+- develop example to expand conceptual understanding
 
 What are example algorithms or sequences of steps, at various levels of abstraction?
 - What is the purpose of coding?
   - Pleasure of solving short prompts for developing a pure understanding of algorithms
   - Pleasure of developing something for someone else, like a gift, as an applied understanding of algorithms
-  - Even AI is intended as a gift, with all it's uncertainity ... the road is paved with good intentions
-- How a comptuer thinks - reading a program and connections to what it needs
+  - Even AI is intended as a gift, with all it's uncertainty ... the road is paved with good intentions
+- How a computer thinks - reading a program and connections to what it needs
 - What are examples of sequential code that demonstrate how to sequence code differently than drag and drop IDEs 
 
 DIVs do not overlap

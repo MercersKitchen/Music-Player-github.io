@@ -91,7 +91,7 @@ void setup() {
   //
   String musicDirectory = "../../../../" + lessonDependanciesFolder + musicPathway;
   String file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
-  println( file );
+  //println( file );
   //Create a FOR loop to loadFile() a changing songName
   playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
   //Music Testing

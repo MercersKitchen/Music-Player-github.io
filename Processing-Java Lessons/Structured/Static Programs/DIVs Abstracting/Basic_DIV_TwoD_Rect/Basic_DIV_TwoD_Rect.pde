@@ -1,4 +1,4 @@
-/* Purpose: 
+/* Purpose: Reorganize decreasing the amount for formulae & using FOR Loop
  */
 //Display
 fullScreen();
@@ -104,7 +104,7 @@ float fastRewindDivWidth = widthOfButton;
 float fastRewindDivHeight = widthOfButton;
 //
 //fast rewind button
-float fastRewindX1 = fastRewindDivX + fastRewindDivWidth*3/4 ;
+float fastRewindX1 = fastRewindDivX + fastRewindDivWidth*1/4 + fastRewindDivWidth*1/2;
 float fastRewindY1 = fastRewindDivY + fastRewindDivHeight*1/4 ;
 float fastRewindX2 = fastRewindX1 - fastRewindDivWidth*1/4 ;
 float fastRewindY2 = fastRewindY1 + fastRewindDivHeight*1/4 ;
@@ -211,12 +211,12 @@ float nextDivWidth = widthOfButton;
 float nextDivHeight = widthOfButton;
 //
 //Next Button
-float nextX1 = nextDivX + nextDivWidth*1/4;
+float nextX1 = nextDivX + nextDivWidth*1/4 + 0*nextDivWidth*1/2;
 float nextY1 = nextDivY + nextDivHeight*1/4;
-float nextX2 = nextDivX + nextDivWidth*1/2;
-float nextY2 = nextDivY + nextDivHeight*1/2;
-float nextX3 = nextDivX + nextDivWidth*1/4;
-float nextY3 = nextDivY + nextDivHeight*3/4;
+float nextX2 = nextX1 + nextDivWidth*1/4;
+float nextY2 = nextY1 + nextDivHeight*1/4;
+float nextX3 = nextX1 ;
+float nextY3 = nextY2 + nextDivHeight*1/4;
 float nextX = nextX2;
 float nextY = nextY1;
 float nextWidth = nextDivWidth*1/8;
@@ -236,18 +236,22 @@ float shuffleCross2X1 = shuffleDivX + shuffleDivWidth*1/4;
 float shuffleCross2Y1 = shuffleDivY + shuffleDivHeight*3/4;
 float shuffleCross2X2 = shuffleDivX + shuffleDivWidth*3/4;
 float shuffleCross2Y2 = shuffleDivY + shuffleDivHeight*1/4;
-float shuffleTriX1 = shuffleCross2X2;
-float shuffleTriY1 = shuffleCross2Y2 - shuffleDivHeight*1/16;
-float shuffleTriX2 = shuffleCross2X2;
-float shuffleTriY2 = shuffleCross2Y2 + shuffleDivHeight*1/16;
-float shuffleTriX3 = shuffleCross2X2 + shuffleDivWidth*1/16;
-float shuffleTriY3 = shuffleCross2Y2;
-float shuffleTriX4 = shuffleCross1X2;
-float shuffleTriY4 = shuffleCross1Y2 - shuffleDivHeight*1/16;
-float shuffleTriX5 = shuffleCross1X2;
-float shuffleTriY5 = shuffleCross1Y2 + shuffleDivHeight*1/16;
-float shuffleTriX6 = shuffleCross1X2 + + shuffleDivWidth*1/16;
-float shuffleTriY6 = shuffleCross1Y2;
+float cornerX1 = shuffleCross2X2 ;
+float cornerY1 = shuffleCross2Y2 ;
+float shuffleTriX1 = cornerX1;
+float shuffleTriY1 = cornerY1 - shuffleDivHeight*1/16;
+float shuffleTriX2 = cornerX1;
+float shuffleTriY2 = cornerY1 + shuffleDivHeight*1/16;
+float shuffleTriX3 = cornerX1 + shuffleDivWidth*1/16;
+float shuffleTriY3 = cornerY1;
+float cornerX2 = shuffleCross1X2 ;
+float cornerY2 = shuffleCross1Y2 ;
+float shuffleTriX4 = cornerX2;
+float shuffleTriY4 = cornerY2 - shuffleDivHeight*1/16;
+float shuffleTriX5 = cornerX2;
+float shuffleTriY5 = cornerY2 + shuffleDivHeight*1/16;
+float shuffleTriX6 = cornerX2 + shuffleDivWidth*1/16;
+float shuffleTriY6 = cornerY2;
 //
 float musicSongPaddingY = widthOfButton*1/4;
 float musicSongSpaceX = stopDivX;

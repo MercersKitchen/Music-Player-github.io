@@ -7,3 +7,9 @@ Thus, if point moves, shape is drawn
 
 Further Abstraction: drawing same shape backwards
 - subtraction instead of addition (multiply by -1)
+
+---
+
+Easing variable initialization
+
+---

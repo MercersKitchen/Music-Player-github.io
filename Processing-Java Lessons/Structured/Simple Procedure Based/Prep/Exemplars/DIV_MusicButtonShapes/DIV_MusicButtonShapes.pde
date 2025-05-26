@@ -228,7 +228,6 @@ void setup() {
   loopInfiniteX3 = loopInfiniteX1 ;
   loopInfiniteY3 = loopInfiniteDivY + loopInfiniteDivHeight*1/4 + loopInfiniteDivHeight*1/16 ;
   //
-  //
   fastForwardDivX = beginningButtonSpace + widthOfButton*8;
   fastForwardDivY = buttonY;
   fastForwardDivWidth = widthOfButton;
@@ -291,7 +290,6 @@ void setup() {
   shuffleTriY5 = shuffleCross1Y2 + shuffleDivHeight*1/16;
   shuffleTriX6 = shuffleCross1X2 + + shuffleDivWidth*1/16;
   shuffleTriY6 = shuffleCross1Y2;
-
   //
   float musicSongPaddingY = widthOfButton*1/4;
   float musicSongSpaceX = stopDivX;

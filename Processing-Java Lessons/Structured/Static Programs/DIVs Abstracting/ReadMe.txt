@@ -15,8 +15,11 @@ FOR Loop for DIVs: one array each for X, Y, Width, Height
 
 ---
 
-One formulae for Procedure to send parameters to .. design of parameters helps to understand how formula works
+Procedural: drawing shapes from left corner or right corner
+- Using one formula to feed parameters into 
+- Taking paperfolding fractions as parameters (abstract variable population)
 
+Note: what is the cost of using parameters
 
 Ideas
 Further Abstraction, procedure: drawing same shape backwards

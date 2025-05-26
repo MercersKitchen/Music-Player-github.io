@@ -115,3 +115,14 @@ Hoverover
    - Proceudres will make this exercise easier
 
 ---
+
+# To Include: vocabulary in Static 
+
+Introducing Processing IDE v. VS-Code and Chat-GPT
+- CANVAS
+- Debugger v. "correct my mistakes"
+- Console v. "explain this mistake to me" (highlighting)
+
+DIV_TwoD_Rect.pde
+
+---

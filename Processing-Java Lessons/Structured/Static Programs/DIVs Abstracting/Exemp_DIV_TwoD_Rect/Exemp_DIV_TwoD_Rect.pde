@@ -1,14 +1,4 @@
-/* Purpose: drawing shape from one point
- - All shapes fit inside a STOP Shape (top left or top right)
- - If know beginning point, rest of calculated
- 
- - static programs do not allow multiple initializations in a single line
- - Subtraction can be x(-1)
- - including a term can be x1
- - excluding a term can be x0
- 
- - data sets based on clickable buttons
- 
+/* Purpose: 
  */
 //Display
 fullScreen();

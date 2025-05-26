@@ -9,6 +9,14 @@ Exercise: starting from a point, describe to another how to draw with distances 
 
 ---
 
+FOR Loop for DIVs
+
+---
+
+One formulae for Procedure to send parameters to .. design of parameters helps to understand how formula works
+
+
+Ideas
 Further Abstraction, procedure: drawing same shape backwards
 - subtraction instead of addition (multiply by -1)
 - including a term is x1

@@ -1,4 +1,6 @@
 Abstraction: Create entire shape based on beginning point
+- All buttons based on STOP Button
+- Start in Top Left | Top Right
 
 Thus, if point moves, shape is drawn
 - Called passing a parameter
@@ -12,8 +14,14 @@ Further Abstraction, procedure: drawing same shape backwards
 - including a term is x1
 - excluding a term is x0
 
-leftButtonStart = DivX + DivWidth*1/4
-rightButtonstart = DivX + DivWidth*1/4 + include*DivWidth*2/4
+- one formula to send parameters to
+
+leftButtonStartX = DivX + subtract*DivWidth*1/4
+rightButtonstartX = DivX + subtract*DivWidth*1/4 + include*DivWidth*2/4
+
+Develop one formulae for all examples: procedure
+
+Drawing a Triangle
 
 ---
 

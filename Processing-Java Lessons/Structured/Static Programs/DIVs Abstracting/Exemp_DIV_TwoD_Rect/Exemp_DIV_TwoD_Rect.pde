@@ -23,14 +23,15 @@ int widthOfButton = appWidth/numberOfButtons;
 int beginningButtonSpace = widthOfButton;
 int buttonY = appHeight*3/5;
 //
-float quitX = appWidth - appHeight*1/20;
+float quitRandomSide = appHeight*1/20;
+float quitX = appWidth - quitRandomSide;
 float quitY = 0;
 float randomStartX = 0;
 float randomStartY = 0;
-float quitWidth = appHeight*1/20;
-float quitHeight = appHeight*1/20;
-float randomStartWidth = appHeight*1/20;
-float randomStartHeight = appHeight*1/20;
+float quitWidth = quitRandomSide;
+float quitHeight = quitRandomSide;
+float randomStartWidth = quitRandomSide;
+float randomStartHeight = quitRandomSide;
 //
 float songTitleDivX = beginningButtonSpace;
 float imageDivX = beginningButtonSpace;
@@ -95,7 +96,7 @@ float previousDivWidth = widthOfButton;
 float previousDivHeight = widthOfButton;
 //
 //Previous Button
-float prevX1 = previousDivX + previousDivWidth*3/4;
+float prevX1 = previousDivX + previousDivWidth*1/4 + previousDivWidth*1/2;
 float prevY1 = previousDivY + previousDivHeight*1/4;
 float prevX2 = prevX1 - previousDivWidth*1/4;
 float prevY2 = prevY1 + previousDivHeight*1/4 ;
@@ -134,7 +135,7 @@ float pauseDivHeight = widthOfButton;
 //Pause Button
 float pauseX1 = pauseDivX + pauseDivWidth*1/4;
 float pauseY1 = pauseDivY + pauseDivHeight*1/4;
-float pauseX2 = pauseX1 + pauseDivWidth*3/8;
+float pauseX2 = pauseDivX + pauseDivWidth - pauseDivWidth*1/4 - pauseDivWidth*1/8; //Right Point Start
 float pauseY2 = pauseY1;
 float pauseWidth1 = pauseDivWidth*1/8;
 float pauseWidth2 = pauseDivWidth*1/8;

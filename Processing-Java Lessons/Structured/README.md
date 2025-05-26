@@ -118,11 +118,27 @@ Hoverover
 
 # To Include: vocabulary in Static 
 
+Static will not
+- Allow mulitple declarions and initializations per line
+
 Introducing Processing IDE v. VS-Code and Chat-GPT
 - CANVAS
 - Debugger v. "correct my mistakes"
 - Console v. "explain this mistake to me" (highlighting)
 
 DIV_TwoD_Rect.pde
+- Display
+- Functions, blue
+- Parameters: how to think about the code behind the function
+- Variables as memories of key-variables
+- Variables to manipulate
+- Variable Declaration in strongly formatted language
+- Variable initialization
+ 
+- Input: Display Geometry
+- Output: 2-D Shapes
+
+- typing practice: start with function, then populate variables
+
 
 ---

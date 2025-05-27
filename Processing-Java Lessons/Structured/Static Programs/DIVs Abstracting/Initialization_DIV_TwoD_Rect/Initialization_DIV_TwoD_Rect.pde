@@ -15,6 +15,9 @@ int widthOfButton = appWidth/numberOfButtons;
 int beginningButtonSpace = widthOfButton;
 int buttonY = appHeight*3/5;
 //
+//
+//Redesigning Code by Separating Declaration with Initialization
+//Note: Dynamic Programs allow combnination of mulitple declarations and initializations in Global Variables
 float quitRandomSide = appHeight*1/20;
 float quitX = appWidth - quitRandomSide;
 float randomStartX, randomStartY, quitY;
@@ -34,6 +37,9 @@ float songTitleDivHeight = appHeight*1/10;
 float imageDivHeight = appHeight*1.5/5; //1+1.5=2.5, half of the total height
 float messageDIV_Height = appHeight*9/20;
 //
+//
+//Note: Grouping Code Illustrates what is being repeated and what is formulaic
+//**The number of the button is being counted by 1
 float stopDivX = beginningButtonSpace + widthOfButton*0;
 float stopDivY = buttonY;
 float stopDivWidth = widthOfButton;
@@ -59,7 +65,7 @@ float pauseDivY = buttonY;
 float pauseDivWidth = widthOfButton;
 float pauseDivHeight = widthOfButton;
 //
-float playDivX = beginningButtonSpace + widthOfButton*5; //TEACHER Only" manipulate this number to draw simulate all buttons
+float playDivX = beginningButtonSpace + widthOfButton*5;
 float playDivY = buttonY;
 float playDivWidth = widthOfButton;
 float playDivHeight = widthOfButton;
@@ -89,9 +95,8 @@ float shuffleDivY = buttonY;
 float shuffleDivWidth = widthOfButton;
 float shuffleDivHeight = widthOfButton;
 //
-
-
-
+//
+//
 //STOP BUTTON
 float stopButtonX = stopDivX + stopDivWidth*1/4;
 float stopButtonY = stopDivY + stopDivHeight*1/4;

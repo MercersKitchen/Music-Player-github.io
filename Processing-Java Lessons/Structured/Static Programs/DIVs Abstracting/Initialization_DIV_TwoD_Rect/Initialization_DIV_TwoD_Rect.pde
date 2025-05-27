@@ -39,16 +39,64 @@ float stopDivY = buttonY;
 float stopDivWidth = widthOfButton;
 float stopDivHeight = widthOfButton;
 //
+float muteDivX = beginningButtonSpace + widthOfButton*1;
+float muteDivY = buttonY;
+float muteDivWidth = widthOfButton;
+float muteDivHeight = widthOfButton;
+//
+float previousDivX = beginningButtonSpace + widthOfButton*2;
+float previousDivY = buttonY;
+float previousDivWidth = widthOfButton;
+float previousDivHeight = widthOfButton;
+//
+float fastRewindDivX = beginningButtonSpace + widthOfButton*3;
+float fastRewindDivY = buttonY;
+float fastRewindDivWidth = widthOfButton;
+float fastRewindDivHeight = widthOfButton;
+//
+float pauseDivX = beginningButtonSpace + widthOfButton*4;
+float pauseDivY = buttonY;
+float pauseDivWidth = widthOfButton;
+float pauseDivHeight = widthOfButton;
+//
+float playDivX = beginningButtonSpace + widthOfButton*5; //TEACHER Only" manipulate this number to draw simulate all buttons
+float playDivY = buttonY;
+float playDivWidth = widthOfButton;
+float playDivHeight = widthOfButton;
+//
+float loopOnceDivX = beginningButtonSpace + widthOfButton*6;
+float loopOnceDivY = buttonY;
+float loopOnceDivWidth = widthOfButton;
+float loopOnceDivHeight = widthOfButton;
+//
+float loopInfiniteDivX = beginningButtonSpace + widthOfButton*7;
+float loopInfiniteDivY = buttonY;
+float loopInfiniteDivWidth = widthOfButton;
+float loopInfiniteDivHeight = widthOfButton;
+//
+float fastForwardDivX = beginningButtonSpace + widthOfButton*8;
+float fastForwardDivY = buttonY;
+float fastForwardDivWidth = widthOfButton;
+float fastForwardDivHeight = widthOfButton;
+//
+float nextDivX = beginningButtonSpace + widthOfButton*9;
+float nextDivY = buttonY;
+float nextDivWidth = widthOfButton;
+float nextDivHeight = widthOfButton;
+//
+float shuffleDivX = beginningButtonSpace + widthOfButton*10;
+float shuffleDivY = buttonY;
+float shuffleDivWidth = widthOfButton;
+float shuffleDivHeight = widthOfButton;
+//
+
+
+
 //STOP BUTTON
 float stopButtonX = stopDivX + stopDivWidth*1/4;
 float stopButtonY = stopDivY + stopDivHeight*1/4;
 float stopButtonWidth = widthOfButton*1/2;
 float stopButtonHeight = widthOfButton*1/2;
-//
-float muteDivX = beginningButtonSpace + widthOfButton*1;
-float muteDivY = buttonY;
-float muteDivWidth = widthOfButton;
-float muteDivHeight = widthOfButton;
 //
 //Mute Button
 //Note: population of MUTE could be based on first point
@@ -78,11 +126,6 @@ float muteCross2Y1 = muteUpPoint1Y;
 float muteCross2X2 = muteDownPoint1X;
 float muteCross2Y2 = muteDownPoint1Y;
 //
-float previousDivX = beginningButtonSpace + widthOfButton*2;
-float previousDivY = buttonY;
-float previousDivWidth = widthOfButton;
-float previousDivHeight = widthOfButton;
-//
 //Previous Button
 float prevX1 = previousDivX + previousDivWidth*1/4 + previousDivWidth*1/2;
 float prevY1 = previousDivY + previousDivHeight*1/4;
@@ -94,12 +137,6 @@ float prevX = previousDivX + previousDivWidth*1/2 - previousDivWidth*1/8 ;
 float prevY = previousDivY + previousDivHeight*1/4 ;
 float prevWidth = previousDivWidth*1/8 ;
 float prevHeight = previousDivHeight*1/2 ;
-
-//
-float fastRewindDivX = beginningButtonSpace + widthOfButton*3;
-float fastRewindDivY = buttonY;
-float fastRewindDivWidth = widthOfButton;
-float fastRewindDivHeight = widthOfButton;
 //
 //fast rewind button
 float fastRewindX1 = fastRewindDivX + fastRewindDivWidth*1/4 + fastRewindDivWidth*1/2;
@@ -115,11 +152,6 @@ float fastRewindY5 = fastRewindY2 ;
 float fastRewindX6 = fastRewindX2 ;
 float fastRewindY6 = fastRewindY3 ;
 //
-float pauseDivX = beginningButtonSpace + widthOfButton*4;
-float pauseDivY = buttonY;
-float pauseDivWidth = widthOfButton;
-float pauseDivHeight = widthOfButton;
-//
 //Pause Button
 float pauseX1 = pauseDivX + pauseDivWidth*1/4;
 float pauseY1 = pauseDivY + pauseDivHeight*1/4;
@@ -130,11 +162,6 @@ float pauseWidth2 = pauseDivWidth*1/8;
 float pauseHeight1 = pauseDivHeight*1/2;
 float pauseHeight2 = pauseDivHeight*1/2;
 //
-float playDivX = beginningButtonSpace + widthOfButton*5; //TEACHER Only" manipulate this number to draw simulate all buttons
-float playDivY = buttonY;
-float playDivWidth = widthOfButton;
-float playDivHeight = widthOfButton;
-//
 //Play Button
 float playX1 = playDivX + playDivWidth*1/4;
 float playY1 = playDivY + playDivHeight*1/4;
@@ -142,11 +169,6 @@ float playX2 = playX1 + playDivWidth*1/2;
 float playY2 = playY1 + playDivHeight*1/4;
 float playX3 = playX1;
 float playY3 = playY2 + playDivHeight*1/4;
-//
-float loopOnceDivX = beginningButtonSpace + widthOfButton*6;
-float loopOnceDivY = buttonY;
-float loopOnceDivWidth = widthOfButton;
-float loopOnceDivHeight = widthOfButton;
 //
 //loop once button
 //Note, this is a stop botton with a "one inside" & a triangle
@@ -164,11 +186,6 @@ float loopOnceY2 = cornerY ;
 float loopOnceX3 = loopOnceX1 ;
 float loopOnceY3 = cornerY + loopOnceDivHeight*1/16 ;
 //
-float loopInfiniteDivX = beginningButtonSpace + widthOfButton*7;
-float loopInfiniteDivY = buttonY;
-float loopInfiniteDivWidth = widthOfButton;
-float loopInfiniteDivHeight = widthOfButton;
-//
 //loop infinite button
 //Note: Loop infinite button is same as loop once, without text "1"
 float loopInfiniteX = loopInfiniteDivX + loopInfiniteDivWidth*1/4 ;
@@ -184,11 +201,6 @@ float loopInfiniteY2 = cornerY ;
 float loopInfiniteX3 = loopInfiniteX1 ;
 float loopInfiniteY3 = cornerY + loopInfiniteDivHeight*1/16 ;
 //
-float fastForwardDivX = beginningButtonSpace + widthOfButton*8;
-float fastForwardDivY = buttonY;
-float fastForwardDivWidth = widthOfButton;
-float fastForwardDivHeight = widthOfButton;
-//
 //Fast Forward Button
 float fastForwardX1 = fastForwardDivX + fastForwardDivWidth*1/4;
 float fastForwardY1 = fastForwardDivY + fastForwardDivHeight*1/4;
@@ -203,11 +215,6 @@ float fastForwardY5 = fastForwardDivY + fastForwardDivHeight*1/2;
 float fastForwardX6 = fastForwardDivX + fastForwardDivWidth*1/2;
 float fastForwardY6 = fastForwardDivY + fastForwardDivHeight*3/4;
 //
-float nextDivX = beginningButtonSpace + widthOfButton*9;
-float nextDivY = buttonY;
-float nextDivWidth = widthOfButton;
-float nextDivHeight = widthOfButton;
-//
 //Next Button
 float nextX1 = nextDivX + nextDivWidth*1/4 + 0*nextDivWidth*1/2;
 float nextY1 = nextDivY + nextDivHeight*1/4;
@@ -219,11 +226,6 @@ float nextX = nextX2;
 float nextY = nextY1;
 float nextWidth = nextDivWidth*1/8;
 float nextHeight = nextDivHeight*1/2;
-//
-float shuffleDivX = beginningButtonSpace + widthOfButton*10;
-float shuffleDivY = buttonY;
-float shuffleDivWidth = widthOfButton;
-float shuffleDivHeight = widthOfButton;
 //
 //Shuffle Button
 float shuffleCross1X1 = shuffleDivX + shuffleDivWidth*1/4;

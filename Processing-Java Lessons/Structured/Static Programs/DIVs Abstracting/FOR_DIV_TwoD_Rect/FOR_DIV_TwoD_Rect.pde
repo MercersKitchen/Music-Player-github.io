@@ -94,7 +94,6 @@ float prevY = DivY[2] + DivHeight[2]*1/4 ;
 float prevWidth = DivWidth[2]*1/8 ;
 float prevHeight = DivHeight[2]*1/2 ;
 //
-
 //fast rewind button. #3
 float fastRewindX1 = DivX[3] + DivWidth[3]*1/4 + DivWidth[3]*1/2;
 float fastRewindY1 = DivY[3] + DivHeight[3]*1/4 ;
@@ -119,7 +118,6 @@ float pauseWidth2 = DivWidth[4]*1/8;
 float pauseHeight1 = DivHeight[4]*1/2;
 float pauseHeight2 = DivHeight[4]*1/2;
 //
-
 //Play Button, #5
 float playX1 = DivX[5] + DivWidth[5]*1/4;
 float playY1 = DivY[5] + DivHeight[5]*1/4;
@@ -159,7 +157,6 @@ float loopInfiniteY2 = cornerY ;
 float loopInfiniteX3 = loopInfiniteX1 ;
 float loopInfiniteY3 = cornerY + DivHeight[7]*1/16 ;
 //
-
 //Fast Forward Button, #8
 float fastForwardX1 = DivX[8] + DivWidth[8]*1/4;
 float fastForwardY1 = DivY[8] + DivHeight[8]*1/4;
@@ -186,7 +183,7 @@ float nextY = nextY1;
 float nextWidth = nextDivWidth*1/8;
 float nextHeight = nextDivHeight*1/2;
 //
-//Shuffle Button
+//Shuffle Button, #10
 float shuffleCross1X1 = shuffleDivX + shuffleDivWidth*1/4;
 float shuffleCross1Y1 = shuffleDivY + shuffleDivHeight*1/4;
 float shuffleCross1X2 = shuffleDivX + shuffleDivWidth*3/4;

@@ -4,6 +4,9 @@
  - 2D Shape DIV Data: Hoverover, mousePressed
  - Shuffle Start DIV Data: Text and 2D Shuffle Shape
  - Quit Button Image Background Data (Red Colour)
+ 
+ - about to send an int and return a float without issue since decimal is added
+ - TBA
  */
 //
 //Global Variables
@@ -20,12 +23,12 @@ void divs() {
 } //End DIVs
 //
 void divButtonPopulation() {
-  
+  //REMOVE When Possible
 } //End DIV Button Population
 //
 void population() {
   //
-  divButtonPopulation(); //No 
+  divButtonPopulation(); //No
   //
   int numberOfButtons = 13; //Half a button on either side as space, Center Button is Play
   int widthOfButton = appWidth/numberOfButtons;
@@ -33,7 +36,7 @@ void population() {
   int buttonY = appHeight*3/5;
   //
   //
-  float quitRandomSide = appHeight*1/20;
+  float quitRandomSide = oneTwentyth(appHeight);
   float quitX = appWidth - quitRandomSide;
   float randomStartX, randomStartY, quitY;
   randomStartX = randomStartY = quitY = 0;
@@ -42,46 +45,34 @@ void population() {
   //
   float songTitleDivX, imageDivX;
   songTitleDivX = imageDivX = beginningButtonSpace;
-  float messageDIV_X = appWidth*1/2 + beginningButtonSpace*1/2;
+  float messageDIV_X = oneHalf(appWidth) + oneHalf(beginningButtonSpace);
   float songTitleDivY, messageDIV_Y;
   songTitleDivY = messageDIV_Y = appHeight*1.5/20;
   float imageDivY = appHeight*4.5/20;
   float songTitleDivWidth, imageDivWidth, messageDIV_Width;
-  songTitleDivWidth = imageDivWidth = messageDIV_Width = appWidth*1/2 - beginningButtonSpace*1.5;
+  songTitleDivWidth = imageDivWidth = messageDIV_Width = oneHalf(appWidth) - beginningButtonSpace*1.5;
   float songTitleDivHeight = appHeight*1/10;
   float imageDivHeight = appHeight*1.5/5; //1+1.5=2.5, half of the total height
   float messageDIV_Height = appHeight*9/20;
   //
   musicButtonDivX = new float[numberOfButtons-2];
+  musicButton = new float[4*numberOfButtons-2];
 
   musicButtonDivY = buttonY;
   musicButtonDivWidth = musicButtonDivHeight = widthOfButton;
   //
   for ( int i=0; i<musicButtonDivX.length; i++ ) {
     musicButtonDivX[i] = beginningButtonSpace + widthOfButton*i;
+    //musicButton[i]=0.0;
   }
   //
   //STOP BUTTON, #0
-  float stopButtonX = musicButtonDivX[0] + musicButtonDivWidth*1/4;
-  float stopButtonY = musicButtonDivY + musicButtonDivHeight*1/4;
-  float stopButtonWidth = widthOfButton*1/2;
-  float stopButtonHeight = widthOfButton*1/2;
+  squareInside(0, musicButtonDivX[0], musicButtonDivY, musicButtonDivWidth, musicButtonDivHeight, widthOfButton); //0-3
   //
   //Mute Button, #1
-  //Note: population of MUTE could be based on first point
-  //rect() is easier than 4xline()
-  float muteTopPoint1X = musicButtonDivX[1] + musicButtonDivWidth*1/4 ;
-  float muteTopPoint1Y = musicButtonDivY + musicButtonDivHeight*1/4 ;
-  float muteTopPoint2X = muteTopPoint1X + musicButtonDivWidth*1/2 ; //based on beginning of line
-  float muteTopPoint2Y = muteTopPoint1Y ;
-  float muteDownPoint1X = musicButtonDivX[1] + musicButtonDivWidth*3/4 ;
-  float muteDownPoint1Y = musicButtonDivY + musicButtonDivHeight*1/4 ;
-  float muteDownPoint2X = muteDownPoint1X; //based on beginning of line
-  float muteDownPoint2Y = musicButtonDivY + musicButtonDivHeight*3/4 ;
-  float muteBottomPoint1X = musicButtonDivX[1] + musicButtonDivWidth*3/4 ;
-  float muteBottomPoint1Y = musicButtonDivY + musicButtonDivHeight*3/4;
-  float muteBottomPoint2X = musicButtonDivX[1] + musicButtonDivWidth*1/4 ; //based on beginning of line
-  float muteBottomPoint2Y = musicButtonDivY + musicButtonDivHeight*3/4 ;
+  squareInside(4, musicButtonDivX[1], musicButtonDivY, musicButtonDivWidth, musicButtonDivHeight, widthOfButton); //4-7
+  crossDiagonal(8, musicButton[4], musicButton[4]+musicButton[6], musicButton[5], musicButton[5]+musicButton[7]); //8-15
+  /*
   float muteUpPoint1X = musicButtonDivX[1] + musicButtonDivWidth*1/4;
   float muteUpPoint1Y = musicButtonDivY + musicButtonDivHeight*3/4;
   float muteUpPoint2X = muteUpPoint1X ; //based on beginning of line
@@ -94,6 +85,7 @@ void population() {
   float muteCross2Y1 = muteUpPoint1Y;
   float muteCross2X2 = muteDownPoint1X;
   float muteCross2Y2 = muteDownPoint1Y;
+  */
   //
   //Previous Button, #2
   float prevX1 = musicButtonDivX[2] + musicButtonDivWidth*1/4 + musicButtonDivWidth*1/2;
@@ -269,13 +261,11 @@ void population() {
   //rect(timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight);
   //
   //Music Buttons
-  rect(stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight);
-  line(muteTopPoint1X, muteTopPoint1Y, muteTopPoint2X, muteTopPoint2Y);
-  line(muteDownPoint1X, muteDownPoint1Y, muteDownPoint2X, muteDownPoint2Y);
-  line(muteBottomPoint1X, muteBottomPoint1Y, muteBottomPoint2X, muteBottomPoint2Y);
-  line(muteUpPoint1X, muteUpPoint1Y, muteUpPoint2X, muteUpPoint2Y);
-  line(muteCross1X1, muteCross1Y1, muteCross1X2, muteCross1Y2);
-  line(muteCross2X1, muteCross2Y1, muteCross2X2, muteCross2Y2);
+  rect(musicButton[0], musicButton[1], musicButton[2], musicButton[3]); //STOP
+  rect(musicButton[4], musicButton[5], musicButton[6], musicButton[7]); //MUTE
+  line(musicButton[8], musicButton[9], musicButton[10], musicButton[11]);
+  line(musicButton[12], musicButton[13], musicButton[14], musicButton[15]);
+  
   rect(prevX, prevY, prevWidth, prevHeight);
   triangle(prevX1, prevY1, prevX2, prevY2, prevX3, prevY3);
   triangle(fastRewindX1, fastRewindY1, fastRewindX2, fastRewindY2, fastRewindX3, fastRewindY3);

@@ -6,7 +6,17 @@
 //Global Variables
 float[] musicButton;
 //
-void squareInside(int i, float x, float y, float Width, float Height, float widthOfButton) {
+void stopShape() {
+  squareInside(0, musicButtonDivX[0], musicButtonDivY, musicButtonDivWidth, musicButtonDivHeight); //0-3
+} //End Stop Shape
+//
+void muteShape() {
+  squareInside(4, musicButtonDivX[1], musicButtonDivY, musicButtonDivWidth, musicButtonDivHeight); //4-7
+  crossDiagonal(8, musicButton[4], musicButton[4]+musicButton[6], musicButton[5], musicButton[5]+musicButton[7]); //8-15
+} //End Mute Shape
+//
+//2D Shapes
+void squareInside(int i, float x, float y, float Width, float Height) {
   musicButton[i] = startingX(x, 1, oneQuarter(Width), 0, 0, 0);
   musicButton[i+1] = startingY(y, 1, Height);
   musicButton[i+2] = musicButton[i+3] = oneHalf(widthOfButton);

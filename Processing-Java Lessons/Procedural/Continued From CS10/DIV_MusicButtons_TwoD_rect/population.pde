@@ -6,12 +6,15 @@
  - Quit Button Image Background Data (Red Colour)
  
  - about to send an int and return a float without issue since decimal is added
- - TBA
+ 
+ - keep global variables to a minimum
+ 
  */
 //
 //Global Variables
 float[] musicButtonDivX;
 float musicButtonDivY, musicButtonDivWidth, musicButtonDivHeight;
+int widthOfButton;
 //
 void divs() {
   //Note: must populate before this procedure
@@ -31,7 +34,7 @@ void population() {
   divButtonPopulation(); //No
   //
   int numberOfButtons = 13; //Half a button on either side as space, Center Button is Play
-  int widthOfButton = appWidth/numberOfButtons;
+  widthOfButton = appWidth/numberOfButtons;
   int beginningButtonSpace = widthOfButton;
   int buttonY = appHeight*3/5;
   //
@@ -56,7 +59,7 @@ void population() {
   float messageDIV_Height = appHeight*9/20;
   //
   musicButtonDivX = new float[numberOfButtons-2];
-  musicButton = new float[4*numberOfButtons-2];
+  musicButton = new float[4+4*numberOfButtons-2];
 
   musicButtonDivY = buttonY;
   musicButtonDivWidth = musicButtonDivHeight = widthOfButton;
@@ -66,12 +69,8 @@ void population() {
     //musicButton[i]=0.0;
   }
   //
-  //STOP BUTTON, #0
-  squareInside(0, musicButtonDivX[0], musicButtonDivY, musicButtonDivWidth, musicButtonDivHeight, widthOfButton); //0-3
-  //
-  //Mute Button, #1
-  squareInside(4, musicButtonDivX[1], musicButtonDivY, musicButtonDivWidth, musicButtonDivHeight, widthOfButton); //4-7
-  crossDiagonal(8, musicButton[4], musicButton[4]+musicButton[6], musicButton[5], musicButton[5]+musicButton[7]); //8-15
+  stopShape();
+  muteShape();
   /*
   float muteUpPoint1X = musicButtonDivX[1] + musicButtonDivWidth*1/4;
   float muteUpPoint1Y = musicButtonDivY + musicButtonDivHeight*3/4;
@@ -261,16 +260,21 @@ void population() {
   //rect(timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight);
   //
   //Music Buttons
-  rect(musicButton[0], musicButton[1], musicButton[2], musicButton[3]); //STOP
-  rect(musicButton[4], musicButton[5], musicButton[6], musicButton[7]); //MUTE
+  rect(musicButton[0], musicButton[1], musicButton[2], musicButton[3]); //STOP 4
+  rect(musicButton[4], musicButton[5], musicButton[6], musicButton[7]); //MUTE 12
   line(musicButton[8], musicButton[9], musicButton[10], musicButton[11]);
   line(musicButton[12], musicButton[13], musicButton[14], musicButton[15]);
   
-  rect(prevX, prevY, prevWidth, prevHeight);
+  rect(prevX, prevY, prevWidth, prevHeight); //Previous
   triangle(prevX1, prevY1, prevX2, prevY2, prevX3, prevY3);
-  triangle(fastRewindX1, fastRewindY1, fastRewindX2, fastRewindY2, fastRewindX3, fastRewindY3);
+  triangle(fastRewindX1, fastRewindY1, fastRewindX2, fastRewindY2, fastRewindX3, fastRewindY3); //Fast Reverse
   triangle(fastRewindX4, fastRewindY4, fastRewindX5, fastRewindY5, fastRewindX6, fastRewindY6);
-  triangle(playX1, playY1, playX2, playY2, playX3, playY3);
+  
+  
+  triangle(playX1, playY1, playX2, playY2, playX3, playY3); //Play
+  
+  
+  
   rect(pauseX1, pauseY1, pauseWidth1, pauseHeight1);
   rect(pauseX2, pauseY2, pauseWidth2, pauseHeight2);
   triangle(fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3, fastForwardY3);

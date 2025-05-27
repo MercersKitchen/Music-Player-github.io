@@ -235,17 +235,9 @@ rect(randomStartX, randomStartY, randomStartWidth, randomStartHeight);
 rect(quitX, quitY, quitWidth, quitHeight);
 rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 rect(messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height);
-rect(DivX[0], DivY, DivWidth, DivHeight);  //*0
-rect(DivX[1], DivY, DivWidth, DivHeight); //*1
-rect(DivX[2], DivY, DivWidth, DivHeight); //*2
-rect(DivX[3], DivY, DivWidth, DivHeight); //*3
-rect(DivX[4], DivY, DivWidth, DivHeight); //*4
-rect(DivX[5], DivY, DivWidth, DivHeight); //*5
-rect(DivX[6], DivY, DivWidth, DivHeight);
-rect(DivX[7], DivY, DivWidth, DivHeight);
-rect(DivX[8], DivY, DivWidth, DivHeight);
-rect(DivX[9], DivY, DivWidth, DivHeight);
-rect(DivX[10], DivY, DivWidth, DivHeight);
+for ( int i=0; i<DivX.length; i++ ) {
+  rect(DivX[i], DivY, DivWidth, DivHeight);
+}
 rect(songPositionDivX, songPositionDivY, songPositionDivWidth, songPositionDivHeight);
 rect(songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight);
 rect(timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight);

@@ -90,75 +90,15 @@ void population() {
   //
   //loop infinite button, #7
   loopInfiniteShape();
-  float cornerX;
-  float cornerY ;
-  float loopInfiniteX = musicButtonDivX[7] + musicButtonDivWidth*1/4 ;
-  float loopInfiniteY = musicButtonDivY + musicButtonDivHeight*1/4 ;
-  float loopInfiniteWidth = musicButtonDivWidth*1/2;
-  float loopInfiniteHeight = musicButtonDivHeight*1/2;
-  cornerX = loopInfiniteX + loopInfiniteWidth ;
-  cornerY = loopInfiniteY ;
-  float loopInfiniteX1 = cornerX - musicButtonDivWidth*1/16 ;
-  float loopInfiniteY1 = cornerY - musicButtonDivHeight*1/16 ;
-  float loopInfiniteX2 = cornerX + musicButtonDivWidth*1/16 ;
-  float loopInfiniteY2 = cornerY ;
-  float loopInfiniteX3 = loopInfiniteX1 ;
-  float loopInfiniteY3 = cornerY + musicButtonDivHeight*1/16 ;
   //
   //Fast Forward Button, #8
   fastForwardShape();
-  float fastForwardX1 = musicButtonDivX[8] + musicButtonDivWidth*1/4;
-  float fastForwardY1 = musicButtonDivY + musicButtonDivHeight*1/4;
-  float fastForwardX2 = fastForwardX1 + musicButtonDivWidth*1/4;
-  float fastForwardY2 = fastForwardY1 + musicButtonDivHeight*1/4;
-  float fastForwardX3 = fastForwardX1 ;
-  float fastForwardY3 = fastForwardY2 + musicButtonDivHeight*1/4;
-  float fastForwardX4 = fastForwardX2;
-  float fastForwardY4 = fastForwardY1;
-  float fastForwardX5 = fastForwardX4 + musicButtonDivWidth*1/4;
-  float fastForwardY5 = fastForwardY2;
-  float fastForwardX6 = fastForwardX4;
-  float fastForwardY6 = fastForwardY3;
   //
   //Next Button, #9
   nextShape();
-  float nextX1 = musicButtonDivX[9] + musicButtonDivWidth*1/4 + 0*musicButtonDivWidth*1/2;
-  float nextY1 = musicButtonDivY + musicButtonDivHeight*1/4;
-  float nextX2 = nextX1 + musicButtonDivWidth*1/4;
-  float nextY2 = nextY1 + musicButtonDivHeight*1/4;
-  float nextX3 = nextX1 ;
-  float nextY3 = nextY2 + musicButtonDivHeight*1/4;
-  float nextX = nextX2;
-  float nextY = nextY1;
-  float nextWidth = musicButtonDivWidth*1/8;
-  float nextHeight = musicButtonDivHeight*1/2;
   //
   //Shuffle Button, #10
   shuffleShape();
-  float shuffleCross1X1 = musicButtonDivX[10] + musicButtonDivWidth*1/4;
-  float shuffleCross1Y1 = musicButtonDivY + musicButtonDivHeight*1/4;
-  float shuffleCross1X2 = musicButtonDivX[10] + musicButtonDivWidth*3/4;
-  float shuffleCross1Y2 = musicButtonDivY + musicButtonDivHeight*3/4;
-  float shuffleCross2X1 = musicButtonDivX[10] + musicButtonDivWidth*1/4;
-  float shuffleCross2Y1 = musicButtonDivY + musicButtonDivHeight*3/4;
-  float shuffleCross2X2 = musicButtonDivX[10] + musicButtonDivWidth*3/4;
-  float shuffleCross2Y2 = musicButtonDivY + musicButtonDivHeight*1/4;
-  float cornerX1 = shuffleCross2X2 ;
-  float cornerY1 = shuffleCross2Y2 ;
-  float shuffleTriX1 = cornerX1;
-  float shuffleTriY1 = cornerY1 - musicButtonDivHeight*1/16;
-  float shuffleTriX2 = cornerX1;
-  float shuffleTriY2 = cornerY1 + musicButtonDivHeight*1/16;
-  float shuffleTriX3 = cornerX1 + musicButtonDivWidth*1/16;
-  float shuffleTriY3 = cornerY1;
-  float cornerX2 = shuffleCross1X2 ;
-  float cornerY2 = shuffleCross1Y2 ;
-  float shuffleTriX4 = cornerX2;
-  float shuffleTriY4 = cornerY2 - musicButtonDivHeight*1/16;
-  float shuffleTriX5 = cornerX2;
-  float shuffleTriY5 = cornerY2 + musicButtonDivHeight*1/16;
-  float shuffleTriX6 = cornerX2 + musicButtonDivWidth*1/16;
-  float shuffleTriY6 = cornerY2;
   //
   float musicSongPaddingY = widthOfButton*1/4;
   float musicSongSpaceX = musicButtonDivX[0];

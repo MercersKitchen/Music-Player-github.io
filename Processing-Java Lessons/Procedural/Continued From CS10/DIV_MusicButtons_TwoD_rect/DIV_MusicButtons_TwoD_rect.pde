@@ -16,8 +16,7 @@ void setup() {
   appHeight = displayHeight;
   //
   population();
-  //Note: DIVs and local variables in population
-  //**Not separated out yet**
+  //divs(); Not Separated out yet
   //
 } //End Setup
 //

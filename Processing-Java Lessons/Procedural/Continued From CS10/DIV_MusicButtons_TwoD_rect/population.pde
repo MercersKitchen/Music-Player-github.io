@@ -59,7 +59,7 @@ void population() {
   float messageDIV_Height = appHeight*9/20;
   //
   musicButtonDivX = new float[numberOfButtons-2];
-  musicButton = new float[4+4*numberOfButtons-2];
+  musicButton = new float[6*numberOfButtons-2];
 
   musicButtonDivY = buttonY;
   musicButtonDivWidth = musicButtonDivHeight = widthOfButton;
@@ -74,78 +74,24 @@ void population() {
   //
   //Previous Button, #2
   previousShape();
-  /*
-  float prevX1 = musicButtonDivX[2] + musicButtonDivWidth*1/4 + musicButtonDivWidth*1/2;
-  float prevY1 = musicButtonDivY + musicButtonDivHeight*1/4;
-  float prevX2 = prevX1 - musicButtonDivWidth*1/4;
-  float prevY2 = prevY1 + musicButtonDivHeight*1/4 ;
-  float prevX3 = prevX1 ;
-  float prevY3 = prevY2 + musicButtonDivHeight*1/4;
-  float prevX = musicButtonDivX[2] + musicButtonDivWidth*1/2 - musicButtonDivWidth*1/8 ;
-  float prevY = musicButtonDivY + musicButtonDivHeight*1/4 ;
-  float prevWidth = musicButtonDivWidth*1/8 ;
-  float prevHeight = musicButtonDivHeight*1/2 ;
-  */
   //
   //fast rewind button. #3
   fastRewind();
-  /*
-  float fastRewindX1 = musicButtonDivX[3] + musicButtonDivWidth*1/4 + musicButtonDivWidth*1/2;
-  float fastRewindY1 = musicButtonDivY + musicButtonDivHeight*1/4 ;
-  float fastRewindX2 = fastRewindX1 - musicButtonDivWidth*1/4 ;
-  float fastRewindY2 = fastRewindY1 + musicButtonDivHeight*1/4 ;
-  float fastRewindX3 = fastRewindX1 ;
-  float fastRewindY3 = fastRewindY2 + musicButtonDivHeight*1/4;
-  float fastRewindX4 = fastRewindX2 ;
-  float fastRewindY4 = fastRewindY1 ;
-  float fastRewindX5 = fastRewindX2 - musicButtonDivWidth*1/4 ;
-  float fastRewindY5 = fastRewindY2 ;
-  float fastRewindX6 = fastRewindX2 ;
-  float fastRewindY6 = fastRewindY3 ;
-  */
   //
   //Pause Button, #4
   pauseShape();
-  /*
-  float pauseX1 = musicButtonDivX[4] + musicButtonDivWidth*1/4;
-  float pauseY1 = musicButtonDivY + musicButtonDivHeight*1/4;
-  float pauseX2 = musicButtonDivX[4] + musicButtonDivWidth - musicButtonDivWidth*1/4 - musicButtonDivWidth*1/8; //Right Point Start
-  float pauseY2 = pauseY1;
-  float pauseWidth1 = musicButtonDivWidth*1/8;
-  float pauseWidth2 = musicButtonDivWidth*1/8;
-  float pauseHeight1 = musicButtonDivHeight*1/2;
-  float pauseHeight2 = musicButtonDivHeight*1/2;
-  */
   //
   //Play Button, #5
   playShape();
-  /*
-  float playX1 = musicButtonDivX[5] + musicButtonDivWidth*1/4;
-  float playY1 = musicButtonDivY + musicButtonDivHeight*1/4;
-  float playX2 = playX1 + musicButtonDivWidth*1/2;
-  float playY2 = playY1 + musicButtonDivHeight*1/4;
-  float playX3 = playX1;
-  float playY3 = playY2 + musicButtonDivHeight*1/4;
-  */
   //
   //loop once button, #6
-  //Note, this is a stop botton with a "one inside" & a triangle
+  loopOnceShape();
   //CAUTION: this needs text
-  float loopOnceX = musicButtonDivX[6] + musicButtonDivWidth*1/4 ;
-  float loopOnceY = musicButtonDivY + musicButtonDivHeight*1/4 ;
-  float loopOnceWidth = musicButtonDivWidth*1/2;
-  float loopOnceHeight = musicButtonDivHeight*1/2;
-  float cornerX = loopOnceX + loopOnceWidth;
-  float cornerY = loopOnceY;
-  float loopOnceX1 = cornerX - musicButtonDivWidth*1/16 ;
-  float loopOnceY1 = cornerY - musicButtonDivHeight*1/16 ;
-  float loopOnceX2 = cornerX + musicButtonDivWidth*1/16 ;
-  float loopOnceY2 = cornerY ;
-  float loopOnceX3 = loopOnceX1 ;
-  float loopOnceY3 = cornerY + musicButtonDivHeight*1/16 ;
   //
   //loop infinite button, #7
   //Note: Loop infinite button is same as loop once, without text "1"
+  float cornerX;
+  float cornerY ;
   float loopInfiniteX = musicButtonDivX[7] + musicButtonDivWidth*1/4 ;
   float loopInfiniteY = musicButtonDivY + musicButtonDivHeight*1/4 ;
   float loopInfiniteWidth = musicButtonDivWidth*1/2;
@@ -274,13 +220,12 @@ void population() {
   
   triangle(musicButton[46], musicButton[47], musicButton[48], musicButton[49], musicButton[50], musicButton[51]); //Play
   
+  rect(musicButton[52], musicButton[53], musicButton[54], musicButton[55]); //Loop Once
+  //triangle(musicButton[58], musicButton[59], musicButton[60], musicButton[61], musicButton[62], musicButton[63]);
   
   
-  
-  triangle(fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3, fastForwardY3);
-  triangle(fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6);
-  rect(loopOnceX, loopOnceY, loopOnceWidth, loopOnceHeight);
-  triangle(loopOnceX1, loopOnceY1, loopOnceX2, loopOnceY2, loopOnceX3, loopOnceY3);
+  //rect(loopOnceX, loopOnceY, loopOnceWidth, loopOnceHeight);
+  //triangle(loopOnceX1, loopOnceY1, loopOnceX2, loopOnceY2, loopOnceX3, loopOnceY3);
   //Note: Loop infinite button is same as loop once, without text "1"
   rect(loopInfiniteX, loopInfiniteY, loopInfiniteWidth, loopInfiniteHeight);
   triangle(loopInfiniteX1, loopInfiniteY1, loopInfiniteX2, loopInfiniteY2, loopInfiniteX3, loopInfiniteY3);

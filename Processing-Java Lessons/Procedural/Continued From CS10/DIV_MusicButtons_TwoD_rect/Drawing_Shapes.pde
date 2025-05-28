@@ -30,12 +30,14 @@ void pauseShape() {
   rectangle(42, 0, 1, startingX(musicButtonDivX[4], 1, musicButtonDivWidth, 1, 1, musicButtonDivWidth), musicButton[38+1], musicButtonDivWidth, musicButtonDivHeight); //42-45
 } //End Pause Shape
 //
-
-
-
 void playShape() {
-  triangle( 46, 1, 1, musicButtonDivX[5], musicButtonDivY, 0, -1, musicButtonDivWidth, musicButtonDivHeight, 1, 1, 0);
+  triangle( 46, 1, 1, musicButtonDivX[5], musicButtonDivY, 0, -1, musicButtonDivWidth, musicButtonDivHeight, 1, 1, 0); //46-51
 }
+void loopOnceShape() {
+  square(52, musicButtonDivX[6], musicButtonDivY, musicButtonDivWidth, musicButtonDivHeight);
+  //Triangle Is Next
+} //End Loop Once Shape
+//
 
 
 

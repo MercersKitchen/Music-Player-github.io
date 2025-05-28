@@ -71,22 +71,10 @@ void population() {
   //
   stopShape();
   muteShape();
-  /*
-  float muteUpPoint1X = musicButtonDivX[1] + musicButtonDivWidth*1/4;
-  float muteUpPoint1Y = musicButtonDivY + musicButtonDivHeight*3/4;
-  float muteUpPoint2X = muteUpPoint1X ; //based on beginning of line
-  float muteUpPoint2Y = musicButtonDivY + musicButtonDivHeight*1/4;
-  float muteCross1X1 = muteTopPoint1X;
-  float muteCross1Y1 = muteTopPoint1Y;
-  float muteCross1X2 = muteBottomPoint1X;
-  float muteCross1Y2 = muteBottomPoint1Y;
-  float muteCross2X1 = muteUpPoint1X;
-  float muteCross2Y1 = muteUpPoint1Y;
-  float muteCross2X2 = muteDownPoint1X;
-  float muteCross2Y2 = muteDownPoint1Y;
-  */
   //
   //Previous Button, #2
+  previousShape();
+  /*
   float prevX1 = musicButtonDivX[2] + musicButtonDivWidth*1/4 + musicButtonDivWidth*1/2;
   float prevY1 = musicButtonDivY + musicButtonDivHeight*1/4;
   float prevX2 = prevX1 - musicButtonDivWidth*1/4;
@@ -97,8 +85,11 @@ void population() {
   float prevY = musicButtonDivY + musicButtonDivHeight*1/4 ;
   float prevWidth = musicButtonDivWidth*1/8 ;
   float prevHeight = musicButtonDivHeight*1/2 ;
+  */
   //
   //fast rewind button. #3
+  fastRewind();
+  /*
   float fastRewindX1 = musicButtonDivX[3] + musicButtonDivWidth*1/4 + musicButtonDivWidth*1/2;
   float fastRewindY1 = musicButtonDivY + musicButtonDivHeight*1/4 ;
   float fastRewindX2 = fastRewindX1 - musicButtonDivWidth*1/4 ;
@@ -111,8 +102,11 @@ void population() {
   float fastRewindY5 = fastRewindY2 ;
   float fastRewindX6 = fastRewindX2 ;
   float fastRewindY6 = fastRewindY3 ;
+  */
   //
   //Pause Button, #4
+  pauseShape();
+  /*
   float pauseX1 = musicButtonDivX[4] + musicButtonDivWidth*1/4;
   float pauseY1 = musicButtonDivY + musicButtonDivHeight*1/4;
   float pauseX2 = musicButtonDivX[4] + musicButtonDivWidth - musicButtonDivWidth*1/4 - musicButtonDivWidth*1/8; //Right Point Start
@@ -121,14 +115,18 @@ void population() {
   float pauseWidth2 = musicButtonDivWidth*1/8;
   float pauseHeight1 = musicButtonDivHeight*1/2;
   float pauseHeight2 = musicButtonDivHeight*1/2;
+  */
   //
   //Play Button, #5
+  playShape();
+  /*
   float playX1 = musicButtonDivX[5] + musicButtonDivWidth*1/4;
   float playY1 = musicButtonDivY + musicButtonDivHeight*1/4;
   float playX2 = playX1 + musicButtonDivWidth*1/2;
   float playY2 = playY1 + musicButtonDivHeight*1/4;
   float playX3 = playX1;
   float playY3 = playY2 + musicButtonDivHeight*1/4;
+  */
   //
   //loop once button, #6
   //Note, this is a stop botton with a "one inside" & a triangle
@@ -265,18 +263,20 @@ void population() {
   line(musicButton[8], musicButton[9], musicButton[10], musicButton[11]);
   line(musicButton[12], musicButton[13], musicButton[14], musicButton[15]);
   
-  rect(prevX, prevY, prevWidth, prevHeight); //Previous
-  triangle(prevX1, prevY1, prevX2, prevY2, prevX3, prevY3);
-  triangle(fastRewindX1, fastRewindY1, fastRewindX2, fastRewindY2, fastRewindX3, fastRewindY3); //Fast Reverse
-  triangle(fastRewindX4, fastRewindY4, fastRewindX5, fastRewindY5, fastRewindX6, fastRewindY6);
+  triangle(musicButton[16], musicButton[17], musicButton[18], musicButton[19], musicButton[20], musicButton[21]);//Previous
+  rect(musicButton[22], musicButton[23], musicButton[24], musicButton[25]); 
+  
+  triangle(musicButton[26], musicButton[27], musicButton[28], musicButton[29], musicButton[30], musicButton[31]); //Fast Reverse
+  triangle(musicButton[32], musicButton[33], musicButton[34], musicButton[35], musicButton[36], musicButton[37]);
+  
+  rect(musicButton[38], musicButton[39], musicButton[40], musicButton[41]); //Pause
+  rect(musicButton[42], musicButton[43], musicButton[44], musicButton[45]);
+  
+  triangle(musicButton[46], musicButton[47], musicButton[48], musicButton[49], musicButton[50], musicButton[51]); //Play
   
   
-  triangle(playX1, playY1, playX2, playY2, playX3, playY3); //Play
   
   
-  
-  rect(pauseX1, pauseY1, pauseWidth1, pauseHeight1);
-  rect(pauseX2, pauseY2, pauseWidth2, pauseHeight2);
   triangle(fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3, fastForwardY3);
   triangle(fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6);
   rect(loopOnceX, loopOnceY, loopOnceWidth, loopOnceHeight);

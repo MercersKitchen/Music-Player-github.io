@@ -1,3 +1,6 @@
+float oneEighth(float a) {
+  return a*1/8;
+}
 float oneQuarter(float a) {
   return a*1/4;
 }

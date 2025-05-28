@@ -528,11 +528,12 @@ void keyPressed() {
    - Next Song
    - Previous Song
    - Shuffle
-   -
+   
    - Advanced Buttons & Combinations
    - Play-Pause-Stop
    - Auto Play
    - Random Song
+   
    */
   //if ( key=='P' || key=='p' ) playList[currentSong].play(); //Simple Play, no double tap possible
   //

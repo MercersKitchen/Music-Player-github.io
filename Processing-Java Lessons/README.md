@@ -13,6 +13,20 @@ Addtional Notes
 
 # Expectations, Sketching, & WireFrame
 
+
+### Images of Final Programs (Creating the Steps inside)
+
+
+---
+
+# Vocabulary to be used in Videos
+= Structured Programming, strongly formatted language: naitve processing-java, minim library
+- Procedural Programming (CS20): procedures (void & return), minim library, java.io.file library
+- Object Oriented Programming (CS30)
+
+## Structured Programming Video
+
+
 ---
 
 # To Include

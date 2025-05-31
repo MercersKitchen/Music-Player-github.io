@@ -5,7 +5,7 @@ Building a Music Player using Processing.org and Minim
 
 Note: all programs can be written between static and dynamic. Static allows for specific, single lines of code to be recognized in more complicated programs as part of simle algorithms.
 
-CAUTION: bugs are sometimes built in since identifying errors is part of learning
+CAUTION: ERRORs (bugs) are sometimes built in since identifying errors is part of learning
 
 Contents
 - TBA, <a href="">tba</a>
@@ -13,6 +13,30 @@ Contents
 ---
 
 # TBA
+
+What is Grade 10 being aimed at - alogorithmically
+- what is the math behind this
+- what is the object being built
+
+int numSquares = 10; // Number of squares
+int squareSize = 50; // Size of each square
+
+void setup() {
+  size(800, 600); // Set the size of the canvas
+  background(255); // Set the background color
+  noLoop(); // Stop draw() from looping
+}
+
+void draw() {
+  float spacing = (width - (numSquares * squareSize)) / (numSquares + 1); // Calculate the spacing
+
+  for (int i = 0; i < numSquares; i++) {
+    float x = spacing + i * (squareSize + spacing); // Calculate x position
+    float y = height - squareSize; // y position (bottom of the page)
+    rect(x, y, squareSize, squareSize); // Draw the square
+  }
+}
+
 
 ---
 

@@ -9,6 +9,7 @@
 //Global Variables
 float randomStartX, randomStartY, randomStartWidth, randomStartHeight;
 float quitX, quitY, quitWidth, quitHeight;
+float songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight;
 float imageDivX, imageDivY, imageDivWidth, imageDivHeight;
 float stopDivX, stopDivY, stopDivWidth, stopDivHeight;
 float muteDivX, muteDivY, muteDivWidth, muteDivHeight;
@@ -22,9 +23,8 @@ float fastForwardDivX, fastForwardDivY, fastForwardDivWidth, fastForwardDivHeigh
 float nextDivX, nextDivY, nextDivWidth, nextDivHeight;
 float shuffleDivX, shuffleDivY, shuffleDivWidth, shuffleDivHeight;
 float songPositionDivX, songPositionDivY, songPositionDivWidth, songPositionDivHeight;
-float timeRemainingDivX, timeRemainingDivY, timeRemainingDivWidth, timeRemainingDivHeight;
-float songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight;
 float timeBarDivX, timeBarDivY, timeBarDivWidth, timeBarDivHeight;
+float timeRemainingDivX, timeRemainingDivY, timeRemainingDivWidth, timeRemainingDivHeight;
 float totalTimeDivX, totalTimeDivY, totalTimeDivWidth, totalTimeDivHeight;
 //Button Variables after
 //

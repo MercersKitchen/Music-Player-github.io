@@ -78,7 +78,7 @@ void setup() {
   pauseDivY = buttonY;
   pauseDivWidth = widthOfButton;
   pauseDivHeight = widthOfButton;
-  playDivX = beginningButtonSpace + widthOfButton*5; //TEACHER Only" manipulate this number to draw simulate all buttons
+  playDivX = beginningButtonSpace + widthOfButton*5;
   playDivY = buttonY;
   playDivWidth = widthOfButton;
   playDivHeight = widthOfButton;

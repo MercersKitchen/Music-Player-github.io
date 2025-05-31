@@ -3,7 +3,9 @@ Refining Readability, modulation, and data structures of a Music Player
 
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*
 
-Contents
+# Contents for Reviewing Introductory Computer Science
+
+### Making Data More Accessible: Grouping, Alpha Numeric
 - TBA, <a href="">tba</a>
 
 Additional Notes

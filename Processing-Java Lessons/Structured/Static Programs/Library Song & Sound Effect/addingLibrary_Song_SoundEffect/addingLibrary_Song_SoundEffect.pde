@@ -39,7 +39,7 @@ int appHeight = displayHeight;
 //
 //Music Loading - STRUCTURED Review
 minim = new Minim(this);
-String relativePathway = "../../../../../";
+String upArrow = "../../../../../";
 String lessonDependanciesFolder = "Lesson Dependancies Folder/";
 String soundEffectsFolder = "Sound Effects/";
 String musicPathway = "Music Pong/";
@@ -54,12 +54,12 @@ String pongWorld = "Pong World";
 //Including the reading of the number of files in the array
 String fileExtension_mp3 = ".mp3";
 //
-String musicDirectory = relativePathway + lessonDependanciesFolder + musicPathway;
+String musicDirectory = upArrow + lessonDependanciesFolder + musicPathway;
 String file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
 println( file );
 playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
 //
-String soundEffectsDirectory = relativePathway + lessonDependanciesFolder + soundEffectsFolder;
+String soundEffectsDirectory = upArrow + lessonDependanciesFolder + soundEffectsFolder;
 file = soundEffectsDirectory + carDoor + fileExtension_mp3; //relative pathway or directory
 println( file );
 soundEffects[ numberOfSoundEffects-1 ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library

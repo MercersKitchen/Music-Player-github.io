@@ -24,8 +24,8 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim; //initates entire class
-int numberOfSongs = 1; //Best Practice
-int numberOfSoundEffects = 1; //Best Practice
+int numberOfSongs = 9; //Best Practice
+int numberOfSoundEffects = 2; //Best Practice
 AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
 AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
@@ -42,32 +42,58 @@ void setup() {
   String upArrow = "../../../../../../";
   String lessonDependanciesFolder = "Lesson Dependancies Folder/";
   String soundEffectsFolder = "Sound Effects/";
-  String musicPathway = "Music Pong/";
   String musicPong = "Music Pong/";
   String musicAll = "Music All/";
   //Note: Download music and sound effects, then design your player with images, text, and 2D shapes
   //See Google Search: Atari pong logo free image download
   String carDoor = "Car_Door_Closing";
+  String simplestSting = "The_Simplest_Sting";
+  //
   String pongWorld = "Pong World";
-
-  //Add all files, CS20 Review is special OS Java Library
-  //Including the reading of the number of files in the array
+  String beatYourCompetition = "Beat_Your_Competition";
+  String cycles = "Cycles";
+  String eureka = "Eureka";
+  String ghostWalk = "Ghost_Walk";
+  String groove = "groove";
+  String newsroom = "Newsroom";
+  String startYourEngines = "Start_Your_Engines";
+  String theSimplest = "The_Simplest";
+  //
   String fileExtension_mp3 = ".mp3";
   //
-  String musicDirectory = upArrow + lessonDependanciesFolder + musicPathway;
-  String file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
+  //One way to iterate through all Sound Effects
+  String soundEffectsDirectory = upArrow + lessonDependanciesFolder + soundEffectsFolder;
+  String file = soundEffectsDirectory + carDoor + fileExtension_mp3; //relative pathway or directory
+  println( file );
+  soundEffects[ numberOfSoundEffects-numberOfSoundEffects ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  file = soundEffectsDirectory + simplestSting + fileExtension_mp3; //relative pathway or directory
+  println( file );
+  soundEffects[ numberOfSoundEffects-1 ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  //
+  String musicDirectory = upArrow + lessonDependanciesFolder + musicPong;
+  file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
   println( file );
   playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
   //
-  String soundEffectsDirectory = upArrow + lessonDependanciesFolder + soundEffectsFolder;
-  file = soundEffectsDirectory + carDoor + fileExtension_mp3; //relative pathway or directory
-  println( file );
-  soundEffects[ numberOfSoundEffects-1 ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
-  //One way to iterate through all Sound Effects
+  //Another way to iterate through all Music Files to Load
+  musicDirectory = upArrow + lessonDependanciesFolder + musicAll;
+  for (int i=0; i<numberOfSongs; i++) {
+    if (i==1) file = musicDirectory + groove + fileExtension_mp3;
+    if (i==2) file = musicDirectory + startYourEngines + fileExtension_mp3;
+    if (i==3) file = musicDirectory + beatYourCompetition + fileExtension_mp3;
+    if (i==4) file = musicDirectory + cycles + fileExtension_mp3;
+    if (i==5) file = musicDirectory + eureka + fileExtension_mp3;
+    if (i==6) file = musicDirectory + ghostWalk + fileExtension_mp3;
+    if (i==7) file = musicDirectory + newsroom + fileExtension_mp3;
+    if (i==8) file = musicDirectory + theSimplest + fileExtension_mp3;
+    playList[i] = minim.loadFile( file );
+  }
+  //
+  currentSong = 0; //Purpose: song testing
   //
   //Music Testing
   printArray(soundEffects); //Note registry Address on Hard Drive
-  soundEffects[0].play();
+  soundEffects[0].play(); //0 //1
   printArray(playList); //Note registry Address on Hard Drive
   //playList[currentSong].play();
   //

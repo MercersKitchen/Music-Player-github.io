@@ -1,3 +1,11 @@
+/* Autoloading images wtih ImageIO causes threading isseus
+ - Solved with Try-Catch
+ - Compiler signals this through an error
+ - Compiler also tracks variables for your saftey
+ 
+ - Illstrates Java File returning a usable Class-based variable for ImageIO
+ - Different from Minim that required a primitive String
+ */
 //Library - Minim
 import ddf.minim.*;
 import ddf.minim.analysis.*;

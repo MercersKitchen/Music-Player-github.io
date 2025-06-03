@@ -5,6 +5,10 @@
  
  - Illstrates Java File returning a usable Class-based variable for ImageIO
  - Different from Minim that required a primitive String
+ 
+ - Preivous "Try-Catches" Dealt with choosing between solution sets chosen through logical operators
+ - Single Line IF, IF-Else, IF-elseIF-Else
+
  */
 //Library - Minim
 import ddf.minim.*;

@@ -1,4 +1,4 @@
-// Called a Cunstructor in Advanced CS
+// Called a Constructor in Advanced CS
 //
 void populationSetup() {
   //Population

@@ -22,9 +22,24 @@ void quitButton() {
 } //End Quit Button
 //
 void mousePressedQuitButton() {
-  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
-    exit();
-  } //End Quit Button
+  if ( quitDoubleClick==false ) {
+    println("Saving Strings .txt");
+    saveCurrentSong();
+  }
+  noLoop(); //First QUIT Click enables printScreen in OS
+  if ( quitDoubleClick==true ) exit(); //Second QUIT Closes CANVAS
+  quitDoubleClick=true;
 } //End Mouse Pressed Quit Button
 //
+void simpleNextButton() {
+  //Simple NEXT Button
+  playList[ currentSong ].pause();
+  playList[ currentSong ].rewind();
+  if ( currentSong >= numberOfSongs-1 ) {
+    currentSong=0;
+  } else {
+    currentSong++;
+  }
+  playList[ currentSong ].play();
+} //End Simle NEXT Button
 //End Buttons Subprogram

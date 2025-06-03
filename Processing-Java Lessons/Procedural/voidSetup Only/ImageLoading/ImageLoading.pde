@@ -36,7 +36,7 @@ void setup() {
   String upArrow = "/../../../../";
   String imageDirectory = "Lesson Dependancies Folder/Images/"; //Hardcoded, always relative to the MAIN program
   String imagePathway = absolutePath + upArrow + imageDirectory;
-  println("Image Directory:", imageDirectory);
+  println("Image Pathway:", imagePathway);
   println(); //Note: space left, one method formatting CONSOLE
   //
   File imageFolder = new File(imagePathway); //Uses Java Library to create class (variables & code)
@@ -44,7 +44,6 @@ void setup() {
   File[] filePathway_Name = imageFolder.listFiles(); //Uses built in class to list all files
   println("Image Folder Pathway & File Names: ");
   printArray(filePathway_Name);
-  //println("\nNo Change in Classes is necessary, to primitive String Data\n");
   //
   //Converstion to Primitve String Data, different Class
   //Same Code used in Reading Music Files - will be procedure

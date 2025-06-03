@@ -28,6 +28,7 @@ void setup() {
   String absolutePath = sketchPath();
   println(absolutePath);
   String musicFolder = "/../../../../Lesson Dependancies Folder/Music All/";
+  String imagesFolder = "";
   //
   String musicDirectory = absolutePath + musicFolder;
   println(musicDirectory);

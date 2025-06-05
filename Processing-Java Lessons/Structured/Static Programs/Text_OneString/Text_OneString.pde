@@ -62,6 +62,7 @@ textFont(titleFont, fontSize); //see variable note
 while ( titleWidth < textWidth( title ) ) { //decrease font
   fontSize *= 0.99; //Assignment Operator  //fontSize = fontSize*0.99;
   //1% decrease but more accurate to 0.0001% ... increases runtime
+  //Recurive and nonrecursive number sequences and formulae (linear algebra)
   //
   //Update WHILE Conditional with fontSize
   textFont(titleFont, fontSize);

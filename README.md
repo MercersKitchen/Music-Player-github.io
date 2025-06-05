@@ -118,3 +118,9 @@ Visual verification creates wonder with cause-effect, making abstract a concrete
 - Etc.
 
 ---
+
+What is AI writes code in the wrong algorithmic direction for other pieces of code
+- how do structured algorithms fit together
+- how does this progress to procedural, objects and abstract classes
+
+---

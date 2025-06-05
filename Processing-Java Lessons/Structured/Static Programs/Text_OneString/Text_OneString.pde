@@ -61,6 +61,8 @@ textFont(titleFont, fontSize); //see variable note
 //Decrease Font when wrapped around
 while ( titleWidth < textWidth( title ) ) { //decrease font
   fontSize *= 0.99; //Assignment Operator  //fontSize = fontSize*0.99;
+  //1% decrease but more accurate to 0.0001% ... increases runtime
+  //
   //Update WHILE Conditional with fontSize
   textFont(titleFont, fontSize);
 } //End Wrap-Around Notification

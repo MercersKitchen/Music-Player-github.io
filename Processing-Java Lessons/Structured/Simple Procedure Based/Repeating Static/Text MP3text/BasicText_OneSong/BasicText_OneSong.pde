@@ -1,23 +1,9 @@
-/* Text - Dynamic Strings and MetaData
- What is available from Minim Documentation, 20250421
- - https://code.compartmental.net/minim/audiometadata_class_audiometadata.html
+/* Text: Font size is based on Two Dimensions
+ - When font HEIGHT is too big it is not shown
+ - When font WIDTH is too long it is off the screen
  
- - File Name: meta.fileName()
- - Length (in milliseconds): meta.length()
- - Title: meta.title()
- - Author: meta.author()
- - Album: meta.album()
- - Date: meta.date()
- - Comment: meta.comment()
- - Lyrics: meta.lyrics()
- - Track: meta.track()
- - Genre: meta.genre()
- - Copyright: eta.copyright()
- - Disc: meta.disc()
- - Composer: meta.composer()
- - Orchestra: meta.orchestra()
- - Publisher: meta.publisher()
- - Encoded: meta.encoded()
+ - Use a multi-line comment to turn off the 2D Size Adjustment, WHILE recursive iteration
+ - Algorithm uses code to introduce other functions in drawing text
  
  */
 //
@@ -31,11 +17,17 @@ import ddf.minim.ugens.*;
 PFont titleFont;
 float fontSize;
 String title = "Wahoo!";
+/* Full String longer than Rectangle,  "Wahoo! I changed 2D Size."
+ - When a String just fits the hieght aspect ratio is the largest, sometimes >1
+ - Fonts differs in WHITE SPACE around the foreground font
+ */
 //
-Minim minim;
+//Global Variables
+Minim minim; //initates entire class
 int numberOfSongs = 1; //Best Practice
+int numberOfSoundEffects = 1; //Best Practice
 AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
-AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
+AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
 //
 void setup() {
@@ -45,25 +37,34 @@ void setup() {
   int appWidth = width; //displayWidth
   int appHeight = height; //displayHeight
   //
-  //Music & MetaData Loading
+  //Music Loading - STRUCTURED Review
   minim = new Minim(this);
+  String upArrow = "../../../../../";
   String lessonDependanciesFolder = "Lesson Dependancies Folder/";
+  String soundEffectsFolder = "Sound Effects/";
+  String musicPathway = "Music Pong/";
   String musicPong = "Music Pong/";
   String musicAll = "Music All/";
-  String musicPathway = lessonDependanciesFolder + musicAll;
   //Note: Download music and sound effects, then design your player with images, text, and 2D shapes
   //See Google Search: Atari pong logo free image download
-  String song = "groove";
+  String carDoor = "Car_Door_Closing";
+  String pongWorld = "Pong World";
+
   //Add all files, CS20 Review is special OS Java Library
   //Including the reading of the number of files in the array
   String fileExtension_mp3 = ".mp3";
   //
-  String musicDirectory = "../../../../../../" + musicPathway;
-  String file = musicDirectory + song + fileExtension_mp3; //relative pathway or directory
+  String musicDirectory = upArrow + lessonDependanciesFolder + musicPathway;
+  String file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
   println( file );
-  //Create a FOR loop to loadFile() a changing songName
   playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
-  playListMetaData[ currentSong ] = playList[ currentSong ].getMetaData();
+  //
+  String soundEffectsDirectory = upArrow + lessonDependanciesFolder + soundEffectsFolder;
+  file = soundEffectsDirectory + carDoor + fileExtension_mp3; //relative pathway or directory
+  println( file );
+  soundEffects[ numberOfSoundEffects-1 ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  //One way to iterate through all Sound Effects
+  //
   //Music Testing
   //playList[currentSong].play();
   //
@@ -73,7 +74,10 @@ void setup() {
   String[] fontList = PFont.list(); //To list all fonts available on system
    printArray(fontList); //For listing all possible fonts to choose, then createFont
    */
-  titleFont = createFont ("Harrington", 55); //Verify font exists
+  float fontSize = 55.0; //Starts as an int but converted to a float later
+  String harrington = "Harrington";
+  PFont titleFont;
+  titleFont = createFont (harrington, fontSize); //Verify font exists
   //Tools / Create Font / Find Font / Do Not Press "OK", known bug
   //
   //Layout with a rect()
@@ -84,7 +88,7 @@ void setup() {
   rect(titleX, titleY, titleWidth, titleHeight);
   //
   //Font Size relative to rect(height)
-  float fontSize = 52; //Change the number until it fits, largest font size, int only to ease guessing
+  fontSize = 52.0; //Change the number until it fits, largest font size, int only to ease guessing
   println("Font Size:", fontSize );
   //
   /* Aspect Ratio Manipulations (changes to variables)
@@ -96,7 +100,7 @@ void setup() {
   println("Aspect Ratio:", harringtonAspectRatio);
   println(); //Skip a line
   //
-  //Minimum Lines of code to format and draw text with colour
+  //Minimum Lines of code to format, draw text with colour, and become aware of other functions
   color purpleInk = #2C08FF;
   fill(purpleInk); //Ink, hexidecimal copied from Color Selector
   textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
@@ -105,20 +109,19 @@ void setup() {
   //textFont() has option to combine font declaration with textSize()
   //
   //Drawing Text
-  //Option draw ```title```
   //Decrease Font when wrapped around
-  /* while ( titleWidth < textWidth( playListMetaData[currentSong].title() ) ) { //decrease font
-   //exit();
-   println("here"); //infinte loop, problem with WHILE, similar to draw()
-   //Nothing Else works
-   //
-   fontSize *= 0.99; //Assignment Operator  //fontSize = fontSize*0.99;
-   //Update WHILE Conditional with fontSize
-   textFont(titleFont, fontSize);
-   } //End Wrap-Around Notification
-   */
+  float constantDecrease = 0.99; //99% of origonal or 1% decrease (larger #'s have  bigger decrease)
+  while ( titleWidth < textWidth( title ) ) { //decrease font
+    fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
+    //1% decrease but can be more accurate (0.0001%) ... increases runtime
+    //Recursive number sequences and tests each number
+    //Able to start with large and become small when close with IF formulae
+    //Recursive programming, later topic, can increase readability & runtime while iterations increase efficeincy
+    //
+    //Update WHILE Conditional with fontSize
+    textFont(titleFont, fontSize);
+  } //End Wrap-Around Notification
   //
-  //Option, drawing ```title``` v playListMetaData[currentSong].title()
   text(title, titleX, titleY, titleWidth, titleHeight);
   color whiteInk = #FFFFFF;
   fill(whiteInk); //reset

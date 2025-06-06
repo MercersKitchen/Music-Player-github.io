@@ -4,7 +4,6 @@
  
  - Use a multi-line comment to turn off the 2D Size Adjustment, WHILE recursive iteration
  - Algorithm uses code to introduce other functions in drawing text
- - 
  
  */
 //

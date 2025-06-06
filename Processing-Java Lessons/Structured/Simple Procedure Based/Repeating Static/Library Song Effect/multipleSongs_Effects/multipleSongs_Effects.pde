@@ -100,7 +100,7 @@ void setup() {
 } //End Setup
 //
 void draw() {
-  //Empty Draw;
-} //End Draw
+  //Empty Draw Loop: for Compiler
+} //End draw
 //
 //End MAIN

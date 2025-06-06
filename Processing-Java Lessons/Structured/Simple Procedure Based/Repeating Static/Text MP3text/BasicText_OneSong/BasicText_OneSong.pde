@@ -5,6 +5,8 @@
  - Use a multi-line comment to turn off the 2D Size Adjustment, WHILE recursive iteration
  - Algorithm uses code to introduce other functions in drawing text
  
+ - What are the new lines of code added
+ 
  */
 //
 import ddf.minim.*;
@@ -27,6 +29,7 @@ Minim minim; //initates entire class
 int numberOfSongs = 1; //Best Practice
 int numberOfSoundEffects = 1; //Best Practice
 AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
+AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
 AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO
 //
@@ -39,7 +42,7 @@ void setup() {
   //
   //Music Loading - STRUCTURED Review
   minim = new Minim(this);
-  String upArrow = "../../../../../";
+  String upArrow = "../../../../../../";
   String lessonDependanciesFolder = "Lesson Dependancies Folder/";
   String soundEffectsFolder = "Sound Effects/";
   String musicPathway = "Music Pong/";
@@ -58,6 +61,7 @@ void setup() {
   String file = musicDirectory + pongWorld + fileExtension_mp3; //relative pathway or directory
   println( file );
   playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+  playListMetaData[ currentSong ] = playList[ currentSong ].getMetaData();
   //
   String soundEffectsDirectory = upArrow + lessonDependanciesFolder + soundEffectsFolder;
   file = soundEffectsDirectory + carDoor + fileExtension_mp3; //relative pathway or directory
@@ -67,6 +71,7 @@ void setup() {
   //
   //Music Testing
   //playList[currentSong].play();
+  //soundEffects[currentSong].play();
   //
   //println("Start of Console");
   //Fonts from OS
@@ -122,7 +127,11 @@ void setup() {
     textFont(titleFont, fontSize);
   } //End Wrap-Around Notification
   //
-  text(title, titleX, titleY, titleWidth, titleHeight);
+  //Drawing Title v. playListMetaData[currentSong].title()
+  println();
+  println("Song Title:", playListMetaData[currentSong].title());
+  println();
+  text(playListMetaData[currentSong].title(), titleX, titleY, titleWidth, titleHeight);
   color whiteInk = #FFFFFF;
   fill(whiteInk); //reset
   //

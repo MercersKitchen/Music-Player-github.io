@@ -59,10 +59,13 @@ textFont(titleFont, fontSize); //see variable note
 //
 //Drawing Text
 //Decrease Font when wrapped around
+float constantDecrease = 0.99; //99% of origonal or 1% decrease (larger #'s have  bigger decrease)
 while ( titleWidth < textWidth( title ) ) { //decrease font
-  fontSize *= 0.99; //Assignment Operator  //fontSize = fontSize*0.99;
-  //1% decrease but more accurate to 0.0001% ... increases runtime
-  //Recurive and nonrecursive number sequences and formulae (linear algebra)
+  fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
+  //1% decrease but can be more accurate (0.0001%) ... increases runtime
+  //Recursive number sequences and tests each number
+  //Able to start with large and become small when close with IF formulae
+  //Recursive programming, later topic, can increase runtime
   //
   //Update WHILE Conditional with fontSize
   textFont(titleFont, fontSize);

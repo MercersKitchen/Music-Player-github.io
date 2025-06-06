@@ -1,7 +1,3 @@
-CONTINUE HERE: figuring out changing text size
-See: Structured\Simple Procedure Based\Prep\Exemplars\TextDynamic_SingleMP3
-
-
 /* Text - Dynamic Strings and MetaData
  What is available from Minim Documentation, 20250421
  - https://code.compartmental.net/minim/audiometadata_class_audiometadata.html
@@ -23,6 +19,13 @@ See: Structured\Simple Procedure Based\Prep\Exemplars\TextDynamic_SingleMP3
  - Publisher: meta.publisher()
  - Encoded: meta.encoded()
  
+ - algorithm uses the smallest fontSize
+ 
+ - What changes will enable a range of sizes to create an 
+ - Binary: largest v. smallest decreasing calculation per song change
+ - Data Structure to save font calculations per song
+ - Averaging the largest font size to maximize the calculations v. saved default font size
+ 
  */
 //
 import ddf.minim.*;
@@ -34,9 +37,9 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 PFont titleFont;
-float fontSizeStart, fontSize;
+String harrington = "Harrington";
+float fontSize;
 float titleX, titleY, titleWidth, titleHeight;
-String title = "Wahoo!";
 color purpleInk=#2C08FF, whiteInk = #FFFFFF;
 //
 Minim minim; //initates entire class
@@ -127,8 +130,6 @@ void setup() {
   println( "Publisher: " + playListMetaData[currentSong].publisher() );
   println( "Encoded: " + playListMetaData[currentSong].encoded() );
   //
-  //
-  //
   //Text
   //println("Start of Console");
   //Fonts from OS
@@ -136,7 +137,8 @@ void setup() {
   String[] fontList = PFont.list(); //To list all fonts available on system
    printArray(fontList); //For listing all possible fonts to choose, then createFont
    */
-  titleFont = createFont ("Harrington", 55); //Verify font exists
+  fontSize = 55.0; //Starts as an int but converted to a float later
+  titleFont = createFont (harrington, fontSize); //Verify font exists
   //Tools / Create Font / Find Font / Do Not Press "OK", known bug
   //
   //Layout with a rect()
@@ -147,15 +149,15 @@ void setup() {
   rect(titleX, titleY, titleWidth, titleHeight);
   //
   //Font Size relative to rect(height)
-  fontSizeStart = 52; //Change the number until it fits, largest font size, int only to ease guessing
-  println("Font Size:", fontSizeStart );
+  fontSize = 52; //Change the number until it fits, largest font size, int only to ease guessing
+  println("Font Size:", fontSize );
   //
   /* Aspect Ratio Manipulations (changes to variables)
    - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
    - Rewriting fontSize with formulae
    */
-  float harringtonAspectRatio = fontSizeStart / titleHeight;
-  fontSizeStart = titleHeight*harringtonAspectRatio;
+  float harringtonAspectRatio = fontSize / titleHeight;
+  fontSize = titleHeight*harringtonAspectRatio;
   println("Aspect Ratio:", harringtonAspectRatio);
   println(); //Skip a line
   //
@@ -167,24 +169,20 @@ void setup() {
   //textFont() has option to combine font declaration with textSize()
   //
   //Drawing Text
-  //Option draw ```title```
   //Decrease Font when wrapped around
-  fontSize = fontSizeStart;
+  float constantDecrease = 0.99; //99% of origonal or 1% decrease (larger #'s have  bigger decrease)
   while ( titleWidth < textWidth( playListMetaData[currentSong].title() ) ) { //decrease font
-    //exit();
-    println("here"); //infinte loop, problem with WHILE, similar to draw()
-    //Nothing Else works
+    fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
+    //1% decrease but can be more accurate (0.0001%) ... increases runtime
+    //Recursive number sequences and tests each number
+    //Able to start with large and become small when close with IF formulae
+    //Recursive programming, later topic, can increase readability & runtime while iterations increase efficeincy
     //
-    fontSize *= 0.99; //Assignment Operator  //fontSize = fontSize*0.99;
     //Update WHILE Conditional with fontSize
     textFont(titleFont, fontSize);
   } //End Wrap-Around Notification
-  if () {
-  } else {
-  }
   //
-  //Option, drawing ```title``` v playListMetaData[currentSong].title()
-  text(title, titleX, titleY, titleWidth, titleHeight);
+  text(playListMetaData[currentSong].title(), titleX, titleY, titleWidth, titleHeight);
   fill(whiteInk); //reset
   //
   //Aspect Ratio of Specfic Font, calculations only to be entered in variables above

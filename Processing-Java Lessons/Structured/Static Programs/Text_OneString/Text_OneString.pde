@@ -65,7 +65,7 @@ while ( titleWidth < textWidth( title ) ) { //decrease font
   //1% decrease but can be more accurate (0.0001%) ... increases runtime
   //Recursive number sequences and tests each number
   //Able to start with large and become small when close with IF formulae
-  //Recursive programming, later topic, can increase runtime
+  //Recursive programming, later topic, can increase readability & runtime while iterations increase efficeincy
   //
   //Update WHILE Conditional with fontSize
   textFont(titleFont, fontSize);

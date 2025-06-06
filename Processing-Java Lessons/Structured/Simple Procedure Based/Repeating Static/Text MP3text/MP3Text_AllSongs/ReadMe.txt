@@ -1,0 +1,1 @@
+A calculator and central tendency is an expectation

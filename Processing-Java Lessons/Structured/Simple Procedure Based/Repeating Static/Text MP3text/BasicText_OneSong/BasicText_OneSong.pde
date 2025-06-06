@@ -162,7 +162,7 @@ void setup() {
 } //End setup
 //
 void draw() {
-} //End draw
+} //End draw for compiler
 //
 void mousePressed() {
   if (currentSong == numberOfSongs-1) {

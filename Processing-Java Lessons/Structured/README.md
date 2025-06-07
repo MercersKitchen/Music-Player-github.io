@@ -8,10 +8,12 @@ Note: all programs can be written between static and dynamic. Static allows for 
 CAUTION: ERRORs (bugs) are sometimes built in since identifying errors is part of learning
 
 Recommened Programs and Steps to Know about
-- TBA, <a href="">tba</a>
+- Reminders and Foci, <a href="">tba</a>
+- Static Programs, 
 
 ---
 
+# TBA, Reminders and Foci
 Beliefs about Computational Theory
 - Mathematics: use simplier mathematics when it can be combined with coding features 
 - Arithmetic is separate from mathematics adn the computer does arithmetic like a calcualtor, also tracking the answers
@@ -29,6 +31,13 @@ Beliefs about learning Algorithms
 - Fully self-checking: 
    - Within problem space illustrated by Euler or Venn Diagrams
    - Wihtin hardware space and various ERRORs that can be produced
+
+
+---
+
+# Static Programs
+
+###  
 
 ---
 

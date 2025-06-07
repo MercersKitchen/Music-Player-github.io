@@ -7,8 +7,31 @@ Note: all programs can be written between static and dynamic. Static allows for 
 
 CAUTION: ERRORs (bugs) are sometimes built in since identifying errors is part of learning
 
-Contents
+Recommened Programs and Steps to Know about
 - TBA, <a href="">tba</a>
+
+---
+
+Beliefs about Computational Theory
+- Math: use simplier mathematics when it can be combined with coding features 
+- Iterations or steps are sometimes useful to be obvious about
+
+Beliefs of Structured Programming
+- Visual Objects visually completing Algorithms
+- Algorithms are sometimes recommended Processing-Java language progressions to learn parallel with algorithms
+
+---
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 

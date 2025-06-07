@@ -13,12 +13,22 @@ Recommened Programs and Steps to Know about
 ---
 
 Beliefs about Computational Theory
-- Math: use simplier mathematics when it can be combined with coding features 
+- Mathematics: use simplier mathematics when it can be combined with coding features 
+- Arithmetic is separate from mathematics adn the computer does arithmetic like a calcualtor, also tracking the answers
 - Iterations or steps are sometimes useful to be obvious about
 
 Beliefs of Structured Programming
 - Visual Objects visually completing Algorithms
 - Algorithms are sometimes recommended Processing-Java language progressions to learn parallel with algorithms
+
+Beliefs about learning Algorithms
+- Combination of ...
+- Applied Math, and sometimes relearning it to address misconcpetions
+- Learning a CS Language (in HS ... learn a general langauge to learn others in post-secondary)
+- Partially self-checking: visually verified
+- Fully self-checking: 
+   - Within problem space illustrated by Euler or Venn Diagrams
+   - Wihtin hardware space and various ERRORs that can be produced
 
 ---
 

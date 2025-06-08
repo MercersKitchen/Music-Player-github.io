@@ -14,6 +14,7 @@ Recommened Programs and Steps to Know about
 ---
 
 # TBA, Reminders and Foci
+
 Beliefs about Computational Theory
 - Mathematics: use simplier mathematics when it can be combined with coding features 
 - Arithmetic is separate from mathematics adn the computer does arithmetic like a calcualtor, also tracking the answers
@@ -36,6 +37,10 @@ Beliefs about learning Algorithms
 Beliefs about reading code: each line is a summary and provides echoes of information
 - this information is required for the next line of code
 - reading becomes incredibly slow
+
+Beliefs about AI as a tool
+- Students are required to ensure the voice of a program
+- Voice is a difficult concept to teach but AI enables the difficult to become possible
 
 ---
 

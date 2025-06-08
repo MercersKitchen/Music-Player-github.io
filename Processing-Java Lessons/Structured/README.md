@@ -36,6 +36,7 @@ Beliefs about learning Algorithms
 ---
 
 # Static Programs - Vocabulary
+- Incorporated into program snippets
 
 ### Hello World
 - print() & println() local strings
@@ -45,6 +46,9 @@ Beliefs about learning Algorithms
 - **Hello World** is a time honoured tradition to become part of something more, bigger than oneself
 - The examples of Hello World will be repeated and become part of a routinue
 - The examples are part of awareness
+
+---
+- see comments for draft
 
 ### DIV_TwoD_Rect
 - JAVA, @param: description of a parameter

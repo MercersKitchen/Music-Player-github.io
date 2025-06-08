@@ -35,10 +35,49 @@ Beliefs about learning Algorithms
 
 ---
 
-# Static Programs
+# Static Programs - Vocabulary
+
+### Hello World
+- print() & println() local strings
+- location of debugger, console
+- integration of VS-Code and AI
 
 ### DIV_TwoD_Rect
+- JAVA, @param: description of a parameter
+- JAVA, @return: what a method returns
+- Algorithm
+- Arithmetic Operators in integer, long, float, double ( + - * / % )
+- Truncation: removing decimals returning integers only
+- Assertion: statement of fact if program is working well
+   - visually verifying
+   - inspection of variables with print, println, and printArray
+- Bottom-up developement in programming starts with the simplest object-oritentated
+- Top-down developement starts with the summary of the entire program
+- Class: creation of objects, how these are used
+- Compiler-Time Errors (debugger), before execution:
+   - undeclared variables
+   - invoking method object doesn't have access to
+   - using incorrect parameter
+   - 
+   - **Often useful to purposefully program these, writing code backwards**
+     - Program will fail at the spot developer needs to return to
+     - "Finding errors" that have odd CONSOLE descriptions gets easier with this technique
+   - TBA
 
+### 
+---
+
+### Other vocabulary to revisit
+- Abstract Class
+- Abstract Method
+- Accessor Method (getter method)
+- Arithemtic Exception: runtime error, division by zero
+- ArrayIndexOutOfBoundars Exception: runtime error, +- index error beyond array.length
+- Average Case, runtime estimate between worst-case and best-case
+- Base Case, recursive programming: termination case will return to regular programming
+- Boolean Expressions, conditionals in if-statements, etc
+- Client Program accesses the public methods of a class (similar to driver program)
+- Compound Assignemnt Operators, order matters ( += -= *= /= %= )
 
 ---
 

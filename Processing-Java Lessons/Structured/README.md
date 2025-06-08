@@ -36,7 +36,8 @@ Beliefs about learning Algorithms
 
 Beliefs about reading code: each line is a summary and provides echoes of information
 - this information is required for the next line of code
-- reading becomes incredibly slow
+- reading becomes slow
+- object instantiation requires conceptul fluency of class & prototyping in DRIVER CLASS for exemplar data handling
 
 Beliefs about AI as a tool
 - Students are required to ensure the voice of a program
@@ -45,6 +46,8 @@ Beliefs about AI as a tool
 ---
 
 # Static Programs - Vocabulary
+- Program Specfications: written statements (can become psuedocode)
+    - CAUTION: AI struggles with learning progressions when developing code or how a student chooses code
 - Incorporated into program snippets
    - issue of copy and paste to emphasize new data structure
 - Assersions
@@ -53,16 +56,21 @@ Beliefs about AI as a tool
 - Algorithms
 - Formulae to summarize data
 - Compiler Errors - end of algorithm
-
+- Assersion (to be tested) || post-condition (tested) || pre-condition (tested)
+    - Protytping in DRIVER CLASS
+- Variables & Scope
 
 ### Hello World
-- print() & println() local strings
+- print() & println() using String Literals, including escape sequences
+    - Example: 1 != 1, 1==one (cannot do arithmetic on one)
 - location of debugger, console
 - integration of VS-Code and AI
 - Difference between routine and becoming aware
 - **Hello World** is a time honoured tradition to become part of something more, bigger than oneself
 - The examples of Hello World will be repeated and become part of a routinue
 - The examples are part of awareness
+
+- Logic or Intent ERROR fails assersion, program compilers without exception
 
 ---
 - see comments for draft
@@ -71,11 +79,12 @@ Beliefs about AI as a tool
 - JAVA, @param: description of a parameter
 - JAVA, @return: what a method returns
 - Algorithm
-- Arithmetic Operators in integer, long, float, double ( + - * / % )
+- Arithmetic Operators in integer, long, float, double ( + + - - * / % )
 - Truncation: removing decimals returning integers only (can creates arithmetic exception or logic errors)
 - Assertion: statement of fact if program is working well
    - visually verifying
    - inspection of variables with print, println, and printArray
+- Assersion (to be tested) || post-condition (tested)
 - Bottom-up developement in programming starts with the simplest object-oritentated
    - Answers: how to learn a language without documentation 
    - i.e. apply compiler exceptions and errors 
@@ -91,13 +100,17 @@ Beliefs about AI as a tool
    - **Often useful to purposefully program these, writing code backwards**
      - Program will fail at the spot developer needs to return to
      - "Finding errors" that have odd CONSOLE descriptions gets easier with this technique
-
+- Mention floating-point division ( & multiplcation), see next exemplar for examples
+- Population: testing construction of variables to be included in a class
+    - Note: a music player will have a single instance from a class in CS30, special form of CLASS (static class???)
+- Prmitive Data used is ???? (boolean, byte, char, short, int, long, float, double), String seems primitive but immutable
 
 ### DIVs: introducing math fluency
 - Primitive rect() parameters can be abstracted to groups of 4
 - Intialization can become patterned
 - Initiailization based on single values
 - Repeating lines, number changes, summarized by FOR-iteration
+- Static Variable: memory allocation happens only once
 
 - TBA
 
@@ -117,6 +130,19 @@ Beliefs about AI as a tool
     - TBA
 - TBA
 
+### BoilerPlate & boilerplate_settings
+- Compiler sees Folder and Driver Class with Main Methods (setup & draw)
+- Driver Class: class within MAIN Method used to prototype program pieces before implemented in a formal class
+    - setup() & draw() are MAIN Methods in Driver Class of Processing-Java 
+    - TABs can be seen as subprograms (static classes without constructors) 
+    - Fluency with this is in Review of Abstract Classes at the end of Pong in CS30
+- Using fullScreen() and size() to input numbers into GUI
+- CAUTION: size() || fullScreen() must be first-line in setup(){} 
+    - note: size(displayWidth, displayHeight) == fullScreen()
+    - emphasizes Processing-Java requests geometry from DISPLAY being called
+
+### ???
+- Reference Data Type: address where object || variable is stored ( i.e. printArray( minim.playList) )
 
 ---
 
@@ -124,14 +150,71 @@ Beliefs about AI as a tool
 - Abstract Class
 - Abstract Method
 - Accessor Method (getter method)
-- Arithemtic Exception: runtime error, division by zero
-- ArrayIndexOutOfBoundars Exception: runtime error, +- index error beyond array.length
+- Mutator Method (setter method)
+- 
+- 
 - Average Case, runtime estimate between worst-case and best-case
 - Base Case, recursive programming: termination case will return to regular programming
 - Boolean Expressions, conditionals in if-statements, etc
 - Client Program accesses the public methods of a class (similar to driver program)
-- Compound Assignemnt Operators, order matters ( += -= *= /= %= )
+- Compound Assignemnt Operators, order matters ( ++ += -- -= *= /= %= )
+    - increment operator
+    - decriment operator
+- Constructors: same name, void, & can be overloaded
 
+- Dynamic Binding: changing choice of overidden methods
+- Static Binding || Early Binding: first choosing correct overridden method
+- Encapsulation
+    - private variable accessible through public getters and setters
+- Enhanced FOR Loop | FOR-Each Loop
+- Escape Sequences for CONSOLE when inspecting Variables for Assersions
+- Exceptions that HALT a programs EXECUTION && unchecked exceptions at compile time
+    - ArrayIndexOutOfBoundars Exception: runtime error, +- index error beyond array.length
+    - IndexOutOfBounds Exception
+    - Arithemtic Exception: runtime error, division by zero
+    - NullPointer Exception: access || modify instance of object with NULL value (usually variable)
+    - IllegalArgument Exception - thrown to prevent processing bad data, i.e. try-catch
+- Stack Overflow (comptuer runs out of memory)
+- Final Variable: constant, ```final int var=25;```
+- Floating Point Division
+    - 7.0/2 returns 3.5
+    - 3 / double(4) returns 0.75
+    - 3/4 returns 0.0
+    - double (3/4) returns 0.0
+- Integer Operations trucate all decimals, especially * / 
+    - Integer Division creates problems
+- Formal Parameters: local variables set by method call
+- Immutable Objects: cannot be changed
+    - String is immutable
+- Information Hiding: declaring class variables private restricting client classes from access information
+- Inheritance, inheritance relationship ("is-a"): subclass inherits superclass variables and methods, able to add to formal constructor parameters and methods
+- Method Overriding: a subclass method with same signature (name & parameters as superclass method) has different code contents
+- Interface: superclass declared by ```interface```
+- Logical Operator: ! && || (not, and, or) seen in single IFs
+    - replicated in nested IFs
+    - evalauted with short-curcuits similar to parent-IF in nested IFs
+    - IF a==true then nothing else evalauted: a||b
+    - if a==flase then nothing else evalauted: a&&b
+
+- Nested FORs: formulaic iteration of more than one index
+
+- Object: single instance of a class, computer tracks mutliple instances logically, developer tracks conceptually
+- Overloaded Methods have different signatures
+    - int a (int x)
+    - int a (int x, int y)
+    - double a (int x, int y)
+- Polymorphism: correct choice of overloaded || overridden methods
+- Recursive Programming: process defined in terms of itself until the base case (beginning)
+- Recursive Method calls itself
+    - Example: void recur() {if(){**do somethin;**}else {recur();}}
+- Relational Operator return boolean ( < > <= >= != == )
+- Scope of Variable, global, local, formal parameter, formal index
+- Sentinel || guard data: terminate data entered by keyboard
+- State of an Object: value of private class variables
+- Static Method: method used by all instances of class
+- Tail Recusive Method: recusive call is last statement of method
+
+- Key Word: class, static, public, private, void, abstract, etc.
 
 ---
 

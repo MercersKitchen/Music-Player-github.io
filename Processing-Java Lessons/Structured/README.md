@@ -37,6 +37,14 @@ Beliefs about learning Algorithms
 
 # Static Programs - Vocabulary
 - Incorporated into program snippets
+   - issue of copy and paste to emphasize new data structure
+- Assersions
+- @param
+- @return
+- Algorithms
+- Formulae to summarize data
+- Compiler Errors - end of algorithm
+
 
 ### Hello World
 - print() & println() local strings
@@ -55,7 +63,7 @@ Beliefs about learning Algorithms
 - JAVA, @return: what a method returns
 - Algorithm
 - Arithmetic Operators in integer, long, float, double ( + - * / % )
-- Truncation: removing decimals returning integers only
+- Truncation: removing decimals returning integers only (can creates arithmetic exception or logic errors)
 - Assertion: statement of fact if program is working well
    - visually verifying
    - inspection of variables with print, println, and printArray
@@ -72,7 +80,9 @@ Beliefs about learning Algorithms
      - "Finding errors" that have odd CONSOLE descriptions gets easier with this technique
    - TBA
 
-### 
+### TBA
+
+
 ---
 
 ### Other vocabulary to revisit

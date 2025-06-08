@@ -68,7 +68,11 @@ Beliefs about learning Algorithms
    - visually verifying
    - inspection of variables with print, println, and printArray
 - Bottom-up developement in programming starts with the simplest object-oritentated
+   - Answers: how to learn a language without documentation 
+   - i.e. apply compiler exceptions and errors 
 - Top-down developement starts with the summary of the entire program
+   - psudeocode
+   - tested smaller prototypes
 - Class: creation of objects, how these are used
 - Compiler-Time Errors (debugger), before execution:
    - undeclared variables
@@ -78,10 +82,15 @@ Beliefs about learning Algorithms
    - **Often useful to purposefully program these, writing code backwards**
      - Program will fail at the spot developer needs to return to
      - "Finding errors" that have odd CONSOLE descriptions gets easier with this technique
-   - TBA
 
-### TBA
 
+### DIVs: introducing math fluency
+- Primitive rect() parameters can be abstracted to groups of 4
+- Intialization can become patterned
+- Initiailization based on single values
+- Repeating lines, number changes, summarized by FOR-iteration
+
+- TBA
 
 ---
 
@@ -99,7 +108,8 @@ Beliefs about learning Algorithms
 
 ---
 
-
+Interesting logic errors 
+- background image looses 1 pixel when placed in rectangle with an outline
 
 
 

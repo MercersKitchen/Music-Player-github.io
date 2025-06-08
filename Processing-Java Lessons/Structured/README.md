@@ -22,6 +22,7 @@ Beliefs about Computational Theory
 Beliefs of Structured Programming
 - Visual Objects visually completing Algorithms
 - Algorithms are sometimes recommended Processing-Java language progressions to learn parallel with algorithms
+- Bottom-up programming
 
 Beliefs about learning Algorithms
 - Combination of ...
@@ -32,6 +33,9 @@ Beliefs about learning Algorithms
    - Within problem space illustrated by Euler or Venn Diagrams
    - Wihtin hardware space and various ERRORs that can be produced
 
+Beliefs about reading code: each line is a summary and provides echoes of information
+- this information is required for the next line of code
+- reading becomes incredibly slow
 
 ---
 

@@ -43,6 +43,11 @@ Beliefs about AI as a tool
 - Students are required to ensure the voice of a program
 - Voice is a difficult concept to teach but AI enables the difficult to become possible
 
+Beliefs about students and learning
+- example, exemplar, concept, misconception, fluency
+- modalities: rare pure-sense of words, applied sense of word-definition, translation to words from (logic, images, embodies, etc. )
+
+
 ---
 
 # Static Programs - Vocabulary

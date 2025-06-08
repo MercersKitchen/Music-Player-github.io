@@ -41,6 +41,10 @@ Beliefs about learning Algorithms
 - print() & println() local strings
 - location of debugger, console
 - integration of VS-Code and AI
+- Difference between routine and becoming aware
+- **Hello World** is a time honoured tradition to become part of something more, bigger than oneself
+- The examples of Hello World will be repeated and become part of a routinue
+- The examples are part of awareness
 
 ### DIV_TwoD_Rect
 - JAVA, @param: description of a parameter

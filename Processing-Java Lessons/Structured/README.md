@@ -118,6 +118,7 @@ Beliefs about students and learning
 - Static Variable: memory allocation happens only once
 
 - TBA
+- Global Variables for DRIVER CLASS can happen on any TAB if NOT CLASS
 
 ### Drawing 2D Shapes, identifying a start-end, and flow with making each drawing similar
 - introduces another pattern (procedures)

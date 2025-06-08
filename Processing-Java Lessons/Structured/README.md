@@ -101,6 +101,23 @@ Beliefs about AI as a tool
 
 - TBA
 
+### Drawing 2D Shapes, identifying a start-end, and flow with making each drawing similar
+- introduces another pattern (procedures)
+- similar to a FOR loop but the variables are substitued in, not numbers changing
+
+### Library Song & Sound Effect
+- Two Concatenation Operators building directories and pathways
+
+- Concatenation Operator ( + , )
+- Building directories and pathways in same way
+    - leads to .IO.File
+    - leads to Object created by .IO.File to find image.width & image.height
+    - introduces data space boundaries different than solution space ...
+    - Try-Catch for threading Errors, hardware related
+    - TBA
+- TBA
+
+
 ---
 
 ### Other vocabulary to revisit
@@ -114,6 +131,7 @@ Beliefs about AI as a tool
 - Boolean Expressions, conditionals in if-statements, etc
 - Client Program accesses the public methods of a class (similar to driver program)
 - Compound Assignemnt Operators, order matters ( += -= *= /= %= )
+
 
 ---
 

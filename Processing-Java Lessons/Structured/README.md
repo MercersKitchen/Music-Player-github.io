@@ -24,6 +24,7 @@ Beliefs of Structured Programming
 - Visual Objects visually completing Algorithms
 - Algorithms are sometimes recommended Processing-Java language progressions to learn parallel with algorithms
 - Bottom-up programming
+- Concrete is already known as a coding word in object-orientated when an class is able to be constructed, what is the word to use when creating something concrete (i.e. prototyping)
 
 Beliefs about learning Algorithms
 - Combination of ...
@@ -45,7 +46,7 @@ Beliefs about AI as a tool
 
 Beliefs about students and learning
 - example, exemplar, concept, misconception, fluency
-- modalities: rare pure-sense of words, applied sense of word-definition, translation to words from (logic, images, embodies, etc. )
+- learning modalities, expereince of the moment: rare pure-sense of words, applied sense of word-definition, translation to words from (logic, images, embodies, etc. )
 
 
 ---
@@ -67,7 +68,7 @@ Beliefs about students and learning
 
 ### Hello World
 - print() & println() using String Literals, including escape sequences
-    - Example: 1 != 1, 1==one (cannot do arithmetic on one)
+    - Example: 1 != 1, 1==one (cannot do arithmetic on one or 1)
 - location of debugger, console
 - integration of VS-Code and AI
 - Difference between routine and becoming aware
@@ -109,6 +110,12 @@ Beliefs about students and learning
 - Population: testing construction of variables to be included in a class
     - Note: a music player will have a single instance from a class in CS30, special form of CLASS (static class???)
 - Prmitive Data used is ???? (boolean, byte, char, short, int, long, float, double), String seems primitive but immutable
+
+- See ReadMe.txt file for ideas
+- What is lesson, concept, primitive values for debugging by reading
+- What is awareness
+     - skip-counting and modulus available
+
 
 ### DIVs: introducing math fluency
 - Primitive rect() parameters can be abstracted to groups of 4
@@ -221,12 +228,37 @@ Beliefs about students and learning
 - Tail Recusive Method: recusive call is last statement of method
 
 - Key Word: class, static, public, private, void, abstract, etc.
+- Abstract (class & method)
+- Class
+- Extends
+- impliments (concrete or abstract)
+- inteface: collection of abstract mehtods
+- private: helper variables or methods called internally to the class
+- public: all data can be changed by client programs (variables and methods)
+- static (variable or method, one memory slot) shared by all instances of class, nested class (i.e. music player as a nested class to MAIN Program & DRIVER)
+- super(); used to implement constructor of subclass with the same values for the superclass
+     - in subclass, super.doSomething(); signals superclass method doSomething should be invoked here
+- this. initializes constructor variables separately for mutation
+
+- return: breaks or returns a method after processing (i.e. void can return before full method executed)
+- throw
+     - Example: if (numScores==0) throw new ArithmeticException("cannot divide by zero")
+- void (method doesn't return a value)
+
+- import (packages, libraries)
+- new: creation of new objects, arrays
+- final: creates constant or immutable variable
+- boolean (variable & return)
+- int (4-bytes, 32-bit, integer variable & return, size depends sign, i.e. -2,147,483,648 to 2,147,483,647 or 0 to 4,294,967,295)
+- double (64-bit floating variable & return)
+
+- null: once declared variables and objects are null, when populated used to test if initialized for processing or mutation
+
 
 ---
 
 Interesting logic errors 
 - background image looses 1 pixel when placed in rectangle with an outline
-
 
 
 

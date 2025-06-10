@@ -20,3 +20,8 @@ Additional Notes
 - Dividing the Playing Sufrace into searchable spaces based on the ball's coordinates or single coordinate
 
 ---
+
+Recursion: using a procedural to loop
+- iternations unknown, only finish-case and start (more abstract than start-end, backwards)
+
+---

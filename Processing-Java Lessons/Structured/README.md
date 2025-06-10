@@ -127,6 +127,8 @@ Beliefs about students and learning
 - TBA
 - Global Variables for DRIVER CLASS can happen on any TAB if NOT CLASS
 
+- Symmetry creates formulae to pattern on
+
 ### Drawing 2D Shapes, identifying a start-end, and flow with making each drawing similar
 - introduces another pattern (procedures)
 - similar to a FOR loop but the variables are substitued in, not numbers changing

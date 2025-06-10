@@ -38,7 +38,7 @@ int shortSide = ( appWidth <= appHeight ) ? appWidth : appHeight ;
 int numberOfButtons = 13; //One button on either side as space, Center Button is Play
 int widthOfButton = appWidth/numberOfButtons; //Creates Symmetry
 int beginningButtonSpace = widthOfButton;
-int buttonY = appHeight*3/5;
+int buttonY = appHeight*3/5; //Close approximation of total, slightly bigger space than randomStartQuitSide to separate DIVs
 int randomStartQuitSide = shortSide*1/20;
 //
 randomStartX = 0;
@@ -110,25 +110,24 @@ shuffleDivHeight = widthOfButton;
 float musicSongPaddingY = widthOfButton*1/4;
 float musicSongSpaceX = stopDivX;
 float musicSongSpaceY = stopDivY + widthOfButton + musicSongPaddingY;
-float musicSongSpaceWidth = appWidth - widthOfButton*2;
+float timeBarWidth_temp = appWidth - widthOfButton*2;
 float musicSongSpaceHeight = appHeight - musicSongPaddingY - musicSongSpaceY;
 //rect(musicSongSpaceX, musicSongSpaceY, musicSongSpaceWidth, musicSongSpaceHeight); //testing only
 songPositionDivX = musicSongSpaceX;
 songPositionDivY = musicSongSpaceY;
-songPositionDivWidth = musicSongSpaceWidth*1/5;
+songPositionDivWidth = timeBarWidth_temp*1/5;
 songPositionDivHeight = musicSongSpaceHeight*2/5;
-timeRemainingDivX = musicSongSpaceX + musicSongSpaceWidth*3/5;
+timeRemainingDivX = musicSongSpaceX + timeBarWidth_temp*3/5;
 timeRemainingDivY = musicSongSpaceY + musicSongSpaceHeight*3/5;
-timeRemainingDivWidth = musicSongSpaceWidth*1/5;
+timeRemainingDivWidth = timeBarWidth_temp*1/5;
 timeRemainingDivHeight = musicSongSpaceHeight*2/5;
-totalTimeDivX = musicSongSpaceX + musicSongSpaceWidth*4/5;
+totalTimeDivX = musicSongSpaceX + timeBarWidth_temp*4/5;
 totalTimeDivY = musicSongSpaceY + musicSongSpaceHeight*3/5;
-totalTimeDivWidth = musicSongSpaceWidth*1/5;
+totalTimeDivWidth = timeBarWidth_temp*1/5;
 totalTimeDivHeight = musicSongSpaceHeight*2/5;
-float musicSongSpaceButtonHeight = musicSongSpaceHeight*1/5;
 timeBarDivX = musicSongSpaceX;
 timeBarDivY = musicSongSpaceY + musicSongSpaceHeight*2/5;
-timeBarDivWidth = musicSongSpaceWidth;
+timeBarDivWidth = timeBarWidth_temp;
 timeBarDivHeight = musicSongSpaceHeight*1/5;
 //
 //DIVs

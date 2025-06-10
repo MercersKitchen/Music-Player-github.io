@@ -37,22 +37,24 @@ int appHeight = displayHeight;
 int shortSide = ( appWidth <= appHeight ) ? appWidth : appHeight ; //may cause design issues, how
 //
 //Population
-quitX = appWidth - shortSide*1/20;
-quitWidth = quitHeight = shortSide*1/20;
-quitY = randomStartX = randomStartY = 0;
-randomStartWidth = randomStartHeight = shortSide*1/20;
-imageDivX = songTitleDivX = appWidth*1/4;
-imageDivY = appHeight*1/5;
-imageDivWidth = appWidth*1/2;
-imageDivHeight = appHeight*1.5/5; //1+1.5=2.5, half of the total height
-songTitleDivY = appHeight*1/20;
-songTitleDivWidth = appWidth*1/2;
-songTitleDivHeight = appHeight*1/10;
-//
 int numberOfButtons = 13; //One button on either side as space, Center Button is Play
-int widthOfButton = appWidth/numberOfButtons;
+int widthOfButton = appWidth/numberOfButtons; //Creates Symmetry
 int beginningButtonSpace = widthOfButton;
-int buttonY = appHeight*3/5;
+int buttonY = appHeight*3/5; //Close approximation of total, slightly bigger space than randomStartQuitSide to separate DIVs
+int randomStartQuitSide = shortSide*1/20;
+//
+//Population
+randomStartX = randomStartY = quitY = 0;
+randomStartWidth = randomStartHeight = randomStartQuitSide;
+quitX = appWidth - randomStartQuitSide;
+quitWidth = quitHeight = randomStartQuitSide;
+songTitleDivX = imageDivX = widthOfButton*3;
+songTitleDivY = randomStartQuitSide;
+songTitleDivWidth = widthOfButton*7;
+songTitleDivHeight = widthOfButton*1.5/2;
+imageDivY = songTitleDivY + songTitleDivHeight + quitHeight;
+imageDivWidth = widthOfButton*7;
+imageDivHeight = imageDivY + ( widthOfButton*1 );
 //
 //Pattern with X-parameters of rect()
 stopDivX = beginningButtonSpace + widthOfButton*0;
@@ -94,26 +96,26 @@ shuffleDivWidth = shuffleDivHeight = widthOfButton;
 float musicSongPaddingY = widthOfButton*1/4;
 float musicSongSpaceX = stopDivX;
 float musicSongSpaceY = stopDivY + widthOfButton + musicSongPaddingY;
-float musicSongSpaceWidth = appWidth - widthOfButton*2;
+float timeBarWidth_temp = appWidth - widthOfButton*2;
 float musicSongSpaceHeight = appHeight - musicSongPaddingY - musicSongSpaceY;
 //rect(musicSongSpaceX, musicSongSpaceY, musicSongSpaceWidth, musicSongSpaceHeight); //testing only
 //
 // Pattern of repeating with operations, variables are not patterned
 songPositionDivX = musicSongSpaceX;
 songPositionDivY = musicSongSpaceY;
-songPositionDivWidth = musicSongSpaceWidth*1/5;
+songPositionDivWidth = timeBarWidth_temp*1/5;
 songPositionDivHeight = musicSongSpaceHeight*2/5;
-timeRemainingDivX = musicSongSpaceX + musicSongSpaceWidth*3/5;
+timeRemainingDivX = musicSongSpaceX + timeBarWidth_temp*3/5;
 timeRemainingDivY = musicSongSpaceY + musicSongSpaceHeight*3/5;
-timeRemainingDivWidth = musicSongSpaceWidth*1/5;
+timeRemainingDivWidth = timeBarWidth_temp*1/5;
 timeRemainingDivHeight = musicSongSpaceHeight*2/5;
-totalTimeDivX = musicSongSpaceX + musicSongSpaceWidth*4/5;
+totalTimeDivX = musicSongSpaceX + timeBarWidth_temp*4/5;
 totalTimeDivY = musicSongSpaceY + musicSongSpaceHeight*3/5;
-totalTimeDivWidth = musicSongSpaceWidth*1/5;
+totalTimeDivWidth = timeBarWidth_temp*1/5;
 totalTimeDivHeight = musicSongSpaceHeight*2/5;
 timeBarDivX = musicSongSpaceX;
 timeBarDivY = musicSongSpaceY + musicSongSpaceHeight*2/5;
-timeBarDivWidth = musicSongSpaceWidth;
+timeBarDivWidth = timeBarWidth_temp;
 timeBarDivHeight = musicSongSpaceHeight*1/5;
 //
 //DIVs

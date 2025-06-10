@@ -39,16 +39,17 @@ int numberOfButtons = 13; //One button on either side as space, Center Button is
 int widthOfButton = appWidth/numberOfButtons; //Creates Symmetry
 int beginningButtonSpace = widthOfButton;
 int buttonY = appHeight*3/5;
+int randomStartQuitSide = shortSide*1/20;
 //
 randomStartX = 0;
 randomStartY = 0;
-randomStartWidth = shortSide*1/20;
-randomStartHeight = shortSide*1/20;
+randomStartWidth = randomStartQuitSide;
+randomStartHeight = randomStartQuitSide;
 //
-quitX = appWidth - shortSide*1/20;
+quitX = appWidth - randomStartQuitSide; //Subtracting from the end, foreshawdow recursive programming
 quitY = 0;
-quitWidth = shortSide*1/20;
-quitHeight = shortSide*1/20;
+quitWidth = randomStartQuitSide;
+quitHeight = randomStartQuitSide;
 //
 songTitleDivX = widthOfButton*3;
 songTitleDivY = randomStartHeight;
@@ -59,16 +60,8 @@ imageDivX = widthOfButton*3;
 imageDivY = songTitleDivY + songTitleDivHeight + quitHeight;
 imageDivWidth = widthOfButton*7;
 //From the bottom up
-imageDivHeight = appHeight - ( quitHeight*4 + widthOfButton*3 );
-//(appHeight, quitHeight, quitHeight*3, widthOfButton, widthOfButton*2, appHeight - ( quitHeight*3 + widthOfButton*2 ));
-
-
-
-
-
-
-
-
+imageDivHeight = imageDivY + ( widthOfButton*1 );
+//
 stopDivX = beginningButtonSpace + widthOfButton*0;
 stopDivY = buttonY;
 stopDivWidth = widthOfButton;

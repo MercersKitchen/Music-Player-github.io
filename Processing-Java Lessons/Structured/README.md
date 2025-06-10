@@ -65,6 +65,7 @@ Beliefs about students and learning
 - Assersion (to be tested) || post-condition (tested) || pre-condition (tested)
     - Protytping in DRIVER CLASS
 - Variables & Scope
+- ERRORs being given (compiler in debugger, runtime, halt-errors, logic errors)
 
 ### Hello World
 - print() & println() using String Literals, including escape sequences
@@ -144,6 +145,13 @@ Beliefs about students and learning
     - Try-Catch for threading Errors, hardware related
     - TBA
 - TBA
+
+CS20 Level - verifying variable is loaded for more advanced OS debugging 
+- add if (var !=null  && ???) soundEffects-array, playList-array, text( var, rect()-parameters ) | image( var, rect()-parameters );
+- ensuring variable populated for processing
+- catch with else and println ERROR with Exception
+- do not need to verify if variable is loaded
+- can still verify behaivour in CANVAS 
 
 ### BoilerPlate & boilerplate_settings
 - Compiler sees Folder and Driver Class with Main Methods (setup & draw)

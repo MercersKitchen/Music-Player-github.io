@@ -23,7 +23,7 @@ void setup() {
   for (int i=0; i<2; i++) {
     musicProgramButtonDiv[i] = 0; //0, 1
   }
-  musicProgramButtonDiv[2] = musicProgramButtonDiv[3] = musicProgramButtonDiv[6] = musicProgramButtonDiv[7] = linear3Term(0, 0, 0, 0, 1, shortSide, 1, 20); 
+  musicProgramButtonDiv[2] = musicProgramButtonDiv[3] = musicProgramButtonDiv[6] = musicProgramButtonDiv[7] = linear3Term(0, 0, 0, 0, 1, shortSide, 1, 20);
   musicProgramButtonDiv[4] = linear3Term(0, 0, 1, appWidth, -1, shortSide, 1, 20);
   musicProgramButtonDiv[5] = musicProgramButtonDiv[1]; //recursive population
   //
@@ -67,14 +67,24 @@ void setup() {
   //
   //DIVs
   //rect(X, Y, Width, Height)
-  for (int i=0; i<musicProgramButtonDiv.length-1; i+=4) {
-    rect(musicProgramButtonDiv[i], musicProgramButtonDiv[i+1], musicProgramButtonDiv[i+2], musicProgramButtonDiv[i+3]);
+  if ( musicProgramButtonDiv.length%4 !=0 ) {
+    println("Halt 1: collection%4 not possible");
+    exit();
+  } else {
+    for (int i=0; i<musicProgramButtonDiv.length-1; i+=4) {
+      rect(musicProgramButtonDiv[i], musicProgramButtonDiv[i+1], musicProgramButtonDiv[i+2], musicProgramButtonDiv[i+3]);
+    }
   }
-  for (int i=0; i<songVarDependantDiv.length-1; i+=4) {
-    rect(songVarDependantDiv[i], songVarDependantDiv[i+1], songVarDependantDiv[i+2], songVarDependantDiv[i+3]); //repeat line
+  if ( songVarDependantDiv.length%4 !=0 ) {
+    println("Halt 2: collection%4 not possible");
+    exit();
+  } else {
+    for (int i=0; i<songVarDependantDiv.length-1; i+=4) {
+      rect(songVarDependantDiv[i], songVarDependantDiv[i+1], songVarDependantDiv[i+2], songVarDependantDiv[i+3]); //repeat line
+    }
   }
-  for (int i=0; i<musicButtonDivX.length; i++) { //Repeat of previous FOR-Conditional
-    square(musicButtonDivX[i], musicButtonDivY, musicButtonDivSquare);
+  for (float div : musicButtonDivX) {
+    square(div, musicButtonDivY, musicButtonDivSquare);
   }
   //
 } //End Setup

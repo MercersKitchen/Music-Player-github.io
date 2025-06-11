@@ -7,10 +7,6 @@ Note: all programs can be written between static and dynamic. Static allows for 
 
 CAUTION: ERRORs (bugs) are sometimes built in since identifying errors is part of learning
 
-Recommened Programs and Steps to Know about
-- Reminders and Foci, <a href="">tba</a>
-- Static Programs, 
-
 ---
 
 # TBA, Reminders and Foci

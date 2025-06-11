@@ -27,6 +27,32 @@ Addtional Notes
 ## Structured Programming Video
 
 
+
+---
+
+Recommened Programs and Steps to Know about ... front of course to end
+- Reminders and Foci, <a href="">tba</a>
+- Static Programs, <a href="">tba</a>
+     - 01 Hello World, <a href="">tba</a>
+     - DIV Two Dimensional Rectangle Shapes, <a href="">tba</a>
+     - DIVs, <a href="">tba</a>
+- Procedural Programs, <a href="">tba</a>
+     - Checking for ERRORs and Halt-errors
+     - DIVs as arrays
+         - Regular FOR and FOR-each with index
+
+
+         CONTINUE HERE with Enrichment
+
+
+
+     - Enrichment: Nested FORs Populationg matrix 
+     - TBA
+- Object Orientated Programming
+     - Recursion based on Static DIVs Program, replicating FOR & known iterations from static program, <a href="">tba</a>
+- TBA 
+
+
 ---
 
 # To Include

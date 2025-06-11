@@ -27,6 +27,7 @@ for ( int x=0; x<rectVar.length; x+=3 ) {
 }
 /* Desgining X Stays same, populate by columns, x stays same, y changes each time, index counts in groups of 4
  - Might be easier to see if iterating through Width and Height all Populated the same by skip counting
+ - Goal is single recursion
  
  rectVar[0]= 0*(appWidth/columns);
  rectVar[0+1]= 0*(appHeight/rows);

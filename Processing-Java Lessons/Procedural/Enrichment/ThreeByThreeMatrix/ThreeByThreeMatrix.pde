@@ -14,6 +14,7 @@ int rows = 3;
 int xRowCounter = 0;
 int columns = 3;
 int parameters = 4;
+int debuggingOnly=0;
 
 for ( int x=0; x<rectVar.length; x+=parameters ) {//Will fail if not a mutliple
   //x
@@ -23,11 +24,12 @@ for ( int x=0; x<rectVar.length; x+=parameters ) {//Will fail if not a mutliple
     //y
     println("y", y);
     for (int i=0; i<parameters; i++) {
-      println(x+i, x, xRowCounter, y);
+      debuggingOnly++;
+      println(debuggingOnly, x+i, x, xRowCounter, y);
       if ( (x+i)%4==0 ) rectVar[x+i]= xRowCounter*(appWidth/columns);
-      if ( (x+i)%4==1 ) rectVar[x+i]= y*(appHeight/rows); //repeat line with different variable
-      if ( (x+i)%4==2 ) rectVar[x+i]=appWidth/columns; //repeat line with different variable
-      if ( (x+i)%4==3 ) rectVar[x+i]=appHeight/rows; //repeat line with different variable
+      //if ( (x+i)%4==1 ) rectVar[x+i]= y*(appHeight/rows); //repeat line with different variable
+      //if ( (x+i)%4==2 ) rectVar[x+i]=appWidth/columns; //repeat line with different variable
+      //if ( (x+i)%4==3 ) rectVar[x+i]=appHeight/rows; //repeat line with different variable
     }
   }
   xRowCounter++; //Acts like WHILE, incrementing at end

@@ -6,7 +6,7 @@ void setup() {
   //
   int numberofSquares = 9;
   int parameters = 4;
-  float[] rectVar = new float[numberofSquares*4];
+  float[] rectVar = new float[numberofSquares*parameters];
   int columns = 3;
   int rows = 3;
   //

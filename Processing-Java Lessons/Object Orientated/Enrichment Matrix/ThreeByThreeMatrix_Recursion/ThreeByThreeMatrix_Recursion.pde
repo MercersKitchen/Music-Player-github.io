@@ -27,6 +27,7 @@ void setup() {
     exit();
   }
   if ( rectVar.length%parameters==0 ) {
+    //CONTINUE HERE
   } else {
     println("ERROR with Array Length populating Array");
     exit();

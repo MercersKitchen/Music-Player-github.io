@@ -32,6 +32,7 @@ Addtional Notes
 
 Recommened Programs and Steps to Know about ... front of course to end
 - Reminders and Foci, <a href="">tba</a>
+     - Students must be able to describe algorithms and update their correctness for less than 100% (and not the failing grade)
 - Static Programs, <a href="">tba</a>
      - 01 Hello World, <a href="">tba</a>
      - DIV Two Dimensional Rectangle Shapes, <a href="">tba</a>

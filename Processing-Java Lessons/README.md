@@ -52,7 +52,10 @@ Issues similar to
 - High School Polynomial Arithmetic in place-value of elementary two number, 2-digit multiplication
 - Derivative of speed graph is distance ??? 
 ---
-
+Choosing DIVs to interact with is a matter of 
+- Quadractics and Zeeros or roots
+- Regression & calcualtors or computers (previous curriculum item in Math 20 Applied)
+---
 - Static Programs, <a href="">tba</a>
      - 01 Hello World, <a href="">tba</a>
      - DIV Two Dimensional Rectangle Shapes, <a href="">tba</a>

@@ -33,6 +33,26 @@ Addtional Notes
 Recommened Programs and Steps to Know about ... front of course to end
 - Reminders and Foci, <a href="">tba</a>
      - Students must be able to describe algorithms and update their correctness for less than 100% (and not the failing grade)
+- Why DIVs
+     - DIVs: assigning space of display for specific purposes (overlapping, not overlapping)
+          - realizing interaction of Processing-Java IDE and VS-Code with CHAT-GPT4
+          - realizing CANVAS function
+          - realizing key-variables
+          - repeating geometry or changing it
+     - Pattern, counting, by 1's, counting by groups of 4 (definition of 1), FOR, Copy Array & FOR-Each (music button group), recursive (procedural) reversing FOR
+     - What does my case study look like (not a face), uses symmetry and referent measures based in paperfolding or percent
+
+
+---
+Math to include in music buttons
+Procedures beyond single degree polynomials here are an exercise
+- rational expressions in financial mathematics for book-keeping - why make something more difficult
+- work on fluency
+Issues similar to
+- High School Polynomial Arithmetic in place-value of elementary two number, 2-digit multiplication
+- Derivative of speed graph is distance ??? 
+---
+
 - Static Programs, <a href="">tba</a>
      - 01 Hello World, <a href="">tba</a>
      - DIV Two Dimensional Rectangle Shapes, <a href="">tba</a>

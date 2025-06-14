@@ -4,11 +4,11 @@ void setup() {
   int appWidth = width;
   int appHeight = height;
   //
-  int numberofSquares = 9;
-  int parameters = 4;
+  int numberofSquares = 9; //can be defined at anytime
+  int parameters = 4; //strict to rect()
   float[] rectVar = new float[numberofSquares*parameters];
-  int columns = 3;
-  int rows = 3;
+  int columns = 3; //can be defined at anytime
+  int rows = 3; //can be defined at anytime
   //
   int i=0;
   for ( int x=0; x<columns; x++ ) {//Will fail if not a mutliple

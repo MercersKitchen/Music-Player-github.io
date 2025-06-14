@@ -27,7 +27,7 @@ for ( int x=0; x<columns; x++ ) {//Will fail if not a mutliple
   }
 }
 //
-printArray(rectVar);
+//printArray(rectVar);
 //
 if ( rectVar.length%parameters==0 ) {
   for (i=0; i<rectVar.length; i+=parameters) {

@@ -39,19 +39,25 @@ Recommened Programs and Steps to Know about ... front of course to end
      - DIVs, <a href="">tba</a>
 - Procedural Programs, <a href="">tba</a>
      - Checking for ERRORs and Halt-errors
-     - DIVs as arrays
-         - Regular FOR and FOR-each with index
+     - DIVs as arrays, Regular FOR
+     - Enrichment: Nested FORs Populating matrix-style DIVs
+     - Enrichment, advanced: application of Nested FOR in Recursive Programming
 
 
-         CONTINUE HERE with Enrichment
+     NEXT Music Symbols ONLY in Music Button DIVs
 
 
 
-     - Enrichment: Nested FORs Populationg matrix 
-     - TBA
 - Object Orientated Programming
      - Recursion based on Static DIVs Program, replicating FOR & known iterations from static program, <a href="">tba</a>
-- TBA 
+     - NOTE: Enrichment of Any Matrix using Recursion, extension of NESTED Regular FOR
+
+
+     NEXT 
+
+
+
+     - Recursion of NEXT Music Symbols ONLY in Music Button DIVs
 
 
 ---

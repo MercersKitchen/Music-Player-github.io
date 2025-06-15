@@ -38,12 +38,12 @@ String folders = "Lesson Dependancies Folder/Images/";
 String bike = "bike";
 String fileExtension = ".jpg";
 String image1Pathway = upArrow + folders + bike + fileExtension;
-println(image1Pathway);
+//println(image1Pathway);
 PImage image1 = loadImage( image1Pathway );
 int image1Width = 860;
 int image1Height = 529;
 float image1AspectRatio_GreaterOne = ( image1Width >= image1Height ) ? float(image1Width)/float(image1Height) : float(image1Height)/float(image1Width) ; // Choice x / for bigger or smaller
-println(image1AspectRatio_GreaterOne);
+//println(image1AspectRatio_GreaterOne);
 Boolean image1Landscape = ( image1Width >= image1Height ) ? true : false ;
 /*Only the image geometry needs to be know for the algorithm below
  - When the Geometries change, big dimension to small dimension must happen or image will not fit

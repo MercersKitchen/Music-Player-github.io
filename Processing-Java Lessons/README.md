@@ -56,6 +56,12 @@ Choosing DIVs to interact with is a matter of
 - Quadractics and Zeeros or roots
 - Regression & calcualtors or computers (previous curriculum item in Math 20 Applied)
 ---
+Structured Programming - static Programs
+- Algorithms learded
+- ERRORs learned
+- Easier language structures to learn static classes easier
+---
+
 
 
 

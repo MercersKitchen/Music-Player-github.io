@@ -107,3 +107,16 @@ void draw() {
 
 ---
 
+# To Include: text choices from User Persepctive
+- One Size for entire program,
+- One size for certain items, other size for other items
+- Largest Possible size based on smallest rect()
+- Average between largest and smallest size (which central tendancy is chocen)
+- 
+
+---
+
+# Writing a TAB to highlight what is below - formal writing similar to essay
+- based on Global, setup & sections, draw, listeners, other procedures, setters and getters
+
+---

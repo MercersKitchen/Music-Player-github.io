@@ -65,7 +65,10 @@ Application to CSTA Curriculum from Alberta Curriculum
 - English recipe writing (various names)
 - Math number and algorithms - 2D-multiplcation to binomial mutliplication
 - Why is this sophisication important?
-See in the medelbrolt fractal and set
+
+- What are the basic coding sturctures to learn in a lanuage, also connected to hardware
+
+See in the medelbrolt fractal and set as metaphpor for above
 
 
 

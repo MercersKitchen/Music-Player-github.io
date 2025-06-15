@@ -61,6 +61,12 @@ Structured Programming - static Programs
 - ERRORs learned
 - Easier language structures to learn static classes easier
 ---
+Application to CSTA Curriculum from Alberta Curriculum
+- English recipe writing (various names)
+- Math number and algorithms - 2D-multiplcation to binomial mutliplication
+- Why is this sophisication important?
+See in the medelbrolt fractal and set
+
 
 
 

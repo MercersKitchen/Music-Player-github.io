@@ -33,6 +33,7 @@ Addtional Notes
 Recommened Programs and Steps to Know about ... front of course to end
 - Reminders and Foci, <a href="">tba</a>
      - Students must be able to describe algorithms and update their correctness for less than 100% (and not the failing grade)
+- HelloWorld, Time Honoureed Traditon, Static Program Start
 - Why DIVs
      - DIVs: assigning space of display for specific purposes (overlapping, not overlapping)
           - realizing interaction of Processing-Java IDE and VS-Code with CHAT-GPT4
@@ -41,7 +42,6 @@ Recommened Programs and Steps to Know about ... front of course to end
           - repeating geometry or changing it
      - Pattern, counting, by 1's, counting by groups of 4 (definition of 1), FOR, Copy Array & FOR-Each (music button group), recursive (procedural) reversing FOR
      - What does my case study look like (not a face), uses symmetry and referent measures based in paperfolding or percent
-- HelloWorld, Time Honoureed Traditon, Static Program Start
 - DIVs: Static Structured Programming
       - DIV_TwoD_Rect.pde
       - basicDIVs
@@ -54,15 +54,23 @@ Recommened Programs and Steps to Know about ... front of course to end
      - Formulaic Consistency using first-degree, mutliple term, polynomials
      - FOR: compare regular-FOR and FOR-each to compare methods for array structures
 - DIVs, Matrix Enrichment: separating population of grid-pattern with using the grid patterns
-     - Populate any sized rectangle matrix
-
-Choosing DIVs to interact with is a matter of 
-- Quadractics and Zeeros or roots
-- Regression & calcualtors or computers (previous curriculum item in Math 20 Applied)
+     - Populate any sized rectangle (or square) matrix using rect() as a guide
+     - Procedures declaring VOID or a return-type
+     - Notice, choosing which array indices to use when drawing can use Quadractics (zeros or roots) or calculator-based regression
 
 
 
-      - Coding Structures & ERRORs 
+
+Object Orientated Programming: starting with a Static Class in Processing-JAVA
+- Identifying a MAIN Program and using TABs to organize the procedures of Music Player
+- DIVs, a reivew of arrays, regular-FOR, and FOR-each (declaration & initialization)
+- DIVs, a review of procedural application of first-degree, multiple-term, polynomials for array population (i.e. foreshawdowing a constructor)
+- DIVs, application to regular-FOR
+
+
+
+
+
 
 ---
 Math to include in music buttons

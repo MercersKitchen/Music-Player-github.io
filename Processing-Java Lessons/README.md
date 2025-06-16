@@ -41,7 +41,11 @@ Recommened Programs and Steps to Know about ... front of course to end
           - repeating geometry or changing it
      - Pattern, counting, by 1's, counting by groups of 4 (definition of 1), FOR, Copy Array & FOR-Each (music button group), recursive (procedural) reversing FOR
      - What does my case study look like (not a face), uses symmetry and referent measures based in paperfolding or percent
+- HelloWorld, Time Honoureed Traditon, Static Program Start
+- DIVs: Static Structured Programming
+      - Program Orders
 
+      - Coding Structures & ERRORs 
 
 ---
 Math to include in music buttons

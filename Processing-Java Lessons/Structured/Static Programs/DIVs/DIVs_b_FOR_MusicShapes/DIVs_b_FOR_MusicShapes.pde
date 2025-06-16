@@ -2,8 +2,8 @@
  Note: the visual object is the rectangle but the computer requires the parameter-varaibles created first
  Vocabulary
  - Declaration & Initialization
- - Variables used at a Program-level
- - Variables used to create program-level variables (could be deleted)
+ - Variables used at a CANVAS-level
+ - Variables used to create CANVAS-level variables (could be deleted)
  - Population of variables
  */
 //Library - Minim

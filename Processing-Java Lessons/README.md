@@ -43,7 +43,24 @@ Recommened Programs and Steps to Know about ... front of course to end
      - What does my case study look like (not a face), uses symmetry and referent measures based in paperfolding or percent
 - HelloWorld, Time Honoureed Traditon, Static Program Start
 - DIVs: Static Structured Programming
-      - Program Orders
+      - DIV_TwoD_Rect.pde
+      - basicDIVs
+      - DIVs_a_initialization
+      - DIVs_b_FOR_MusicShapes
+      - Music Shapes: from paper-folding & fractions to abstracting mutliple lines to initialization & FORs (formulaic consistency and numerical change)
+      - Music Shapes must lead to abstracting how the shapes are drawn and abstracted like starting & ending points & functions including to procedural abstractions
+- DIVs, arrays (with ERROR checking): separating the DIVs into differnt features for different access
+     - Able to combine all the same array or visversa
+     - Formulaic Consistency using first-degree, mutliple term, polynomials
+     - FOR: compare regular-FOR and FOR-each to compare methods for array structures
+- DIVs, Matrix Enrichment: separating population of grid-pattern with using the grid patterns
+     - Populate any sized rectangle matrix
+
+Choosing DIVs to interact with is a matter of 
+- Quadractics and Zeeros or roots
+- Regression & calcualtors or computers (previous curriculum item in Math 20 Applied)
+
+
 
       - Coding Structures & ERRORs 
 
@@ -56,9 +73,7 @@ Issues similar to
 - High School Polynomial Arithmetic in place-value of elementary two number, 2-digit multiplication
 - Derivative of speed graph is distance ??? 
 ---
-Choosing DIVs to interact with is a matter of 
-- Quadractics and Zeeros or roots
-- Regression & calcualtors or computers (previous curriculum item in Math 20 Applied)
+
 ---
 Structured Programming - static Programs
 - Algorithms learded

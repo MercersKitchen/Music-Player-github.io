@@ -1,6 +1,6 @@
 /* Purpose: Decreasing Lines of Code
  - Separating Declaration with commas
- - Sngle Line Initialization
+ - Single Line Initialization
  */
 //Display
 fullScreen();

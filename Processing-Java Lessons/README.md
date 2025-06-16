@@ -57,16 +57,28 @@ Recommened Programs and Steps to Know about ... front of course to end
      - Populate any sized rectangle (or square) matrix using rect() as a guide
      - Procedures declaring VOID or a return-type
      - Notice, choosing which array indices to use when drawing can use Quadractics (zeros or roots) or calculator-based regression
+- Music Shapes: starting with STOP, each symbol is desinged meaningfully
+     - Static, all symbols
+     - From paperfolding fractions
+     - Abstracting from paperfolding fractions into initialization, FOR
 
+     - NEXT Programs: basic algorithm, initialization, FOR
+     - Move the full program over to the exemplar program
+     - Procedural for drawing music shapes - use origional complete porgram for demosntration
+     - Recursive for drawing music shapes - use origional complete porgram for demosntration
 
+- See ... for interesting project in Text Procedures
+- https://www.youtube.com/shorts/UWN50ZbW9Fo
+- Offer to Others as Reading App (words over scan of page as background)
+- See Weather App and "Go Outside Notification"
 
 
 Object Orientated Programming: starting with a Static Class in Processing-JAVA
 - Identifying a MAIN Program and using TABs to organize the procedures of Music Player
 - DIVs, a reivew of arrays, regular-FOR, and FOR-each (declaration & initialization)
 - DIVs, a review of procedural application of first-degree, multiple-term, polynomials for array population (i.e. foreshawdowing a constructor)
-- DIVs, application to regular-FOR
-
+- DIVs, recursive application to regular-FOR | FOR-each
+- Music Symbols, recursion application
 
 
 

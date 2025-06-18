@@ -34,6 +34,10 @@ Recommened Programs and Steps to Know about ... front of course to end
 - Reminders and Foci, <a href="">tba</a>
      - Students must be able to describe algorithms and update their correctness for less than 100% (and not the failing grade)
 - HelloWorld, Time Honoureed Traditon, Static Program Start
+- Why Processing-JAVA: ease into mulitple languages & Objects-First
+     - AP CSA Exam
+     - Java Libraries
+     - Static Class to Driver and Processing-Classes to Pure Java Classes
 - Why Static
      - When to Start a Variable: before it is needed, after other variables that create it
      - Order of Functions to create larger algorithm

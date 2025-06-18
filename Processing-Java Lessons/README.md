@@ -34,6 +34,10 @@ Recommened Programs and Steps to Know about ... front of course to end
 - Reminders and Foci, <a href="">tba</a>
      - Students must be able to describe algorithms and update their correctness for less than 100% (and not the failing grade)
 - HelloWorld, Time Honoureed Traditon, Static Program Start
+- Why Static
+     - When to Start a Variable: before it is needed, after other variables that create it
+     - Order of Functions to create larger algorithm
+     - TBA
 - Why DIVs
      - DIVs: assigning space of display for specific purposes (overlapping, not overlapping)
           - realizing interaction of Processing-Java IDE and VS-Code with CHAT-GPT4
@@ -109,7 +113,6 @@ Application to CSTA Curriculum from Alberta Curriculum
 
 See in the medelbrolt fractal and set as metaphpor for above
 
-When to start a variable: before it is needed, after other variables that create it
 When is a variable able to stop
 
 

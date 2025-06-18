@@ -37,6 +37,7 @@ Recommened Programs and Steps to Know about ... front of course to end
 - Why Static
      - When to Start a Variable: before it is needed, after other variables that create it
      - Order of Functions to create larger algorithm
+     - What is being repeated in a static program to learn from it
      - TBA
 - Why DIVs
      - DIVs: assigning space of display for specific purposes (overlapping, not overlapping)

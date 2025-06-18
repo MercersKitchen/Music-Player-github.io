@@ -109,6 +109,10 @@ Application to CSTA Curriculum from Alberta Curriculum
 
 See in the medelbrolt fractal and set as metaphpor for above
 
+When to start a variable: before it is needed, after other variables that create it
+When is a variable able to stop
+
+
 
 
 

@@ -11,7 +11,13 @@ Addtional Notes
 
 ---
 
+# How does AI Fit
+- Voice
+- Attending to and ignoring code sections (modularity), highlighting section, asking about entire expereince 
+
+
 # Expectations, Sketching, & WireFrame
+- Appied Math (computational theory), Appied English (recipe writing, elementary), compiler language and other computer skills to demosntrate algorithms
 
 
 ### Images of Final Programs (Creating the Steps inside)

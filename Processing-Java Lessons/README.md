@@ -126,6 +126,11 @@ JSON: Time to Go Outside, the weather is, 3 hour increments
 - Array Algorithm: when does the weather model being used start to fall apart (very complicated predicitive algorithm) 
 ---
 
+The students current reality is noth their grade-level
+- fluency & sophicisticaion or proficiency with fluemcy
+- AI levels the ability for less-sophisicated to 'level-up' since we cannot use grade-level as a method of communcation
+- Communciation: Scholarships, bursaries, awards, titles, trust been given from others
+
 Classes: learn concepts to start or learn to start other langauges by prototyping
 - Prototype and learn how functions interact ( i.e. textFont() before textWidth() )
 - Static Music, Static Weather ... Incorportated into Pong
@@ -133,7 +138,7 @@ Classes: learn concepts to start or learn to start other langauges by prototypin
 - Abstract-classes to write code once code again (static, dynamic boilerplate, FOR, proceudral (void & return), )
 
 - static to dynamic boilerplate and how to access 4-different proceudres to objectivfy a program as a "sequential" line of code
-- decreasing variable code thorugh declaration, initialization, WHILE (like draw() ), FOR-regular, FOR-each, Arrays, JSON, Recursive
+- decreasing variable code thorugh declaration, initialization, WHILE (like draw() ), FOR-regular, FOR-each, Arrays, JSON, Recursive (creating initial objects backwards to the origional)
 - grouping blocks of code throught object-output as full blocks (including recursion), sub-blocks for returning values
 - ERROR handling & pinpointing the unhandled data point
 

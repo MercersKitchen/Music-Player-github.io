@@ -130,9 +130,17 @@ The students current reality is noth their grade-level
 - fluency & sophicisticaion or proficiency with fluemcy
 - AI levels the ability for less-sophisicated to 'level-up' since we cannot use grade-level as a method of communcation
 - Communciation: Scholarships, bursaries, awards, titles, trust been given from others
+- What does this feel like in a classroom: what is the max grade when 100% is removed as a leveling agent
+     - timelines, issues of 100%
+     - what has been completed
+     - when did a student exit those spiraled lessons
+     - what is the next novel task & concept for sprialing
+     - assumption: AI can be used anytime to 'level up' & compensate for all deficiencies (what it means to be an expert) 
 
 Classes: learn concepts to start or learn to start other langauges by prototyping
 - Prototype and learn how functions interact ( i.e. textFont() before textWidth() )
+- What is static: expectations or object-less execution beyond expectations of individual functions
+     - if language is to be used without understanding, just output without regard for ERROR-analysis, then AI is answer
 - Static Music, Static Weather ... Incorportated into Pong
 - Class designed Pong
 - Abstract-classes to write code once code again (static, dynamic boilerplate, FOR, proceudral (void & return), )

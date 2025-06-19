@@ -139,6 +139,7 @@ The students current reality is noth their grade-level
      - when did a student exit those spiraled lessons
      - what is the next novel task & concept for sprialing
      - assumption: AI can be used anytime to 'level up' & compensate for all deficiencies (what it means to be an expert) 
+     - creating routines addresses memory and expectations
 
 
 Where do we learn about ...

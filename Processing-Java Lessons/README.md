@@ -129,6 +129,8 @@ JSON: Time to Go Outside, the weather is, 3 hour increments
 The students current reality is noth their grade-level
 - fluency & sophicisticaion or proficiency with fluemcy
 - how does grading happen: URL is submitted when student is looking at code to be graded, forms a pathway in GitHub
+     - What am I grading: when they finished strucutred voice ... how ready are they for Procedural Voice
+     - IF advanced voice must use comments demonstrating HEAP Sheets and explaining algorithms at that voice (IPO)
 - AI levels the ability for less-sophisicated to 'level-up' since we cannot use grade-level as a method of communcation
 - Communciation: Scholarships, bursaries, awards, titles, trust been given from others
 - What does this feel like in a classroom: what is the max grade when 100% is removed as a leveling agent
@@ -137,6 +139,12 @@ The students current reality is noth their grade-level
      - when did a student exit those spiraled lessons
      - what is the next novel task & concept for sprialing
      - assumption: AI can be used anytime to 'level up' & compensate for all deficiencies (what it means to be an expert) 
+
+
+Where do we learn about ...
+- GUI (Graphical User Interface): case study (expectations)
+- See Google Classroom
+
 
 Classes: learn concepts to start or learn to start other langauges by prototyping, executing a program so it works and able to read for ERRORs and fix them when AI cannot or is not available 
 - Prototype and learn how functions interact ( i.e. textFont() before textWidth() )

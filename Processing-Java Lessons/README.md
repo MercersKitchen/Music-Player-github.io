@@ -126,7 +126,7 @@ JSON: Time to Go Outside, the weather is, 3 hour increments
 - Array Algorithm: when does the weather model being used start to fall apart (very complicated predicitive algorithm) 
 ---
 
-The students current reality is noth their grade-level
+The students current reality is not at their grade-level ... but what they understand, comprehend, and work with at their grade-level
 - fluency & sophicisticaion or proficiency with fluemcy
 - how does grading happen: URL is submitted when student is looking at code to be graded, forms a pathway in GitHub
      - What am I grading: when they finished strucutred voice ... how ready are they for Procedural Voice

@@ -141,6 +141,9 @@ The students current reality is not at their grade-level ... but what they under
      - assumption: AI can be used anytime to 'level up' & compensate for all deficiencies (what it means to be an expert) 
      - creating routines addresses memory and expectations
 
+Grades decrease when deadline has passed and I am asked to find ERRORs in code if in algorithm already taught
+- 'stiching' together programs in boilerplate or more avainced procedures is not included
+- similar to highlihgting a program section and asking AI, then interpreting that answer
 
 Where do we learn about ...
 - GUI (Graphical User Interface): case study (expectations)

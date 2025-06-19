@@ -151,6 +151,8 @@ Grades decrease when deadline has passed and I am asked to find ERRORs in code i
 - 'stiching' together programs in boilerplate or more avainced procedures is not included
 - similar to highlihgting a program section and asking AI, then interpreting that answer
 
+Grade recorded is lowest grade until project is completed
+
 Where do we learn about ...
 - GUI (Graphical User Interface): case study (expectations)
 - See Google Classroom

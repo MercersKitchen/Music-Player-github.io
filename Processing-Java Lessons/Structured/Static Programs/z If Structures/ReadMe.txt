@@ -14,3 +14,6 @@ How does Static Program search buttons on a keyboard, IF-ElseIF-Else
 How is this counted and adjusted?
 - What is needed
 - Foreshadowing
+
+What are some buttons that can be combined?
+How?

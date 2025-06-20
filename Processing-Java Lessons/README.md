@@ -4,6 +4,9 @@ Lessons, Revisions, and AI (Artificial Intelligence and Academic Integrity)
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*
 
 Contents & Discussion about Voice & Porgramming Methodology
+- What is user expereince?
+- What are vocabulary with AI for students unable with Math or English fluency?
+
 - Expectations, Sketching, & WireFrame, <a href="">tba</a>
 
 Addtional Notes
@@ -193,6 +196,14 @@ Classes: learn concepts to start or learn to start other langauges by prototypin
      NEXT Music Symbols ONLY in Music Button DIVs
 
 
+     Procedureal check of DIVs, input divs into mouseX>< && mouseY><, return a Boolean for further processing 
+     Hoverover, clicking, feature activation
+     For Example:
+          boolean MouseIsOver(float xVariable, float yVariable, float widthVariable, float heightVariable) {
+               return mouseX > xVariable && mouseX < xVariable + widthVariable && mouseY > yVariable && mouseY < yVariable + heightVariable;
+          }
+
+
 
 - Object Orientated Programming
      - Recursion based on Static DIVs Program, replicating FOR & known iterations from static program, <a href="">tba</a>
@@ -204,6 +215,11 @@ Classes: learn concepts to start or learn to start other langauges by prototypin
 
 
      - Recursion of NEXT Music Symbols ONLY in Music Button DIVs
+     - Opposite of Iteration 
+
+
+
+
 
 
 ---

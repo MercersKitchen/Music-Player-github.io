@@ -3,28 +3,10 @@ Lessons, Revisions, and AI (Artificial Intelligence and Academic Integrity)
 
 **CAUTION:** Repository and Website *UNDER CONSTRUCTION*
 
-Contents & Discussion about Voice & Porgramming Methodology
-- What is user expereince?
-- What are vocabulary with AI for students unable with Math or English fluency?
-
-- Expectations, Sketching, & WireFrame, <a href="">tba</a>
+-  <a href="">tba</a>
 
 Addtional Notes
 - Processing-Java, <a href="">here</a>, makes simple code look like many other languages with immediate visual output
-
----
-
-# How does AI Fit
-- Voice
-- Attending to and ignoring code sections (modularity), highlighting section, asking about entire expereince 
-
-
-# Expectations, Sketching, & WireFrame
-- Appied Math (computational theory), Appied English (recipe writing, elementary), compiler language and other computer skills to demosntrate algorithms
-
-
-### Images of Final Programs (Creating the Steps inside)
-
 
 ---
 

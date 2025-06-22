@@ -5,9 +5,6 @@ Lessons, Revisions, and AI (Artificial Intelligence and Academic Integrity)
 
 -  <a href="">tba</a>
 
-Addtional Notes
-- Processing-Java, <a href="">here</a>, makes simple code look like many other languages with immediate visual output
-
 ---
 
 # Vocabulary to be used in Videos
@@ -21,14 +18,7 @@ Addtional Notes
 
 ---
 
-- Why DIVs
-     - DIVs: assigning space of display for specific purposes (overlapping, not overlapping)
-          - realizing interaction of Processing-Java IDE and VS-Code with CHAT-GPT4
-          - realizing CANVAS function
-          - realizing key-variables
-          - repeating geometry or changing it
-     - Pattern, counting, by 1's, counting by groups of 4 (definition of 1), FOR, Copy Array & FOR-Each (music button group), recursive (procedural) reversing FOR
-     - What does my case study look like (not a face), uses symmetry and referent measures based in paperfolding or percent
+- 
 - DIVs: Static Structured Programming
       - DIV_TwoD_Rect.pde
       - basicDIVs

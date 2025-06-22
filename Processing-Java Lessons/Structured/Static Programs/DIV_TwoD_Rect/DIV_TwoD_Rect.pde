@@ -33,7 +33,7 @@
 //Display: interaction of Display and CANVAS
 // See boilerplate_settings for exemplar
 //fullScreen(); //displayWidth //displayHeight
-int shorterSide = (displayWidth >= displayHeight) ? displayHeight : displayWidth;
+int shorterSide = (displayWidth >= displayHeight) ? displayHeight : displayWidth; //note: shorterSide includes square geometry
 println(displayWidth, displayHeight, shorterSide, width, height); //illstrates width & height are populated before size() line, not sequential
 int appWidth = displayWidth; //width
 int appHeight = displayHeight; //height

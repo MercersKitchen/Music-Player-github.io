@@ -39,11 +39,11 @@ int numberOfButtons = 13; //One button on either side as space, Center Button is
 int widthOfButton = appWidth/numberOfButtons; //Creates Symmetry
 int beginningButtonSpace = widthOfButton;
 int buttonY = appHeight*3/5; //Close approximation of total, slightly bigger space than randomStartQuitSide to separate DIVs
-int randomStartQuitSide = shortSide*1/20;
+int randomStartQuitSide = shortSide*1/20; //truncation of decimal to integer
 //
 randomStartX = 0;
 randomStartY = 0;
-randomStartWidth = randomStartQuitSide;
+randomStartWidth = randomStartQuitSide; //Note: depending on processing formatted variables, decimal can be lost
 randomStartHeight = randomStartQuitSide;
 //
 quitX = appWidth - randomStartQuitSide; //Subtracting from the end, foreshawdow recursive programming

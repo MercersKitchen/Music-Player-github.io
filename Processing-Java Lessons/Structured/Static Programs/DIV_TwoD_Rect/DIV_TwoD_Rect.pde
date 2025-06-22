@@ -7,7 +7,7 @@
  - Algorithm: Display & CANVAS, a rectangle like a case study
  - Abstracting a case study illustrates human bias, very useful in HS
  
- - Variables as memories of key-variables, ease of changing CANVAS for debugging (leads to "turning device")
+ - Variables as memories of key-variables, ease of changing CANVAS for debugging (leads to "turning device" from landscape to portrait)
  - Variables to manipulate
  
  - Possible activity: how do you draw a rectangle in the middle of the page (start, length of 1-D lines, overall 2-D look or angles)
@@ -34,7 +34,7 @@
 // See boilerplate_settings for exemplar
 //fullScreen(); //displayWidth //displayHeight
 int shorterSide = (displayWidth >= displayHeight) ? displayHeight : displayWidth;
-println(displayWidth, displayHeight, shorterSide, width, height);
+println(displayWidth, displayHeight, shorterSide, width, height); //illstrates width & height are populated before size() line, not sequential
 int appWidth = displayWidth; //width
 int appHeight = displayHeight; //height
 //size(shorterSide, shorterSide); //Locked unless placed in void setting() {} before void setup() {}
@@ -48,7 +48,10 @@ float imageX = appWidth*0.17; //Using Percents from Case Study
 float imageY = appHeight*0.20;
 float imageWidth = appWidth*0.67;
 float imageHeight = appHeight*0.15;
+println();
 //
 //DIVs: rect(X, Y Width, Height);
+//CAUTION: rectangle is in odd place, explain 
+println("Is this true:", width*0.17,"=", appWidth*0.17 );
 rect(imageX, imageY, imageWidth, imageHeight);
 //

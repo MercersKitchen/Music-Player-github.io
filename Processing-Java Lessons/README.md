@@ -18,7 +18,8 @@ Lessons, Revisions, and AI (Artificial Intelligence and Academic Integrity)
 
 ---
 
-- 
+- Comment on Debugging: ERRORs are considered to be in a specfic voice. If a student is using an AI to code in a more advanced voice, errors at the less adavnced voice should be identified with by the AI or another peer
+
 - DIVs: Static Structured Programming
       - DIV_TwoD_Rect.pde
       - basicDIVs

@@ -26,12 +26,12 @@
  - Case Study: referent measures, paperfolding
  - What does the rectangle teach use about the overall
  
- - Coding Awareness exps: execution of fillScreen() and size() do not populate key variables afterwards but before setup()
+ - Coding Awareness experiements: execution of fillScreen() and size() do not populate key variables afterwards but before setup()
  - Note: see boilerplate_settings.pde for details (requires more coding expereince for understanding)
  
  */
 //Display: interaction of Display and CANVAS
-// See boilerplate_settings for exemplar
+// See boilerplate_settings for exemplar of basic procedure-based
 //fullScreen(); //displayWidth //displayHeight
 int shorterSide = (displayWidth >= displayHeight) ? displayHeight : displayWidth; //note: shorterSide includes square geometry
 println(displayWidth, displayHeight, shorterSide, width, height); //illstrates width & height are populated before size() line, not sequential

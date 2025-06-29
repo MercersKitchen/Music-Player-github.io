@@ -166,6 +166,10 @@ float loopOnceX2 = loopOnceDivX + loopOnceDivWidth*3/4 + loopOnceDivWidth*1/16 ;
 float loopOnceY2 = loopOnceDivY + loopOnceDivHeight*1/4 ;
 float loopOnceX3 = loopOnceX1 ;
 float loopOnceY3 = loopOnceDivY + loopOnceDivHeight*1/4 + loopOnceDivHeight*1/16 ;
+float loopOnceStrNumX = loopOnceDivX + loopOnceDivWidth*3/8 ;
+float loopOnceStrNumY = loopOnceDivY + loopOnceDivHeight*3/8;
+float loopOnceStrNumWidth = loopOnceDivWidth*1/4;
+float loopOnceStrNumHeight = loopOnceDivHeight*1/4; 
 //
 float loopInfiniteDivX = beginningButtonSpace + widthOfButton*7;
 float loopInfiniteDivY = buttonY;
@@ -184,6 +188,10 @@ float loopInfiniteX2 = loopInfiniteDivX + loopInfiniteDivWidth*3/4 + loopInfinit
 float loopInfiniteY2 = loopInfiniteDivY + loopInfiniteDivHeight*1/4 ;
 float loopInfiniteX3 = loopInfiniteX1 ;
 float loopInfiniteY3 = loopInfiniteDivY + loopInfiniteDivHeight*1/4 + loopInfiniteDivHeight*1/16 ;
+float loopInfiniteStrNumX = loopInfiniteDivX + loopInfiniteDivWidth*3/8 ;
+float loopnfiniteStrNumY = loopInfiniteDivY + loopInfiniteDivHeight*3/8 ;
+float loopnfiniteStrNumWidth = loopInfiniteDivWidth*1/4 ;
+float loopnfiniteStrNumHeight = loopInfiniteDivHeight*1/4 ;
 //
 float fastForwardDivX = beginningButtonSpace + widthOfButton*8;
 float fastForwardDivY = buttonY;
@@ -317,9 +325,11 @@ triangle(fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForward
 triangle(fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6);
 rect(loopOnceX, loopOnceY, loopOnceWidth, loopOnceHeight);
 triangle(loopOnceX1, loopOnceY1, loopOnceX2, loopOnceY2, loopOnceX3, loopOnceY3);
+rect(loopOnceStrNumX, loopOnceStrNumY, loopOnceStrNumWidth, loopOnceStrNumHeight);
 //Note: Loop infinite button is same as loop once, without text "1"
 rect(loopInfiniteX, loopInfiniteY, loopInfiniteWidth, loopInfiniteHeight);
 triangle(loopInfiniteX1, loopInfiniteY1, loopInfiniteX2, loopInfiniteY2, loopInfiniteX3, loopInfiniteY3);
+rect(loopInfiniteStrNumX, loopnfiniteStrNumY, loopnfiniteStrNumWidth, loopnfiniteStrNumHeight);
 triangle(nextX1, nextY1, nextX2, nextY2, nextX3, nextY3);
 rect(nextX, nextY, nextWidth, nextHeight);
 line(shuffleCross1X1, shuffleCross1Y1, shuffleCross1X2, shuffleCross1Y2);

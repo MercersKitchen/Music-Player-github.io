@@ -1,4 +1,4 @@
-/* Purpose: repeating DIVs (used to begin data strctures)
+/* Purpose: repeating DIVs (used to begin object data strctures)
  - Concrete Action of Copy and Paste, leading to repeating variables and code
  - Display Geometry: Landscape, Portrait, Square
  
@@ -20,7 +20,7 @@ int widthOfButton = appWidth/numberOfButtons;
 int beginningButtonSpace = widthOfButton;
 int buttonY = appHeight*3/5;
 //
-float quitX = appWidth - appHeight*1/20;
+float quitX = appWidth - appHeight*1/20; //Counting Backwards
 float quitY = 0;
 float quitWidth = appHeight*1/20;
 float quitHeight = appHeight*1/20;

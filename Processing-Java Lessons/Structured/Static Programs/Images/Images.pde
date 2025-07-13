@@ -50,7 +50,7 @@ Boolean image1Landscape = ( image1Width >= image1Height ) ? true : false ;
  - still need an ERROR-Check with oddly shaped landscape-landscape, protrait-portrait resampling
  - size-decreasing algorithms (resampling) discussed in Text
  */
-float image1WidthChanged, image1HeightChanged;
+float image1WidthChanged, image1HeightChanged; //should be some small value for Population Error-Check (hardware may fail, program checks this)
 if ( image1Landscape==true ) {
   image1WidthChanged = imageDivWidth;
   image1HeightChanged = ( image1WidthChanged >= imageDivWidth ) ? image1WidthChanged/image1AspectRatio_GreaterOne : image1WidthChanged*image1AspectRatio_GreaterOne ;

@@ -1,1 +1,0 @@
-Starter Functions and Vocabulary

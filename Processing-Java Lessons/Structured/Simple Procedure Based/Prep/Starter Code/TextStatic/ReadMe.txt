@@ -1,1 +1,0 @@
-For testing Aspect Ratio of Text
